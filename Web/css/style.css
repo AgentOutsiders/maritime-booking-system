@@ -1,37 +1,64 @@
-/* #################################### -  Page commune - #################################### */
+/* ######################################################## -  Page commune - ######################################################## */
 
 body 
 {
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding-top: 50px;
+    flex-direction: column;                                 /* Met les éléments du body à la verticale */
+    padding-top: 40px;                                      /* Ajoute un espacement */
 }
 
-/* #################################### - Les liens - #################################### */
+.zoneTexte
+{
+    background-color: #f0f0f0;                              /* Couleur de fond */
+    display:flex;                                             
+    flex-direction: column;                                   /* Met les éléments du body à la verticale */
+    align-items:center;                                       /* Centre horizontalement les éléments */
+    justify-content:center;                                   /* Centre verticalement les éléments */   
+    padding: 15px;                                            /* Ajoute un espacement */
+    margin: 15px;                                             /* Ajoute de la marge */
+    border-radius: 15px;                                      /* Arrondi les bords */
+}
 
+/* ######################################################## - Les liens - ######################################################## */
+
+.menuPageAcceuil 
+{
+    display: flex;                                            
+    justify-content: space-evenly;                                /* Centre horizontalement le menu */ 
+    width: 100%;                                            /* Largeur */
+}
 .menuPageAcceuil ul 
 {
     display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 20px 40px;
-    border-radius: 40px;
-    background-color: #f0f0f0;
+    gap: 20px;                                              /* Ajoute un espacement */
+    list-style: none;                                       /* Enlève les puces de la liste */
+    padding: 20px 40px;                                     /* Ajoute de l'espace */
+    border-radius: 40px;                                    /* Arrondi les bords */
+    background-color: #f0f0f0;                            /* Couleur du fond */
 }
 
 .menuPageAcceuil li a 
 {
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #0b638c;
-    color: white;
-    transition: background-color 0.5s, color 0.s;
+    display: inline-block;
+    text-decoration: none;                                                      /* Enlève le soulignement des liens */
+    padding: 10px 20px;                                                         /* Agrandit la zone autour du lien */
+    border-radius: 20px;                                                        /* Arrondi les bords */
+    background-color: #0b638c;                                                /* Couleur de fond */
+    color: white;                                                             /* Couleur du texte */
+    transition: background-color 0.5s, color 0.5s, transform 0.8s;              /* Animation de transition */
 }
 
 .menuPageAcceuil li a:hover 
 {
-    background-color: black;
-    color: white;
+    background-color: black;                               /* Arrondi les bords */
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+h1{
+    color:#1e191d;
 }
