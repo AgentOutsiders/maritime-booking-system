@@ -1,57 +1,237 @@
-/* ######################################################## -  Page commune - ######################################################## */
+/* ######################################################## - Page commune - ######################################################## */
 
 body 
 {
     display: flex;
-    flex-direction: column;                                 /* Met les éléments du body à la verticale */
-    padding-top: 40px;                                      /* Ajoute un espacement */
+    flex-direction: column;
+    padding-top: 40px;
 }
 
-.zoneTexte
+
+
+
+img.img1p0
 {
-    background-color: #f0f0f0;                              /* Couleur de fond */
-    display:flex;                                             
-    flex-direction: column;                                   /* Met les éléments du body à la verticale */
-    align-items:center;                                       /* Centre horizontalement les éléments */
-    justify-content:center;                                   /* Centre verticalement les éléments */   
-    padding: 15px;                                            /* Ajoute un espacement */
-    margin: 15px;                                             /* Ajoute de la marge */
-    border-radius: 15px;                                      /* Arrondi les bords */
+    height:150px;
+}
+
+
+img.img2p0
+{
+    height:150px;
 }
 
 /* ######################################################## - Les liens - ######################################################## */
 
 .menuPageAcceuil 
 {
-    display: flex;                                            
-    justify-content: space-evenly;                                /* Centre horizontalement le menu */ 
-    width: 100%;                                            /* Largeur */
-}
-.menuPageAcceuil ul 
-{
     display: flex;
-    gap: 20px;                                              /* Ajoute un espacement */
-    list-style: none;                                       /* Enlève les puces de la liste */
-    padding: 20px 40px;                                     /* Ajoute de l'espace */
-    border-radius: 40px;                                    /* Arrondi les bords */
-    background-color: #f0f0f0;                            /* Couleur du fond */
+    justify-content: space-around;
+    align-items: center;  
+    width: 100%;
+    margin-bottom: 20px; 
 }
 
-.menuPageAcceuil li a 
+
+.menuPageAcceuil ul.zoneImage {
+    display: flex;
+    padding: 20px;            
+    border-radius: 40px;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+
+.menuPageAcceuil ul.lienMenu
+{ 
+    display: flex;
+    gap: 20px;                 
+    padding: 20px 40px;        
+    border-radius: 40px;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+
+.menuPageAcceuil ul:not(.zoneImage) 
+{ 
+    display: flex;
+    gap: 20px;                 
+    padding: 20px 40px;        
+    border-radius: 40px;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+
+.menuPageAcceuil li a
 {
     display: inline-block;
-    text-decoration: none;                                                      /* Enlève le soulignement des liens */
-    padding: 10px 20px;                                                         /* Agrandit la zone autour du lien */
-    border-radius: 20px;                                                        /* Arrondi les bords */
-    background-color: #0b638c;                                                /* Couleur de fond */
-    color: white;                                                             /* Couleur du texte */
-    transition: background-color 0.5s, color 0.5s, transform 0.8s;              /* Animation de transition */
+    text-decoration: none;                                     
+    padding: 10px 20px;                                   
+    border-radius: 20px;                                        
+    background-color: #0b638c;                              
+    color: white;                                                       
+    transition: background-color 0.5s, color 0.5s, transform 0.8s;         
 }
 
 .menuPageAcceuil li a:hover 
 {
-    background-color: black;                               /* Arrondi les bords */
-    transform: scale(1.1);
+    background-color: black;     
+    transform: scale(1.1);  
+}
+
+
+/* ####################################################################### - Index - ######################################################################## */
+
+.zoneTexte0
+{
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 60px;
+    border-radius: 15px;
+}
+
+.flash 
+{
+    opacity: 1; 
+    transition: opacity 0.5s ease; 
+}
+
+.flash:hover 
+{
+    opacity: 0.7; 
+}
+
+/* ######################################################## - Page n°1 - Les cartes d'embarquement - ######################################################## */
+
+.zoneTexte1
+{
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 90px;
+    border-radius: 15px;
+}
+
+
+/* ############################################################### - Page n°2 - Les factures - ############################################################## */
+
+.zoneTexte2 
+{
+    background-color: #f0f0f0;                    /* Couleur du fond */
+    display: flex;                                  /* Active la propriété display */
+    flex-direction: column;                         /* Organise les éléments verticalement */ 
+    align-items: center;                            /* Centre les éléments horizontalement */
+    justify-content: center;                        /* Centre les éléments verticlamenent */
+    padding: 15px;           
+    margin: 15px 70px;
+    border-radius: 15px;
+
+}
+
+.carreBleu 
+{
+    width: 100%;          
+    height: 100%; 
+    background-color: transparent;
+    border: 3px solid #0b638c;
+
+    border-radius: 5px;
+}
+
+.imageContainer 
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin: 10px 0;     
+}
+
+p.text1p2
+{
+    font-weight: bold;
+    text-align: center;
+    padding:20px;
+    font-size:24px;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+p.text2p2
+{
+    font-weight: bold;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+article.articlePage2 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+p.margeTexte 
+{
+    align-self: flex-start;
+    padding-left: 68px;
+}
+
+p.espace
+{
+    height:60px;
+}
+
+.flash 
+{
+    opacity: 1; 
+    transition: opacity 0.5s ease; 
+}
+
+.flash:hover 
+{
+    opacity: 0.7; 
+}
+
+/* ########################################################### - Page n°3 - Le tableau de bord - ############################################################ */
+
+.zoneTexte3
+{
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 78px;
+    border-radius: 15px;
+}
+
+
+/* ############################################################ - Page n°4 - Les statistiques - ############################################################# */
+
+.zoneTexte4
+{
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 74px;
+    border-radius: 15px;
 }
 
 
@@ -59,6 +239,8 @@ body
 
 
 
-h1{
-    color:#1e191d;
+
+
+h1 {
+    color: #1e191d;
 }
