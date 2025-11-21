@@ -7,9 +7,6 @@ body
     padding-top: 40px;
 }
 
-
-
-
 img.img1p0
 {
     height:150px;
@@ -203,6 +200,8 @@ p.espace
 .flash:hover 
 {
     opacity: 0.7; 
+    transform:scale(1.05);
+    transition: transform 0.8s;    
 }
 
 /* ########################################################### - Page n°3 - Le tableau de bord - ############################################################ */
