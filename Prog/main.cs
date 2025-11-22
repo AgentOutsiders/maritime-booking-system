@@ -2,6 +2,26 @@ using System;
 using System.IO;
 class Ex
 {
+    struct reserv
+    {
+        public int idLiaison;
+        public string nom, date, heure, horodatage;
+    }
+    struct passagers
+    {
+        public string nom, prenom, codeCategorie;
+    }
+
+    struct vehicules
+    {
+        public string codeCategorie;
+        public int quantite;
+    }
+
+    List<passagers> listePassagers;
+    List<vehicules> listeVehicules;
+
+
     static void Main()
     {
         int reponse;
@@ -32,8 +52,20 @@ class Ex
     static void reservation()
     {
         if (File.Exists("passagers.json"))
-        {
-            int idLiaison, date;
+        { 
+            reserv = new reserv();
+            string[] horaireId1Special = {"09:45", "12:15", "17:00", "19:30"};
+            string[] horaireId1 = {"08:05", "11:00", "13:45", "16:15", "18:45"};
+
+            string[] horaireId2Special = {"08:30", "11:00", "15:45", "18:15"};
+            string[] horaireId2 = {"06:50", "09:30", "12:30", "15:00", "17:30"};
+
+            string[] horaireid3Special = {"08:30", "11:00", "15:45", "18:15"};
+            string[] horaireId3 = {"06:50", "09:30", "12:30", "15:00", "17:30"};
+
+            string[] horaireid4Special = {"08:30", "11:00", "15:45", "18:15"};
+            string[] horaireId4 = {"06:50", "09:30", "12:30", "15:00", "17:30"};
+
             FileStream fs = new FileStream("passagers.json", FileMode.Append, FileAccess.Write);
             StreamWriter passagers = new StreamWriter(fs);
 
@@ -45,7 +77,7 @@ class Ex
 
             do
             {
-                idLiaison = int.Parse(Console.ReadLine());
+                reserv.idLiaison = int.Parse(Console.ReadLine());
                 if(!(idLiaison == 1 || idLiaison == 2 || idLiaison == 3 || idLiaison == 4))
                 {
                     Console.WriteLine("Veuiller tapper une des 4 options.");
@@ -66,7 +98,11 @@ class Ex
 
             if(date == 1 || date == 11 || date%7 == 2)
             {
-                
+                Console.WriteLine("Selectionner une horaire");
+                Console.WriteLine("1.\t9:45");
+                Console.WriteLine("1.\t12:15&");
+                Console.WriteLine("1.\tLorient – Groix");
+                Console.WriteLine("1.\tLorient – Groix");
             }
         }
     }
