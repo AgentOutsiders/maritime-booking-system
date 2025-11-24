@@ -1,56 +1,73 @@
+/* ################################################################################################################################## */
 /* ######################################################## - Page commune - ######################################################## */
+/* ################################################################################################################################## */
 
 body 
 {
-    display: flex;
-    flex-direction: column;
-    padding-top: 40px;
+    display: flex;                        /* On active flexbox */
+    flex-direction: column;               /* On place les éléments en colonne */
+    padding-top: 40px;                    /* On ajoute un espace de 40px en haut */
+    background-color: #506E99;          /* On définit la couleur de fond */
 }
 
 img.img1p0
 {
-    height:150px;
+    height:150px;                       /* On fixe la hauteur de l'image à 150px */
 }
 
 
 img.img2p0
 {
-    height:150px;
+    height:150px;                       /* On fixe la hauteur de l'image à 150px */
 }
 
+.flash 
+{
+    transition: transform 0.8s, border-radius 0.8s;           /* On ajoute une animation sur transform et border-radius */
+} 
+
+.flash:hover 
+{
+    transform: scale(0.95);                     /* On réduit légèrement l’élément lors du survol */
+    border-radius: 32px;                        /* On arrondis les coins lors du survol */
+}
+
+
+/* ############################################################################################################################### */
 /* ######################################################## - Les liens - ######################################################## */
+/* ############################################################################################################################### */
 
 .menuPageAcceuil 
 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;  
-    width: 100%;
-    margin-bottom: 20px; 
+    display: flex;                         /* On active flexbox */
+    justify-content: space-around;         /* On répartit les éléments avec de l'espace autour */
+    align-items: center;                   /* On aligne verticalement au centre */
+    width: 100%;                           /* On prend toute la largeur */
+    margin-bottom: 20px;                   /* On ajoute un espace en bas du menu */
 }
 
 
 .menuPageAcceuil ul.zoneImage {
-    display: flex;
-    padding: 20px;            
-    border-radius: 40px;
-    background-color: #f0f0f0;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
+    display: flex;                           /* On active flexbox */
+    padding: 20px;                           /* On met un espace intérieur de 20px */
+    border-radius: 40px;                     /* On arrondis les coins */
+    background-color: #fafafa;             /* On définit la couleur de fond */
+    align-items: center;                     /* On aligne verticalement au centre */
+    justify-content: center;                 /* On centre horizontalement */
+    list-style: none;                        /* On supprime les puces */
 }
 
 
 .menuPageAcceuil ul.lienMenu
 { 
-    display: flex;
-    gap: 20px;                 
-    padding: 20px 40px;        
-    border-radius: 40px;
-    background-color: #f0f0f0;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
+    display: flex;                           /* On active flexbox */
+    gap: 20px;                               /* On met un espace entre les éléments */
+    padding: 20px 40px;                      
+    border-radius: 40px;                     /* On arrondis les coins */
+    background-color: #fafafa;             /* On définit la couleur de fond */
+    align-items: center;                     /* On aligne verticalement au centre */
+    justify-content: center;                 /* On centre horizontalement */
+    list-style: none;                        /* On supprime les puces */
 }
 
 
@@ -60,7 +77,6 @@ img.img2p0
     gap: 20px;                 
     padding: 20px 40px;        
     border-radius: 40px;
-    background-color: #f0f0f0;
     align-items: center;
     justify-content: center;
     list-style: none;
@@ -82,39 +98,136 @@ img.img2p0
 {
     background-color: black;     
     transform: scale(1.1);  
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-
-/* ####################################################################### - Index - ######################################################################## */
-
-.zoneTexte0
+ul.puceJ li 
 {
-    background-color: #f0f0f0;
+    list-style: none;
+    padding-left: 2rem;
+    background-image: url('../img/puce/puce1_sf.jpg');
+    background-repeat: no-repeat;
+    background-size: 1.2rem 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ########################################################################################################################################################## */
+/* ####################################################################### - Index - ######################################################################## */
+/* ########################################################################################################################################################## */
+
+.zoneTexte0 
+{
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 15px;
-    margin: 15px 60px;
+    margin: 15px 140px;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.imageIndex 
+{
+    max-width: 80%;       
+    border-radius: 20px; 
+    margin: 20px 0;    
+    display: block;
+}
+
+.titreAccueil 
+{
+    font-family: 'Pacifico', cursive;         
+    font-size: 2.5rem;                 
+    text-align: center;                
+    margin-bottom: 20px;          
+    font-style: normal;                
+}
+
+.blocTexte 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    align-self: flex-start;
+    margin-left: 150px;
+}
+
+.introBateaux 
+{
+    text-align: center;
+}
+
+.bateauxCards 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.bateauCard 
+{
+    background: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+    height: 300px;               
+}
+
+.bateauCard:hover 
+{
+    transform: translateY(-5px);
+}
+
+.bateauCard img {
+    width: 100%;
+    height: 150px;         
+    object-fit: cover;   
     border-radius: 15px;
+    margin-bottom: 10px;
 }
 
-.flash 
+.btn-pulse 
 {
-    opacity: 1; 
-    transition: opacity 0.5s ease; 
+    display: inline-block;
+    padding: 8px 20px;
+    background: #506E99;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.flash:hover 
+.btn-pulse:hover 
 {
-    opacity: 0.7; 
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
+.lienMenu li a img {
+    vertical-align: middle; 
+    display: inline-block;
+    margin: 0;     
+}
+
+/* ########################################################################################################################################################## */
 /* ######################################################## - Page n°1 - Les cartes d'embarquement - ######################################################## */
+/* ########################################################################################################################################################## */
 
 .zoneTexte1
 {
-    background-color: #f0f0f0;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,12 +237,13 @@ img.img2p0
     border-radius: 15px;
 }
 
-
+/* ########################################################################################################################################################## */
 /* ############################################################### - Page n°2 - Les factures - ############################################################## */
+/* ########################################################################################################################################################## */
 
 .zoneTexte2 
 {
-    background-color: #f0f0f0;                    /* Couleur du fond */
+    background-color: #fafafa;                    /* Couleur du fond */
     display: flex;                                  /* Active la propriété display */
     flex-direction: column;                         /* Organise les éléments verticalement */ 
     align-items: center;                            /* Centre les éléments horizontalement */
@@ -191,24 +305,13 @@ p.espace
     height:60px;
 }
 
-.flash 
-{
-    opacity: 1; 
-    transition: opacity 0.5s ease; 
-}
-
-.flash:hover 
-{
-    opacity: 0.7; 
-    transform:scale(1.05);
-    transition: transform 0.8s;    
-}
-
+/* ########################################################################################################################################################## */
 /* ########################################################### - Page n°3 - Le tableau de bord - ############################################################ */
+/* ########################################################################################################################################################## */
 
 .zoneTexte3
 {
-    background-color: #f0f0f0;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,12 +321,13 @@ p.espace
     border-radius: 15px;
 }
 
-
+/* ########################################################################################################################################################## */
 /* ############################################################ - Page n°4 - Les statistiques - ############################################################# */
+/* ########################################################################################################################################################## */
 
 .zoneTexte4
 {
-    background-color: #f0f0f0;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,13 +337,108 @@ p.espace
     border-radius: 15px;
 }
 
+/* ########################################################################################################################################################## */
+/* ############################################################# - Page n°5 - Les paramètres - ############################################################## */
+/* ########################################################################################################################################################## */
 
-
-
-
-
-
-
-h1 {
-    color: #1e191d;
+.zoneTexte5
+{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 140px;
+    border-radius: 40px;
 }
+
+/* ########################################################################################################################################################## */
+/* ####################################################### - Tableau des caractéristiques - ################################################################# */
+/* ########################################################################################################################################################## */
+
+.tableBateau 
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tableBateau th 
+{
+    background: #ffc100;
+    color: black;
+    width: 50%;
+    text-align: left;
+    padding: 12px;
+    font-size: 1.3rem;
+}
+
+.tableBateau td 
+{
+    padding: 10px 12px;
+    width: 50%;
+    border-bottom: 1px solid #ddd;
+}
+
+.tableBateau tr:nth-child(even) 
+{
+    background-color: #f7f7f7;
+}
+
+.tableBateau tr 
+{
+    transition: background-color 0.8s;
+}
+
+.tableBateau tr:hover 
+{
+    background-color: #ffe9a6;
+}
+
+/* ######################################################################################################################################################################## */
+/* ###################################################################### - Animation des boutons - ####################################################################### */
+/* ######################################################################################################################################################################## */
+
+.btn 
+{
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; 
+    display: inline-block;
+}
+
+.btn-pulse 
+{
+    background-color: #506E99;
+    color: white;
+    padding:8px 40px;
+    margin:4px;
+    animation: pulse 1.5s infinite;
+    border-radius: 8px;
+}
+
+.btn-pulse2 
+{
+    background-color: #506E99;
+    color: white;
+    padding:8px 40px;
+    margin:4px;
+    animation: pulse 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes pulse 
+{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* ######################################################################################################################################################################## */
+/* ######################################################################################################################################################################## */
+/* ######################################################################################################################################################################## */

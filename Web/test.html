@@ -1,0 +1,92 @@
+/* ==== Roue chromatique ==== */
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(
+        red, yellow, lime, cyan, blue, magenta, red
+    );
+    margin: 20px auto;
+    cursor: crosshair;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+#preview {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#validate {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 18px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#validate:hover {
+    background: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../logo/logo_can_sf.png" type="image/png">
+    <title>Les cartes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/javascript.js" defer></script>
+</head>
+
+<body>
+    <header></header>
+
+    <nav class="menuPageAcceuil">
+        <ul class="zoneImage">
+            <img class="img1p0 flash" src="../logo/logo_can_sf.png" alt="Logo de la CAN">
+        </ul>
+        <ul class="lienMenu">
+            <li><a href="../index.html">Acceuil</a></li>
+            <li><a href="page1.html">Les cartes d'embarquements</a></li>
+            <li><a href="page2.html">Les factures</a></li>
+            <li><a href="page3.html">Le tableau de bord</a></li>
+            <li><a href="page4.html">Les statistiques</a></li>
+        </ul>
+        <ul class="zoneImage">
+            <img class="img2p0 flash" src="../logo/logo_iut_sf.png" alt="Logo de l'IUT">
+        </ul>
+	</nav>	
+
+	<main>
+		<section class="zoneTexte5">
+			<article>
+
+                <h2>🎨 Choisissez la couleur du fond</h2>
+
+                <div class="wheel" id="wheel"></div>
+
+                <p id="preview">Couleur sélectionnée : aucune</p>
+
+                <button id="validate">Valider</button>
+
+			</article>
+		</section>
+	</main>
+	
+	<footer></footer>
+</body>
+
+</html>
