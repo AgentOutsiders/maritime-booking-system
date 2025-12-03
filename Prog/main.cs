@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 
 
@@ -54,7 +55,7 @@ class appReservation
 
             affichage(reservation, listePassagers, listeVehicules);
 
-
+            genererFichierJson(reservation, listePassagers, listeVehicules);
         }
 
         else
@@ -382,6 +383,34 @@ class appReservation
 
     static void affichage(structReservation reservation, List<structPassagers> listePassagers, List<structVehicules> listeVehicules)
     {
+
+        Dictionary<string, double[]> tarifsPassagers = new Dictionary<string, double[]>
+        {
+            // Structure : { "Code", new double[] { Prix Groix, Prix Belle-Ile } }
+            { "adu26p",  new double[] { 18.75, 18.80 } },
+            { "jeu1825", new double[] { 13.80, 14.10 } },
+            { "enf417",  new double[] { 11.25, 11.65 } },
+            { "bebe",    new double[] { 0.0, 0.0 } },    // 0.0 pour gratuit
+            { "ancomp",  new double[] { 3.35, 3.35 } }
+        };
+
+        Dictionary<string, double[]> tarifsVehicules = new Dictionary<string, double[]>
+        {
+            // Structure : { "Code", new double[] { Prix Groix, Prix Belle-Ile } }
+            { "trot",    new double[] { 4.70, 4.70 } },
+            { "velo",    new double[] { 8.20, 8.20 } },
+            { "velelec", new double[] { 11.00, 11.00 } },
+            { "cartand", new double[] { 16.45, 16.45 } },
+            { "mobil",   new double[] { 23.10, 23.35 } },
+            { "moto",    new double[] { 66.05, 66.40 } },
+            { "cat1",    new double[] { 96.05, 98.50 } },
+            { "cat2",    new double[] { 114.80, 117.20 } },
+            { "cat3",    new double[] { 174.45, 176.90 } },
+            { "cat4",    new double[] { 210.90, 213.35 } },
+            { "camp",    new double[] { 330.20, 332.70 } }
+        };
+        double prix = 0;
+
         Console.WriteLine("########################################");
         Console.WriteLine("       RÉCAPITULATIF DE RÉSERVATION      ");
         Console.WriteLine("########################################\n");
@@ -411,6 +440,7 @@ class appReservation
         foreach (structPassagers p in listePassagers)
         {
             Console.WriteLine(" - " + p.prenom + " " + p.nom + " (Code : " + p.codeCategorie + ")");
+            prix = prix + tarifsPassagers[p.codeCategorie][(int)(reservation.idLiaison / 2)];
         }
 
         // --- 3. Liste des véhicules ---
@@ -427,13 +457,46 @@ class appReservation
             foreach (structVehicules v in listeVehicules)
             {
                 Console.WriteLine(" - " + v.quantite + " x " + v.codeCategorie);
+                prix = prix + tarifsVehicules[v.codeCategorie][(int)(reservation.idLiaison / 2)] * v.quantite;
             }
         }
+        Console.WriteLine(prix);
 
         Console.WriteLine("\n########################################");
         Console.WriteLine("Merci pour votre réservation !");
         Console.ReadKey(); // Attend que l'utilisateur appuie sur une touche avant de finir
     }
+
+    static void genererFichierJson(structReservation res, List<structPassagers> passagers, List<structVehicules> vehicules)
+{
+    // 1. On formate la date pour qu'elle ressemble à "2025-11-01"
+    // On suppose que l'année est 2025 et le mois 11 (Novembre) selon ton exemple
+    string dateFormatee = $"2025-11-{res.date:00}"; // :00 permet d'avoir "01" au lieu de "1"
+
+    // 2. On construit la structure EXACTE du JSON demandé
+    // On crée un tableau [] contenant un objet anonyme new { ... }
+    var donneesExport = new object[]
+    {
+        new 
+        {
+            reservation = res,
+            passagers = passagers, // Ta liste de structs matche déjà le JSON
+            vehicules = vehicules  // Ta liste de vehicules matche aussi
+        }
+    };
+
+    // 3. Sérialisation
+    string jsonFinal = JsonConvert.SerializeObject(donneesExport, Formatting.Indented);
+
+    // 4. Création d'un nom de fichier unique
+    // On nettoie le nom pour éviter les caractères interdits dans les noms de fichiers
+    string nomFichier = $"reservation_{res.nom}_{DateTime.Now:yyyyMMdd_HHmmss}.json";
+    nomFichier = nomFichier.Replace(" ", "_"); // Remplace les espaces par des _
+
+    // 5. Écriture
+    File.WriteAllText(nomFichier, jsonFinal);
+    Console.WriteLine($"\n[Succès] Fichier de sauvegarde créé : {nomFichier}");
+}
 
     
 }
