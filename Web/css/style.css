@@ -12,13 +12,13 @@ body
 
 img.img1p0
 {
-    height:150px;                       /* On fixe la hauteur de l'image à 150px */
+    height:150px;                                             /* On fixe la hauteur de l'image à 150px */
 }
 
 
 img.img2p0
 {
-    height:150px;                       /* On fixe la hauteur de l'image à 150px */
+    height:150px;                                             /* On fixe la hauteur de l'image à 150px */
 }
 
 .flash 
@@ -28,8 +28,8 @@ img.img2p0
 
 .flash:hover 
 {
-    transform: scale(0.95);                     /* On réduit légèrement l’élément lors du survol */
-    border-radius: 32px;                        /* On arrondis les coins lors du survol */
+    transform: scale(0.95);                                   /* On réduit légèrement l’élément lors du survol */
+    border-radius: 32px;                                      /* On arrondis les coins lors du survol */
 }
 
 
@@ -46,8 +46,19 @@ img.img2p0
     margin-bottom: 20px;                   /* On ajoute un espace en bas du menu */
 }
 
+.menuPageAcceuil ul.lienMenu li a p 
+{
+    white-space: nowrap;    /* On empêche le retour à la ligne */
+}
 
-.menuPageAcceuil ul.zoneImage {
+.menuPageAcceuil ul.lienMenu li 
+{
+    margin: 5px;                          /* On met un petit espace entre les boutons */
+}
+
+
+.menuPageAcceuil ul.zoneImage 
+{
     display: flex;                           /* On active flexbox */
     padding: 20px;                           /* On met un espace intérieur de 20px */
     border-radius: 40px;                     /* On arrondis les coins */
@@ -58,57 +69,72 @@ img.img2p0
 }
 
 
-.menuPageAcceuil ul.lienMenu
+.menuPageAcceuil ul.lienMenu 
+{ 
+    display: flex;
+    flex-wrap: wrap;          /* Permet de passer à la ligne */
+    padding: 20px 40px;
+    border-radius: 40px;
+    background-color: #fafafa;
+    justify-content: center;   /* Centre horizontalement les liens */
+    list-style: none;
+    max-width: 800px;          /* Ajuste selon ton design */
+}
+
+.menuPageAcceuil ul.lienMenu li 
+{
+    flex: 0 0 26%;            /* Chaque lien prend environ 1/3 de la largeur */
+    text-align: center;       /* Centre le contenu à l’intérieur du lien */
+}
+
+.menuPageAcceuil ul.lienMenu li a 
+{
+    display: inline-flex;      /* On garde flex pour aligner l'image et le texte */
+    align-items: center; 
+    justify-content: center;   /* Centre le texte et l'image horizontalement */
+    gap: 8px;           
+    height: 29px;
+    text-decoration: none;
+}
+
+.menuPageAcceuil ul:not(.zoneImage) 
 { 
     display: flex;                           /* On active flexbox */
-    gap: 20px;                               /* On met un espace entre les éléments */
-    padding: 20px 40px;                      
+    gap: 20px;                               /* On met un espace 20 px entre les enfants */
+    padding: 20px 40px;                      /* On met un espace intérieur de 20 px en haut et en bas et un espace intérieur de 40 px à gauche et à droite */
     border-radius: 40px;                     /* On arrondis les coins */
-    background-color: #fafafa;             /* On définit la couleur de fond */
     align-items: center;                     /* On aligne verticalement au centre */
     justify-content: center;                 /* On centre horizontalement */
     list-style: none;                        /* On supprime les puces */
 }
 
 
-.menuPageAcceuil ul:not(.zoneImage) 
-{ 
-    display: flex;
-    gap: 20px;                 
-    padding: 20px 40px;        
-    border-radius: 40px;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-}
-
-
 .menuPageAcceuil li a
 {
-    display: inline-block;
-    text-decoration: none;                                     
-    padding: 10px 20px;                                   
-    border-radius: 20px;                                        
-    background-color: #0b638c;                              
-    color: white;                                                       
+    display: inline-block;                                                  /* On combine inline et block */
+    text-decoration: none;                                                  /* On supprime le soulignement */
+    padding: 10px 20px;                                                     /* On met un espace intérieur de 10 px en haut et en bas et un espace intérieur de 20 px à gauche et à droite */
+    border-radius: 20px;                                                    /* On arrondis les coins */
+    background-color: #0b638c;                                            /* On définit la couleur de fond */
+    color: white;                                                         /* On définit la couleur du texte */
     transition: background-color 0.5s, color 0.5s, transform 0.8s;         
 }
 
 .menuPageAcceuil li a:hover 
 {
-    background-color: black;     
-    transform: scale(1.1);  
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    background-color: black;                                              /* On définit la couleur de fond */
+    transform: scale(1.1);                                                  /* On agrandit légèrement le lien lors du survol */
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);                                 /* On ajoute une ombre autour du lien lors du survol */
 }
 
 ul.puceJ li 
 {
-    list-style: none;
-    padding-left: 2rem;
-    background-image: url('../img/puce/puce1_sf.jpg');
-    background-repeat: no-repeat;
-    background-size: 1.2rem 1.2rem;
-    margin-bottom: 0.5rem;
+    list-style: none;                                                       /* On supprime les puces */
+    padding-left: 2rem;                                                     /* On décale le texte vers la droite de 2 rem pour faire de la place pour la puce personnalisée */
+    background-image: url('../img/puce/puce/puce1_sf.jpg');                 /* On définit une image comme puce personnalisée */
+    background-repeat: no-repeat;                                           /* On empêche l'image de se répéter */
+    background-size: 1.2rem 1.2rem;                                         /* On définit la taille de l'image de la puce */
+    margin-bottom: 0.5rem;                                                  /* On ajoute un petit espace entre chaque élément de la liste */
 }
 
 /* ########################################################################################################################################################## */
@@ -116,72 +142,73 @@ ul.puceJ li
 /* ########################################################################################################################################################## */
 
 .zoneTexte0 
-{
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    margin: 15px 140px;
-    border-radius: 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+{ 
+    background-color: #fafafa;                       /* On définit la couleur de fond */
+    display: flex;                                     /* On active flexbox */
+    flex-direction: column;                            /* On organise les éléments verticalement */ 
+    align-items: center;                               /* On aligne verticalement au centre */
+    justify-content: center;                           /* On centre horizontalement */
+    padding: 15px;                                     /* On ajoute un espace interne de 15 px tout autour */
+    margin: 15px 140px;                                /* On ajoute un espace externe de 15 px en haut et en bas et un espace de 140 px à gauche et àdroite */
+    border-radius: 40px;                               /* On arrondis les coins */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);          /* On met une ombre légère sous la boîte pour l’effet flottant */
 }
 
 .imageIndex 
 {
-    max-width: 80%;       
-    border-radius: 20px; 
-    margin: 20px 0;    
-    display: block;
-}
+    max-width: 80%;                                    /* L’image ne dépasse pas 80% de la largeur de son conteneur */
+    border-radius: 20px;                               /* On arrondis les coins */
+    margin: 20px;                                      /* On ajoute un espace externe de 20 px tout autour */
+    display: block;                                    /* L’image se comporte comme un bloc */
+} 
 
+.policePacifico
+{
+    font-family: 'Pacifico', cursive;                  /* On définit la police à Pacifico */
+    font-size: 2.5rem;                                 /* On définit la taille du texte */
+}
 .titreAccueil 
 {
-    font-family: 'Pacifico', cursive;         
-    font-size: 2.5rem;                 
-    text-align: center;                
-    margin-bottom: 20px;          
-    font-style: normal;                
+    
+    text-align: center;                                /* On centre le texte horizontalement */
+    margin-bottom: 20px;                               /* Espace sous le titre */          
 }
 
 .blocTexte 
-{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    align-self: flex-start;
-    margin-left: 150px;
+{ 
+    display: flex;                                     /* On active flexbox */
+    flex-direction: column;                            /* On organise les éléments verticalement */ 
+    align-items: flex-start;                           /* On aligne les enfants sur le bord gauche */
+    width: 100%;                                       /* On occupe toute la largeur disponible */
+    align-self: flex-start;                            /* On s’assure que le bloc lui-même commence à gauche dans son parent flex */
+    margin-left: 150px;                                /* On réalise un décalage de 150 px depuis le bord gauche du parent */
 }
 
 .introBateaux 
 {
-    text-align: center;
-}
+    text-align: center;                                /* On centre le texte horizontalement */
+} 
 
 .bateauxCards 
 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px 0;
+    display: flex;                                     /* On active flexbox */
+    gap: 20px;                                         /* On met un espace 20 px entre les enfants */
+    margin: 30px;                                      /* On met une marge verticale autour du conteneur */
 }
 
 .bateauCard 
 {
-    background: #fff;
-    padding: 15px;
-    border-radius: 20px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;   
-    height: 300px;               
+
+    padding: 15px;                                    /* On ajoute un espace interne autour du contenu de la carte */
+    border-radius: 20px;                              /* On arrondis les coins */
+    width: 200px;                                     /* On définit une largeur fixe */
+    text-align: center;                               /* On centre le texte horizontalement */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);         /* On ajoute une ombre légère */
+    transition: transform 0.3s;                       /* On ajoute une animation */
+    display: flex;                                    /* On active flexbox */
+    flex-direction: column;                           /* On organise les éléments en colonne */
+    justify-content: space-between;                   /* On répartit les éléments pour occuper tout l’espace vertical */
+    height: 300px;                                    /* On définit une hauteur fixe */       
 }
 
 .bateauCard:hover 
@@ -189,24 +216,13 @@ ul.puceJ li
     transform: translateY(-5px);
 }
 
-.bateauCard img {
+.bateauCard img 
+{
     width: 100%;
     height: 150px;         
     object-fit: cover;   
     border-radius: 15px;
     margin-bottom: 10px;
-}
-
-.btn-pulse 
-{
-    display: inline-block;
-    padding: 8px 20px;
-    background: #506E99;
-    color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .btn-pulse:hover 
@@ -215,11 +231,18 @@ ul.puceJ li
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-.lienMenu li a img {
-    vertical-align: middle; 
-    display: inline-block;
-    margin: 0;     
+.lienMenu li a {
+  display: flex;
+  align-items: center; 
+  gap: 8px;           
+  height: 29px;
+  text-decoration: none;
 }
+
+.lienMenu li a img {
+  margin: 0;
+}
+
 
 /* ########################################################################################################################################################## */
 /* ######################################################## - Page n°1 - Les cartes d'embarquement - ######################################################## */
@@ -243,45 +266,42 @@ ul.puceJ li
 
 .zoneTexte2 
 {
-    background-color: #fafafa;                    /* Couleur du fond */
-    display: flex;                                  /* Active la propriété display */
-    flex-direction: column;                         /* Organise les éléments verticalement */ 
-    align-items: center;                            /* Centre les éléments horizontalement */
-    justify-content: center;                        /* Centre les éléments verticlamenent */
-    padding: 15px;           
-    margin: 15px 70px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 280px;
     border-radius: 15px;
-
 }
 
 .carreBleu 
 {
-    width: 100%;          
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: 3px solid #0b638c;
-
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .imageContainer 
 {
     display: flex;
-    justify-content: center; 
-    align-items: center;    
-    margin: 10px 0;     
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
 }
 
-p.text1p2
+p.text1p2 
 {
     font-weight: bold;
     text-align: center;
-    padding:20px;
-    font-size:24px;
+    font-size: 24px;
     font-family: Calibri, Arial, sans-serif;
 }
 
-p.text2p2
+p.text2p2 
 {
     font-weight: bold;
     font-family: Calibri, Arial, sans-serif;
@@ -291,7 +311,7 @@ article.articlePage2
 {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 p.margeTexte 
@@ -300,11 +320,49 @@ p.margeTexte
     padding-left: 68px;
 }
 
-p.espace
+p.espace 
 {
-    height:60px;
+    height: 60px;
 }
 
+.tableUnifie2
+{
+    width: 70%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.tableUnifie2 th 
+{
+    background: #ffc100;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none; 
+}
+
+.tableUnifie2 td 
+{
+    padding: 10px 12px;
+    text-align: center;
+    border: none;
+}
+
+.tableUnifie2 tr:nth-child(even) 
+{
+    background-color: #f7f7f7;
+}
+
+.texteFacture
+{
+    margin-top:30px;
+}
 /* ########################################################################################################################################################## */
 /* ########################################################### - Page n°3 - Le tableau de bord - ############################################################ */
 /* ########################################################################################################################################################## */
@@ -341,7 +399,40 @@ p.espace
 /* ############################################################# - Page n°5 - Les paramètres - ############################################################## */
 /* ########################################################################################################################################################## */
 
-.zoneTexte5
+.zoneTexte5 
+{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centrer horizontalement */
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 140px;
+    border-radius: 40px;
+    text-align: center; /* <---- AJOUT ICI */
+}
+
+.zoneTexte5_1
+{
+    background: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    width: 700px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+    height: auto;
+    margin-bottom:80px;  
+}
+
+/* ########################################################################################################################################################## */
+/* ########################################################### - Page n°6 - Horraires et tarifs - ########################################################### */
+/* ########################################################################################################################################################## */
+
+.zoneTexte6
 {
     background-color: #fafafa;
     display: flex;
@@ -349,56 +440,62 @@ p.espace
     align-items: center;
     justify-content: center;
     padding: 15px;
-    margin: 15px 140px;
-    border-radius: 40px;
+    margin: 15px 280px;
+    border-radius: 15px;
 }
 
+
+
+
 /* ########################################################################################################################################################## */
-/* ####################################################### - Tableau des caractéristiques - ################################################################# */
+/* ################################################# - Tableau des caractéristiques et des factures - ####################################################### */
 /* ########################################################################################################################################################## */
 
-.tableBateau 
+.tableUnifie 
 {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px auto 2.5rem auto;
     font-size: 1.1rem;
-    background: #fff;
-    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 14px;
     overflow: hidden;
 }
 
-.tableBateau th 
+
+.tableUnifie th 
 {
     background: #ffc100;
     color: black;
-    width: 50%;
-    text-align: left;
+    text-align: center;
     padding: 12px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    border: none; 
 }
 
-.tableBateau td 
+.tableUnifie td 
 {
     padding: 10px 12px;
-    width: 50%;
-    border-bottom: 1px solid #ddd;
+    text-align: center;
+    border: none;
 }
 
-.tableBateau tr:nth-child(even) 
+.tableUnifie tr:nth-child(even) 
 {
     background-color: #f7f7f7;
 }
 
-.tableBateau tr 
+.tableUnifie tbody tr 
 {
-    transition: background-color 0.8s;
+    transition: background-color 1s ease; /* ← transition globale */
 }
 
-.tableBateau tr:hover 
+.tableUnifie tbody tr:hover 
 {
-    background-color: #ffe9a6;
+    background-color: #fff3b0; /* ← couleur au survol */
 }
+
 
 /* ######################################################################################################################################################################## */
 /* ###################################################################### - Animation des boutons - ####################################################################### */
@@ -414,12 +511,17 @@ p.espace
 
 .btn-pulse 
 {
+    display: inline-block;
+    padding: 8px 40px; /* padding plus large pour ressembler à ton premier style */
     background-color: #506E99;
     color: white;
-    padding:8px 40px;
-    margin:4px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 4px;
     animation: pulse 1.5s infinite;
-    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
 .btn-pulse2 
@@ -438,6 +540,89 @@ p.espace
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+
+/* ######################################################################################################################################################################## */
+/* ############################################################################ - Roue chromatique - ###################################################################### */
+/* ######################################################################################################################################################################## */
+
+
+#colorWheel 
+{
+    width: 300px;                     /* On fixe la largeur de la  roue à 300 px */
+    height: 300px;                    /* On fixe la hauteur de la roue à 300 px */
+    cursor: pointer;                  /* Quand on survol la roue, le curseur devient main */
+}
+
+.color-box 
+{ 
+    display: inline-block;            /* On combine inline et block */
+    width: 18px;                      /* On fixe la largeur du carré à 18 px */
+    height: 18px;                     /* On fixe la hauteur du carré à 18 px */
+    border: 1px solid #aaa;         /* On met une bordure grise */
+    vertical-align: middle;           /* On aligne le carré au centre du texte */
+    margin: 0 6px;                    /* On met une petite marge autour pour espacer */
+}
+
+.color-box.none 
+{
+    border: 1px solid #aaa;         /* On met une bordure grise */
+} 
+
+
+/* ######################################################################################################################################################################## */
+/* ####################################################################### - Footer - ##################################################################################### */
+/* ######################################################################################################################################################################## */
+
+.fondBleu {
+    position: relative;      /* Pour que les zones blanches puissent se positionner par rapport à ce conteneur */
+    width: 850px;
+    height: 360px;
+    background-color: #0b638c;
+    border: 4.2px solid black;
+    border-radius: 22px;
+    padding: 6px;
+}
+
+/* zone gauche */
+.zoneGauche {
+    position: absolute;
+    top: 10px;                /* même distance qu’avant pour le haut */
+    left: 10px;               /* même distance qu’avant pour la gauche */
+}
+
+/* zone droite */
+.zoneDroite {
+    position: absolute;
+    bottom: 10px;             /* même distance qu’avant pour le bas */
+    right: 10px;              /* même distance qu’avant pour la droite */
+}
+
+/* zone en haut */
+.fondBlanc {
+    width: 390px;
+    height: 150px; 
+    background-color: white;
+    border: 3.5px solid black;
+    border-radius: 18px;
+}
+
+/* zone en bas */
+.fondBlanc2 {
+    width: 396px;
+    height: 270px; 
+    background-color: white;
+    border: 3.5px solid black;
+    border-radius: 18px;
+}
+
+.img1p1 {
+    display: block;
+    margin: 0 auto;
+    height:150px;
+}
+
+
+
 
 /* ######################################################################################################################################################################## */
 /* ######################################################################################################################################################################## */
