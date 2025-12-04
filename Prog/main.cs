@@ -32,8 +32,10 @@ class appReservation
 
         if (menu())
         {
+
             reservation = new structReservation();
-            
+
+            reservation.nom = nomReservation();
 
             reservation.idLiaison = liaison();
 
@@ -92,6 +94,12 @@ class appReservation
         return false;
     }
 
+    static string nomReservation()
+    {
+        Console.WriteLine("Veuiller saisir le nom de la reservation.");
+        return Console.ReadLine();
+    }
+
 
     static int liaison()
     {
@@ -136,51 +144,9 @@ class appReservation
 
     static List<string> horaire(int idLiaison, int date)
     {
-
-        switch(idLiaison)
-        {
-            case 1:
-            {
-                List<string> tabHoraire1 = new List<string> {"08:05", "11:00", "13:45", "16:15", "18:45"};
-
-                if(date == 1 || date == 11 || date%7 == 2)
-                {
-                    return new List<string> { "09:45", "12:15", "17:00", "19:30" };
-                }
-
-                else if(date == 13)
-                {
-                    tabHoraire1.Remove("16:15");
-                    return tabHoraire1;
-                }
-
-                else
-                {
-                    return tabHoraire1;
-                }
-            }
-
-            case 2:
-            {
-                List<string> tabHoraire2 = new List<string> { "06:50", "09:30", "12:30", "15:00", "17:30" };
-                if(date == 1 || date == 11 || date%7 == 2)
-                {
-                    return new List<string> { "08:30", "11:00", "15:45", "18:15" };
-                }
-
-                else if(date == 13)
-                {
-                    tabHoraire2.Remove("09:30");
-                    return tabHoraire2;
-                }
-
-                else
-                {
-                    return tabHoraire2;
-                }
-            }
-        }
-        return new List<string> {};
+        string json = File.ReadAllText("horaires.json");
+        var donne = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, List<string>>>>(json);
+        return donne[idLiaison.ToString()][date.ToString()];
     }
 
 
