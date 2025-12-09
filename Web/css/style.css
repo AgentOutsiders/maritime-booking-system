@@ -541,88 +541,178 @@ p.espace
     100% { transform: scale(1); }
 }
 
+
 /* ######################################################################################################################################################################## */
-/* ############################################################################ - Roue chromatique - ###################################################################### */
+/* ###################################################################### - Les cartes d'embarquement - ################################################################### */
 /* ######################################################################################################################################################################## */
 
-
-#colorWheel 
+.fondBleu
 {
-    width: 300px;                     /* On fixe la largeur de la  roue à 300 px */
-    height: 300px;                    /* On fixe la hauteur de la roue à 300 px */
-    cursor: pointer;                  /* Quand on survol la roue, le curseur devient main */
-}
-
-.color-box 
-{ 
-    display: inline-block;            /* On combine inline et block */
-    width: 18px;                      /* On fixe la largeur du carré à 18 px */
-    height: 18px;                     /* On fixe la hauteur du carré à 18 px */
-    border: 1px solid #aaa;         /* On met une bordure grise */
-    vertical-align: middle;           /* On aligne le carré au centre du texte */
-    margin: 0 6px;                    /* On met une petite marge autour pour espacer */
-}
-
-.color-box.none 
-{
-    border: 1px solid #aaa;         /* On met une bordure grise */
-} 
-
-
-/* ######################################################################################################################################################################## */
-/* ####################################################################### - Footer - ##################################################################################### */
-/* ######################################################################################################################################################################## */
-
-.fondBleu {
-    position: relative;      /* Pour que les zones blanches puissent se positionner par rapport à ce conteneur */
+    position: relative;
     width: 850px;
-    height: 360px;
+    height: 435px;
     background-color: #0b638c;
     border: 4.2px solid black;
     border-radius: 22px;
     padding: 6px;
+    margin:20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);   
 }
 
-/* zone gauche */
-.zoneGauche {
+.zoneGauche
+{
     position: absolute;
-    top: 10px;                /* même distance qu’avant pour le haut */
-    left: 10px;               /* même distance qu’avant pour la gauche */
+    top: 10px;
+    left: 10px;
 }
 
-/* zone droite */
-.zoneDroite {
+.zoneDroite
+{
     position: absolute;
-    bottom: 10px;             /* même distance qu’avant pour le bas */
-    right: 10px;              /* même distance qu’avant pour la droite */
+    bottom: 10px;
+    right: 10px;
 }
 
-/* zone en haut */
-.fondBlanc {
+.fondBlanc
+{
     width: 390px;
-    height: 150px; 
+    height: 150px;
     background-color: white;
     border: 3.5px solid black;
     border-radius: 18px;
 }
 
-/* zone en bas */
-.fondBlanc2 {
+.fondBlanc2
+{
     width: 396px;
-    height: 270px; 
+    height: 345px;
     background-color: white;
     border: 3.5px solid black;
     border-radius: 18px;
 }
 
-.img1p1 {
+.img1p1
+{
     display: block;
     margin: 0 auto;
-    height:150px;
+    height: 140px;
+}
+
+.zoneDroite p.carteEmbTexte
+{
+    position: relative;
+    top: 9px;
+    color: white;
+    font-size: 1.88em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.carteEmbTexte2
+{
+    margin-left: 12px;
+    color: white;
+    font-size: 1.36em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.carteEmbTexte2 .ligne:first-child
+{
+    margin-top: 18px;
+}
+
+.ligne
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.ligne p
+{
+    margin: 0;
+}
+
+.zoneBlanche
+{
+    background-color: white;
+    height: 30px;
+    width: 190px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texteNoir
+{
+    color: black;
+    margin: 0;
+}
+
+.zoneHaut
+{
+    height:100px;
+    margin:8px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction:row;
+}
+
+.zoneHautGauche
+{
+    margin:8px;
+    height:80px;
+    width:140px;
+    border-radius: 18px;
+}
+
+.zoneHautDroite
+{
+    margin:8px;
+    height:80px;
+    width:210px;
+    border-radius: 18px;
 }
 
 
+.zoneBas
+{
+    height:212px;
+    margin:8px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction:row;
+}
 
+.zoneBasGauche
+{
+    margin:8px;
+    height:190px;
+    width:140px;
+    border-radius: 18px;
+}
+
+.zoneBasDroite
+{
+    margin:8px;
+    height:190px;
+    width:210px;
+    border-radius: 18px;
+}
+
+.texteNoir2
+{
+    color: black;
+    margin: 5px;;
+    font-weight:bold;
+    margin-top:10px;
+    font-size:1.1em;
+}
 
 /* ######################################################################################################################################################################## */
 /* ######################################################################################################################################################################## */
