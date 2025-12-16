@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="logo/logo_can_sf.png" type="image/png">
-    <title>Acceuil</title>
+    <title>Acceuil | CAN</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <!-- Page n°0 - Index -->
@@ -12,7 +12,9 @@
     </header>
     <nav class="menuPageAcceuil">
         <ul class="zoneImage">
-            <img class="img1p0 flash" src="logo/logo_can_sf.png" alt="Logo de la CAN">
+            <div class="imgWrapper flash">
+                <img class="img1p0" src="logo/logo_can_sf.png" alt="Logo de la CAN">
+            </div>
         </ul>
         <ul class="lienMenu">
             <li><a href="page/carteEmbarquement.html"><p>Les cartes d'embarquements</p><img src="img/puce/carte/carte2_sf.png" alt="Carte d'embarquements" width="24" height="24"></a></li>
@@ -23,7 +25,9 @@
             <li><a href="page/horraireTarif.html"><p>Horraires et tarifs</p><img src="img/puce/horloge/horloge1_sf.png" alt="Horraires et tarifs" width="26" height="26"></a></li>
         </ul>
         <ul class="zoneImage">
-            <img class="img2p0 flash" src="logo/logo_iut_sf.png" alt="Logo de l'IUT">
+            <div class="imgWrapper flash">
+                <img class="img2p0 flash" src="logo/logo_iut_sf.png" alt="Logo de l'IUT">
+            </div>
         </ul>
     </nav>
 
@@ -48,35 +52,30 @@
             </article>
 
             <p class="introBateaux">Et maintenant, laissez-moi vous présenter nos bateaux !</p>
-
+            
             <div class="bateauxCards">
-                <div class="bateauCard">
-
+                <div class="bateauCard fromLeft">
                     <img src="img/brg/img_bgr1.png" alt="Bangor">
                     <h4>Bangor</h4>
                     <a href="page/caracteristiqueBangor.html" class="btn btn-pulse">Découvrir</a>
-
                 </div>
-                <div class="bateauCard">
 
+                <div class="bateauCard fromLeft">
                     <img src="img/brz/img_brz2.jpg" alt="Breizh Nevez">
                     <h4>Breizh Nevez</h4>
                     <a href="page/caracteristiqueBreizhNevez.html" class="btn btn-pulse">Découvrir</a>
-
                 </div>
-                <div class="bateauCard">
 
+                <div class="bateauCard fromRight">
                     <img src="img/idg/img_idg1.png" alt="Île de Groix">
                     <h4>Île de Groix</h4>
                     <a href="page/caracteristiqueGroix.html" class="btn btn-pulse">Découvrir</a>
-
                 </div>
-                <div class="bateauCard">
 
+                <div class="bateauCard fromRight">
                     <img src="img/vdl/img_vdl1.png" alt="Vindilis">
                     <h4>Vindilis</h4>
                     <a href="page/caracteristiqueVindilis.html" class="btn btn-pulse">Découvrir</a>
-
                 </div>
             </div>
 
@@ -84,9 +83,20 @@
 	</main>
 	
     <footer class="footer">
+        <div class="footerRow">
+            <img src="img/puce/encre/enc1_sf.png" alt="Icône encre" width="30" height="30">
+            <p>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compagnie Alsacienne de Navigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</p>
+            <img src="img/puce/encre/enc1_sf.png" alt="Icône encre" width="30" height="30">
+        </div>
 
+        <div class="footerRow">
+            <img src="img/puce/friend/frd1_sf.png" alt="Icône petit gens" width="30" height="26">
+            <p>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conception : PEIGNIER Maxime & DANRÉE Alexis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</p>
+            <img src="img/puce/friend/frd1_sf.png" alt="Icône petit gens"" width="30" height="26">
+        </div>
+        
     </footer>
-    
+
     <script src="js/javascript.js"></script>
 
 </body>

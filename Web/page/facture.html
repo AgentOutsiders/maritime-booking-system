@@ -3,9 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="../logo/logo_can_sf.png" type="image/png">
-    <title>Les factures</title>
+    <title>Les factures | CAN</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/javascript.js"></script>
 </head>
 <!-- Page n°2 - Les factures -->
 <body>
@@ -14,7 +13,9 @@
 
     <nav class="menuPageAcceuil">
         <ul class="zoneImage">
-            <img class="img1p0 flash" src="../logo/logo_can_sf.png" alt="Logo de la CAN">
+            <div class="imgWrapper flash">
+                <img class="img1p0" src="../logo/logo_can_sf.png" alt="Logo de la CAN">
+            </div>
         </ul>
         <ul class="lienMenu">
             <li><a href="../index.html"><p>Acceuil</p><img src="../img/puce/home/home3_sf.png" alt="Acceuil" width="24" height="24"></a></li>
@@ -25,7 +26,9 @@
             <li><a href="horraireTarif.html"><p>Horraires et tarifs</p><img src="../img/puce/horloge/horloge1_sf.png" alt="Horraires et tarifs" width="26" height="26"></a></li>
         </ul>
         <ul class="zoneImage">
-            <img class="img2p0 flash" src="../logo/logo_iut_sf.png" alt="Logo de l'IUT">
+            <div class="imgWrapper flash">
+                <img class="img2p0 flash" src="../logo/logo_iut_sf.png" alt="Logo de l'IUT">
+            </div>
         </ul>
 
 	</nav>	
@@ -48,6 +51,7 @@
 
                     <p class="text2p2 margeTexte"> Traversée : </p>                         <!-- Mettre le nom de la traversée -->
                     <p class="text2p2 margeTexte"> Date : </p>                              <!-- Mettre la date de départ -->
+                    <p class="text2p2 margeTexte"> Arrivée : </p>                              <!-- Mettre la date de départ -->
                     <p class="text2p2 margeTexte"> Départ : </p>                            <!-- Mettre l'heure de départ -->
                     <p class="text2p2 margeTexte espace"> Bateau : </p>                            <!-- Mettre le nom du bateau -->
 
@@ -129,9 +133,20 @@
 			
 	</main>
 	
-	<footer>
+    <footer class="footer">
+        <div class="footerRow">
+            <img src="../img/puce/encre/enc1_sf.png" alt="Icône encre" width="30" height="30">
+            <p>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compagnie Alsacienne de Navigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</p>
+            <img src="../img/puce/encre/enc1_sf.png" alt="Icône encre" width="30" height="30">
+        </div>
 
-	</footer>
+        <div class="footerRow">
+            <img src="../img/puce/friend/frd1_sf.png" alt="Icône petit gens" width="30" height="26">
+            <p>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conception : PEIGNIER Maxime & DANRÉE Alexis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</p>
+            <img src="../img/puce/friend/frd1_sf.png" alt="Icône petit gens"" width="30" height="26">
+        </div>
+        
+    </footer>
 
     <script src="../js/javascript.js"></script>
 </body>
