@@ -19,7 +19,7 @@
         </ul>
         <ul class="lienMenu">
             <li><a href="../index.html"><p>Acceuil</p><img src="../img/puce/home/home3_sf.png" alt="Acceuil" width="24" height="24"></a></li>
-            <li><a href="facture.html"><p>Les factures</p><img src="../img/puce/facture/fct3_sf.png" alt="Facture" width="29" height="29"></a></li>
+            <li><a href="connexion.html?vers=facture"><p>Les factures</p><img src="../img/puce/facture/fct3_sf.png" alt="Facture" width="29" height="29"></a></li>
             <li><a href="tableauDeBord.html"><p>Le tableau de bord</p><img src="../img/puce/tableau/tdb3_sf.png" alt="Tableau de bord" width="26" height="26"></a></li>
             <li><a href="statistique.html"><p>Les statistiques</p><img src="../img/puce/statistique/stt3_sf.png" alt="Statistique" width="25" height="25"></a></li>
             <li><a href="parametre.html"><p>Les paramètres</p><img src="../img/parametre/par4_sf.png" alt="Paramètres" width="21" height="21"></a></li>
@@ -34,94 +34,12 @@
 	</nav>	
 
 	<main>
-        <section class="zoneTexte1">
+        <section class="zoneTexte1" id="zoneCarte">
 
             <article>
                 <h1 class="titreAccueil policePacifico">Les cartes d'embarquement</h1>
             </article>
 
-            <div class="fondBleu"> 
-                <!-- Zone gauche -->
-                <div class="zoneGauche">
-                    <div class="fondBlanc"> 
-                        <img class="img1p1" src="../logo/logo_can2_sf.png" alt="Logo de la CAN">
-                    </div>
-
-                    <div class="carteEmbTexte2">
-                        <div class="ligne">
-                            <p>Gare de départ</p>
-                            <div class="zoneBlanche">
-                                <p class="texteNoir" id="gareDepart">...</p>
-                            </div>
-                        </div>
-
-                        <div class="ligne">
-                            <p>Gare d'arrivée</p>
-                            <div class="zoneBlanche">
-                                <p class="texteNoir" id="gareArrivee">...</p>
-                            </div>
-                        </div>
-
-                        <div class="ligne">
-                            <p>Date</p>
-                            <div class="zoneBlanche">
-                                <p class="texteNoir" id="date">...</p>
-                            </div>
-                        </div>
-
-                        <div class="ligne">
-                            <p>Heure départ</p>
-                            <div class="zoneBlanche">
-                                <p class="texteNoir" id="heure">...</p>
-                            </div>
-                        </div>
-
-                        <div class="ligne">
-                            <p>Bateau</p>
-                            <div class="zoneBlanche">
-                                <p class="texteNoir" id="bateau">...</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Zone droite -->
-                <div class="zoneDroite">
-                    <p class="carteEmbTexte"> Carte d'embarquement</p>
-                    <div class="fondBlanc2"> 
-                        <div class="zoneHaut">
-                            <div class="zoneHautGauche">
-                                <p class="texteNoir2">Réservation</p>
-                                <p class="texteNoir2">Nom</p>
-                            </div>
-                            <div class="zoneHautDroite">
-                                <p class="texteNoir2" id="numResa">...</p>
-                                <p class="texteNoir2" id="nomResa">...</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="zoneBas">
-                            <div class="zoneBasGauche">
-                                <p class="texteNoir2">Passagers</p>
-                                <br>
-                                <p class="texteNoir2">Nom</p>
-                                <p class="texteNoir2">Prénom</p>
-                                <p class="texteNoir2">Catégorie</p>
-                                <p class="texteNoir2">Prix</p>
-                            </div>
-                            <div class="zoneBasDroite">
-                                <p class="texteNoir2" id="typeElement">...</p>
-                                <br>
-                                <p class="texteNoir2" id="nomP">...</p>
-                                <p class="texteNoir2" id="prenomP">...</p>
-                                <p class="texteNoir2" id="categorieP">...</p>
-                                <p class="texteNoir2" id="prixP">...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 	</main>
 	
@@ -142,6 +60,7 @@
 
 
     <script src="../js/javascript.js"></script>
+    <script src="../js/carteEmbarquement.js"></script>
 </body>
 
 </html>

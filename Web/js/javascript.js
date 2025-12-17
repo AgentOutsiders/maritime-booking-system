@@ -18,9 +18,15 @@ document.querySelectorAll(".fromLeft, .fromRight").forEach((card) => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+
   const buttons = document.querySelectorAll(".btnPlay");
   const btnStop = document.getElementById("stopSon");
+
+  // 👉 Si on n’est PAS sur la page paramètres, on quitte tranquillement
+  if (buttons.length === 0 && !btnStop) {
+    return;
+  }
 
   let currentSound = null;
 
@@ -35,30 +41,42 @@ document.addEventListener("DOMContentLoaded", () => {
       currentSound.pause();
       currentSound.currentTime = 0;
     }
+
     currentSound = sons[nom];
     currentSound.play();
     localStorage.setItem("currentSound", nom);
   }
 
+  // Boutons PLAY
   buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const sound = button.closest(".bruitDuSon").dataset.sound;
-      playSound(sound);
+    button.addEventListener("click", function () {
+      const parent = button.closest(".bruitDuSon");
+      if (!parent) return;
+
+      const soundName = parent.dataset.sound;
+      if (sons[soundName]) {
+        playSound(soundName);
+      }
     });
   });
 
+  // Relancer le son sauvegardé
   const savedSound = localStorage.getItem("currentSound");
   if (savedSound && sons[savedSound]) {
     currentSound = sons[savedSound];
     currentSound.play();
   }
 
-  btnStop.addEventListener("click", () => {
-    if (currentSound) {
-      currentSound.pause();
-      currentSound.currentTime = 0;
-      currentSound = null;
-      localStorage.removeItem("currentSound");
-    }
-  });
+  // Bouton STOP (uniquement s’il existe)
+  if (btnStop) {
+    btnStop.addEventListener("click", function () {
+      if (currentSound) {
+        currentSound.pause();
+        currentSound.currentTime = 0;
+        currentSound = null;
+        localStorage.removeItem("currentSound");
+      }
+    });
+  }
+
 });

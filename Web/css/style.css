@@ -647,7 +647,94 @@ p.espace
     border-radius: 15px;
 }
 
+/* ########################################################################################################################################################## */
+/* ################################################################ - Page n°7 - Connexion - ################################################################ */
+/* ########################################################################################################################################################## */
 
+.zoneTexte7
+{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 300px;
+    border-radius: 15px;
+}
+
+.texte1Connexion
+{
+    font-size:1.1em;
+}
+
+.regroupementConnexion
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.connexionBlanc
+{
+    margin-top:10px;
+    color:white;
+}
+
+.connexionFondBleu 
+{
+    width: 100%;
+    height: 100%;
+    background-color: #0b638c;
+    border-radius: 8px;
+    display:flex;
+    flex-direction: column;
+}
+
+.connexionFondBlanc1
+{
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin:24px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.connexionFondBlanc2
+{
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin:24px;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+img.imageConnexion1
+{
+    margin-top:22px;
+    padding:12px;
+    height: 150px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideI1 0.9s ease-out forwards;
+}
+
+.imageConnexion2
+{
+    padding:20px;
+    border-radius: 28px;
+}
+
+.connexionVerticale
+{
+    display:flex;
+    flex-direction: column;
+    padding:30px;
+    margin:20px;
+}
 
 
 /* ########################################################################################################################################################## */
@@ -893,3 +980,29 @@ p.espace
 /* ######################################################################################################################################################################## */
 /* ######################################################################################################################################################################## */
 /* ######################################################################################################################################################################## */
+
+
+
+
+
+
+
+
+
+
+
+
+
+span
+{
+    font-weight: normal;
+}
+
+#numRes
+{
+        -webkit-text-security: disc;
+        text-align: center;
+}
+
+
+

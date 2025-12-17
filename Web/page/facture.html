@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="../logo/logo_can_sf.png" type="image/png">
-    <title>Les factures | CAN</title>
+    <title>Les factures</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <!-- Page n°2 - Les factures -->
@@ -13,9 +13,7 @@
 
     <nav class="menuPageAcceuil">
         <ul class="zoneImage">
-            <div class="imgWrapper flash">
-                <img class="img1p0" src="../logo/logo_can_sf.png" alt="Logo de la CAN">
-            </div>
+            <img class="img1p0 flash" src="../logo/logo_can_sf.png" alt="Logo de la CAN">
         </ul>
         <ul class="lienMenu">
             <li><a href="../index.html"><p>Acceuil</p><img src="../img/puce/home/home3_sf.png" alt="Acceuil" width="24" height="24"></a></li>
@@ -26,9 +24,7 @@
             <li><a href="horraireTarif.html"><p>Horraires et tarifs</p><img src="../img/puce/horloge/horloge1_sf.png" alt="Horraires et tarifs" width="26" height="26"></a></li>
         </ul>
         <ul class="zoneImage">
-            <div class="imgWrapper flash">
-                <img class="img2p0 flash" src="../logo/logo_iut_sf.png" alt="Logo de l'IUT">
-            </div>
+            <img class="img2p0 flash" src="../logo/logo_iut_sf.png" alt="Logo de l'IUT">
         </ul>
 
 	</nav>	
@@ -38,22 +34,19 @@
 
             <div class="carreBleu">
 
-                <article class="articlePage2" >
+                <article class="articlePage2" id="articleFacture">
 
                     <img class="img1p2 imageContainer" src="../logo/logo_can_sf.png" alt="Image">
 
                     <p class="text1p2"> Facture </p>
-                    
-                    <p class="margeTexte espace"> Lieu le date </p>
 
-                    <p class="text2p2 margeTexte"> Reservation n° : </p>                    <!-- Mettre le numéro de réservation -->
-                    <p class="text2p2 margeTexte espace"> Nom de reservation : </p>                <!-- Mettre le nom de la réservation -->
+                    <p class="text2p2 margeTexte"> Reservation n° : <span id="numFacture"></span></p>                    <!-- Mettre le numéro de réservation -->
+                    <p class="text2p2 margeTexte espace"> Nom de reservation : <span id="nomReservation"></span></p>                <!-- Mettre le nom de la réservation -->
 
-                    <p class="text2p2 margeTexte"> Traversée : </p>                         <!-- Mettre le nom de la traversée -->
-                    <p class="text2p2 margeTexte"> Date : </p>                              <!-- Mettre la date de départ -->
-                    <p class="text2p2 margeTexte"> Arrivée : </p>                              <!-- Mettre la date de départ -->
-                    <p class="text2p2 margeTexte"> Départ : </p>                            <!-- Mettre l'heure de départ -->
-                    <p class="text2p2 margeTexte espace"> Bateau : </p>                            <!-- Mettre le nom du bateau -->
+                    <p class="text2p2 margeTexte"> Traversée : <span id="traverse"></span></p>                         <!-- Mettre le nom de la traversée -->
+                    <p class="text2p2 margeTexte"> Date : <span id="date"></span></p>                              <!-- Mettre la date de départ -->
+                    <p class="text2p2 margeTexte"> Départ : <span id="depart"></span></p>                            <!-- Mettre l'heure de départ -->
+                    <p class="text2p2 margeTexte espace"> Bateau : <span id="bateau"></span></p>                            <!-- Mettre le nom du bateau -->
 
                     <p class="text2p2 margeTexte espace"> Les personnes </p>
                     
@@ -66,31 +59,8 @@
                                 <th> &nbsp; Prix ligne &nbsp; </th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td> &nbsp; Adulte de 26 ans et plus &nbsp; </td>
-                                <td> &nbsp; ... &nbsp; </td>
-                                <td> &nbsp; 18,75 € &nbsp; </td>
-                                <td> &nbsp; ... &nbsp; </td>
-                            </tr>
-                            <tr>
-                                <td> &nbsp; Jeune 18 à 25 ans inclus &nbsp; </td>
-                                <td> &nbsp; ... &nbsp; </td>
-                                <td> &nbsp; 13,80 € &nbsp; </td>
-                                <td> &nbsp; ... &nbsp; </td>
-                            </tr>
-                            <tr>
-                                <td> &nbsp; Enfant 4 à 17 inclus &nbsp; </td>
-                                <td> &nbsp; ... &nbsp; </td>
-                                <td> &nbsp; 11,25 € &nbsp; </td>
-                                <td> &nbsp; ... &nbsp; </td>
-                            </tr>
-                            <tr>
-                                <td> &nbsp; Bébé moins de 4 ans &nbsp; </td>
-                                <td> &nbsp; ... &nbsp; </td>
-                                <td> &nbsp; Gratuit &nbsp; </td>
-                                <td> &nbsp; ... &nbsp; </td>
-                            </tr>
+                        <tbody id="tableauPassagers">
+
                         </tbody>
                     </table>
 
@@ -105,19 +75,8 @@
                                 <th>Prix ligne</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Catégorie 4 plus de 4,80 m</td>
-                                <td>1</td>
-                                <td>210,90 €</td>
-                                <td>210,90 €</td>
-                            </tr>
-                            <tr>
-                                <td>Trottinette électrique</td>
-                                <td>2</td>
-                                <td>4,70 €</td>
-                                <td>4,70 €</td>
-                            </tr>
+                        <tbody id="tableauVehicules">
+                            
                         </tbody>
                     </table>
 
@@ -133,22 +92,12 @@
 			
 	</main>
 	
-    <footer class="footer">
-        <div class="footerRow">
-            <img src="../img/puce/encre/enc1_sf.png" alt="Icône encre" width="30" height="30">
-            <p>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compagnie Alsacienne de Navigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</p>
-            <img src="../img/puce/encre/enc1_sf.png" alt="Icône encre" width="30" height="30">
-        </div>
+	<footer>
 
-        <div class="footerRow">
-            <img src="../img/puce/friend/frd1_sf.png" alt="Icône petit gens" width="30" height="26">
-            <p>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conception : PEIGNIER Maxime & DANRÉE Alexis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</p>
-            <img src="../img/puce/friend/frd1_sf.png" alt="Icône petit gens"" width="30" height="26">
-        </div>
-        
-    </footer>
+	</footer>
 
     <script src="../js/javascript.js"></script>
+    <script src="../js/facture.js"></script>
 </body>
 
 </html>
