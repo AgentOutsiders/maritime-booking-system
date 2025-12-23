@@ -27,35 +27,35 @@ async function remplieCarte() {
                         <div class="ligne">
                             <p>Gare de départ</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir">${donne["portDepart"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donne["portDepart"]}</p>
                             </div>
                         </div>
 
                         <div class="ligne">
                             <p>Gare d'arrivée</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir">${donne["portArrivee"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donne["portArrivee"]}</p>
                             </div>
                         </div>
 
                         <div class="ligne">
                             <p>Date</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir">${donne["date"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donne["date"]}</p>
                             </div>
                         </div>
 
                         <div class="ligne">
                             <p>Heure départ</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir" >${donne["heure"]}</p>
+                                <p class="texteNoir grasPageEmbarquement" >${donne["heure"]}</p>
                             </div>
                         </div>
 
                         <div class="ligne">
                             <p>Bateau</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir">${donne["bateau"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donne["bateau"]}</p>
                             </div>
                         </div>
 
@@ -72,8 +72,8 @@ async function remplieCarte() {
                                 <p class="texteNoir2">Nom</p>
                             </div>
                             <div class="zoneHautDroite">
-                                <p class="texteNoir2">${sessionStorage.getItem("num")}</p>
-                                <p class="texteNoir2">${donne["nom"]}</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${sessionStorage.getItem("num")}</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${donne["nom"]}</p>
                             </div>
                         </div>
                         <hr>
@@ -87,12 +87,12 @@ async function remplieCarte() {
                                 <p class="texteNoir2">Prix</p>
                             </div>
                             <div class="zoneBasDroite">
-                                <p class="texteNoir2">${i}</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${i}</p>
                                 <br>
-                                <p class="texteNoir2" id="nomP">${passager["nom"]}</p>
-                                <p class="texteNoir2" id="prenomP">${passager["prenom"]}</p>
-                                <p class="texteNoir2" id="categorieP">${passager["libelleCategorie"]}</p>
-                                <p class="texteNoir2" id="prixP">${passager["price"]} €</p>
+                                <p class="texteNoir2 grasPageEmbarquement" id="nomP">${passager["nom"]}</p>
+                                <p class="texteNoir2 grasPageEmbarquement" id="prenomP">${passager["prenom"]}</p>
+                                <p class="texteNoir2 grasPageEmbarquement" id="categorieP">${passager["libelleCategorie"]}</p>
+                                <p class="texteNoir2 grasPageEmbarquement" id="prixP">${passager["price"]} €</p>
                             </div>
                         </div>
                     </div>

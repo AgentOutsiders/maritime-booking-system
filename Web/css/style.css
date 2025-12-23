@@ -432,7 +432,7 @@ ul.puceJ li
 {
     margin:8px;
     height:80px;
-    width:140px;
+    width:120px;
     border-radius: 18px;
 }
 
@@ -440,7 +440,7 @@ ul.puceJ li
 {
     margin:8px;
     height:80px;
-    width:210px;
+    width:230px;
     border-radius: 18px;
 }
 
@@ -458,7 +458,7 @@ ul.puceJ li
 {
     margin:8px;
     height:190px;
-    width:140px;
+    width:120px;
     border-radius: 18px;
 }
 
@@ -466,7 +466,7 @@ ul.puceJ li
 {
     margin:8px;
     height:190px;
-    width:210px;
+    width:230px;
     border-radius: 18px;
 }
 
@@ -477,6 +477,11 @@ ul.puceJ li
     font-weight:bold;
     margin-top:10px;
     font-size:1.1em;
+}
+
+.grasPageEmbarquement
+{
+    font-weight: normal;
 }
 
 /* ########################################################################################################################################################## */
@@ -598,6 +603,106 @@ p.espace
     border-radius: 15px;
 }
 
+.zoneLiaison
+{
+    border:2px red dashed;
+    height:auto;
+    width:auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    margin:20px;
+    display:flex;
+    flex-direction: column;
+}
+
+.dateTableau 
+{
+    margin:20px;
+    display: flex;
+    border-radius: 12px;
+    flex-direction: row;
+    align-items: center;  
+    justify-content: center;  
+}
+
+.dateTableau select
+{
+    margin-top:4px;
+    margin-left:9px;
+}
+
+
+
+
+
+
+.remplissageHorizontale
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.abc
+{
+    margin-left: 100px;
+}
+
+.texteRemplissageHorizontale
+{
+    align-items: center;
+    justify-content: center;
+    margin:10px 10px 10px 0px;
+}
+
+.carreNoirDate
+{
+    border:2px #fafafa solid;
+    border-radius: 10px;
+    margin:8px;
+}
+
+
+
+
+
+
+
+
+.lesLiaison
+{
+    display:flex;
+    flex-direction: row;
+    border-radius: 12px;
+    margin:0px 20px 20px;
+}
+
+.uneLiaison
+{
+    background-color: #0b638c;;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    height:auto;
+    width:auto;
+    padding:12px;
+    border-radius: 12px;
+    margin:30px;
+}
+
+.uneLiaison h2
+{
+    margin: 15px 80px 15px 80px;
+    color:white;
+}
+
+.uneLiaison p
+{
+    color:white;
+    margin: 0;
+}
+
+
+
 /* ########################################################################################################################################################## */
 /* ############################################################ - Page n°4 - Les statistiques - ############################################################# */
 /* ########################################################################################################################################################## */
@@ -651,7 +756,7 @@ p.espace
 /* ################################################################ - Page n°7 - Connexion - ################################################################ */
 /* ########################################################################################################################################################## */
 
-.zoneTexte7
+.zoneTexte7 
 {
     background-color: #fafafa;
     display: flex;
@@ -663,85 +768,189 @@ p.espace
     border-radius: 15px;
 }
 
-.texte1Connexion
-{
-    font-size:1.1em;
+.texte1Connexion {
+    font-size: 1.1em;
 }
 
-.regroupementConnexion
-{
-    display:flex;
+.regroupementConnexion {
+    display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: stretch; 
+    gap: 20px; 
 }
 
-.connexionBlanc
-{
-    margin-top:10px;
-    color:white;
+.connexionFondBlanc1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin: 24px;
+    text-align: center;
 }
 
-.connexionFondBleu 
+
+.connexionFondBlanc2 
 {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin: 24px;
+    text-align: center;
+}
+
+.connexionBlanc {
+    margin-top: 10px;
+    color: white;
+}
+
+.connexionFondBleu {
     width: 100%;
     height: 100%;
     background-color: #0b638c;
     border-radius: 8px;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-.connexionFondBlanc1
-{
-    background-color: #fafafa;
-    border-radius: 8px;
-    margin:24px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-.connexionFondBlanc2
-{
-    background-color: #fafafa;
-    border-radius: 8px;
-    margin:24px;
-    width: 100%;
-    height: 100%;
-    display:flex;
-    justify-content: center;
-}
-
-img.imageConnexion1
-{
-    margin-top:22px;
-    padding:12px;
-    height: 150px;
+img.imageConnexion1 {
+    margin-top: 22px;
+    padding: 12px;
+    height: auto; 
+    width: auto;
+    max-width: 40%;
+    max-height: 40%;
     opacity: 0;
     transform: translateY(-20px);
     animation: slideI1 0.9s ease-out forwards;
 }
 
-.imageConnexion2
-{
-    padding:20px;
+
+.imageConnexion2 {
+    padding: 20px;
     border-radius: 28px;
 }
 
-.connexionVerticale
-{
-    display:flex;
+.connexionVerticale {
+    display: flex;
     flex-direction: column;
-    padding:30px;
-    margin:20px;
+    padding: 29px 30px 8px 30px;
+    gap: 10px;
+    margin: 20px;
 }
 
+#erreurConnexion {
+    padding: 10px;
+}
+
+.animationConnexion {
+    opacity: 0;
+    transform: translateY(-24px);
+    animation: slideAnimationCo 0.9s ease-out forwards;
+}
+
+@keyframes slideAnimationCo {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 /* ########################################################################################################################################################## */
 /* ################################################# - Tableau des caractéristiques et des factures - ####################################################### */
 /* ########################################################################################################################################################## */
 
-.tableUnifie 
+.tableUnifie
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 1.1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.tableUnifie th
+{
+    background: #ffc100;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.tableUnifie td
+{
+    padding: 10px 12px;
+    text-align: center;
+    border: none;
+}
+
+.tableUnifie tr:nth-child(even)
+{
+    background-color: #f7f7f7;
+}
+
+.tableUnifie tbody tr
+{
+    transition: background-color 1s ease;
+}
+
+.tableUnifie tbody tr:hover
+{
+    background-color: #fff3b0;
+}
+
+.contBateau
+{
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.contBateauP1
+{
+    flex: 0 0 77%;
+    margin-right: 20px;
+}
+
+.contBateauP2
+{
+    flex: 0 0 20%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#0b638c;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.contBateauImg1
+{
+    border-radius: 12px;
+    max-width: 90%;
+    height: auto;
+    margin: 15px 0px;
+    transition: transform 1s ease;
+}
+
+.contBateauImg1:hover
+{
+    transform: scale(1.1);
+}
+
+.tableUnifie3 
 {
     width: 90%;
     border-collapse: collapse;
@@ -754,7 +963,7 @@ img.imageConnexion1
 }
 
 
-.tableUnifie th 
+.tableUnifie3 th 
 {
     background: #ffc100;
     color: black;
@@ -764,26 +973,26 @@ img.imageConnexion1
     border: none; 
 }
 
-.tableUnifie td 
+.tableUnifie3 td 
 {
     padding: 10px 12px;
     text-align: center;
     border: none;
 }
 
-.tableUnifie tr:nth-child(even) 
+.tableUnifie3 tr:nth-child(even) 
 {
     background-color: #f7f7f7;
 }
 
-.tableUnifie tbody tr 
+.tableUnifie3 tbody tr 
 {
-    transition: background-color 1s ease; /* ← transition globale */
+    transition: background-color 1s ease; 
 }
 
-.tableUnifie tbody tr:hover 
+.tableUnifie3 tbody tr:hover 
 {
-    background-color: #fff3b0; /* ← couleur au survol */
+    background-color: #fff3b0; 
 }
 
 
@@ -981,18 +1190,6 @@ img.imageConnexion1
 /* ######################################################################################################################################################################## */
 /* ######################################################################################################################################################################## */
 
-
-
-
-
-
-
-
-
-
-
-
-
 span
 {
     font-weight: normal;
@@ -1004,5 +1201,6 @@ span
         text-align: center;
 }
 
-
-
+/* ######################################################################################################################################################################## */
+/* ######################################################################################################################################################################## */
+/* ######################################################################################################################################################################## */

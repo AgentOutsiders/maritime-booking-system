@@ -5,7 +5,7 @@ async function testConnexion() {
   );
   if (reponse.status == 404) {
     let erreur = document.getElementById("erreur");
-    erreur.textContent = `Aucune réservation au numéro indiqué, merci de vérifier`;
+    erreur.innerHTML = `Aucune réservation au numéro indiqué <br> Merci de vérifier`;
   } else {
     let donne = await reponse.json();
     sessionStorage.setItem("num", numRes.value);
