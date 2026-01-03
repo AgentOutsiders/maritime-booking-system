@@ -88,6 +88,35 @@ async function remplieFacture() {
         <td> &nbsp; ${dicVehicules[cle][1]} € &nbsp; </td></tr>`;
   }
 
+  leTelechargement();
+
 }
 
-remplieFacture()
+
+
+function leTelechargement() 
+{
+    
+    const monBouton = document.getElementById("imgTelechargement");            // On cible l'image qui déclenche l'action
+
+    monBouton.addEventListener("click", function()                             // On ajoute un écouteur pour détecter le clic de l'utilisateur
+    {
+        monBouton.style.cursor = "wait";                                       // On change l'apparence de la souris pour la mettre en chargement
+        
+        html2canvas(document.getElementById("zoneFacture"),                    // On utilise la bibliothèque html2canvas pour photographier la zone de la facture
+        {
+            scale: 2,                                                          // On augmente la qualité de l'image pour éviter le flou
+            useCORS: true,                                                     // On autorise le chargement d'images provenant d'autres domaines
+            backgroundColor: '#506E99'                                       // On définit la couleur de fond de l'image générée
+        }).then(function(canvas) 
+        {
+            let lien = document.createElement('a');                            // On crée un élément de lien invisible dans la mémoire du navigateur
+            lien.download = 'Facture_CAN.png';                                 // On définit le nom du fichier qui sera enregistré sur l'ordinateur
+            lien.href = canvas.toDataURL('image/png');                         // On transforme le dessin du canvas en une adresse de données
+            lien.click();                                                      // On simule un clic automatique sur ce lien pour lancer le téléchargement
+            monBouton.style.cursor = "pointer";                                // On remet le curseur normal une fois que le traitement est terminé
+        });
+    });
+}
+
+remplieFacture();

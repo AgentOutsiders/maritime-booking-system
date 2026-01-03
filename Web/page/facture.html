@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="../logo/logo_can_sf.png" type="image/png">
-    <title>Les factures</title>
+    <title>Les factures | CAN </title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <!-- Page n°2 - Les factures -->
@@ -17,7 +17,7 @@
         </ul>
         <ul class="lienMenu">
             <li><a href="../index.html"><p>Acceuil</p><img src="../img/puce/home/home3_sf.png" alt="Acceuil" width="24" height="24"></a></li>
-            <li><a href="facture.html"><p>Les cartes d'embarquements</p><img src="../img/puce/carte/carte2_sf.png" alt="Carte d'embarquements" width="24" height="24"></a></li>
+            <li><a href="carteEmbarquement.html"><p>Les cartes d'embarquements</p><img src="../img/puce/carte/carte2_sf.png" alt="Carte d'embarquements" width="24" height="24"></a></li>
             <li><a href="tableauDeBord.html"><p>Le tableau de bord</p><img src="../img/puce/tableau/tdb3_sf.png" alt="Tableau de bord" width="26" height="26"></a></li>
             <li><a href="statistique.html"><p>Les statistiques</p><img src="../img/puce/statistique/stt3_sf.png" alt="Statistique" width="25" height="25"></a></li>
             <li><a href="parametre.html"><p>Les paramètres</p><img src="../img/parametre/par4_sf.png" alt="Paramètres" width="21" height="21"></a></li>
@@ -30,63 +30,69 @@
 	</nav>	
 
 	<main>
-		<section class="zoneTexte2">
+        <div id="zoneFacture">
+            <section class="zoneTexte2">
 
-            <div class="carreBleu">
+                <div class="carreBleu">
 
-                <article class="articlePage2" id="articleFacture">
+                    <article class="articlePage2" id="articleFacture">
 
-                    <img class="img1p2 imageContainer" src="../logo/logo_can_sf.png" alt="Image">
+                        <img class="img1p2 imageContainer" src="../logo/logo_can_sf.png" alt="Image">
 
-                    <p class="text1p2"> Facture </p>
+                        <p class="text1p2"> Facture </p>
 
-                    <p class="text2p2 margeTexte"> Reservation n° : <span id="numFacture"></span></p>                    <!-- Mettre le numéro de réservation -->
-                    <p class="text2p2 margeTexte espace"> Nom de reservation : <span id="nomReservation"></span></p>                <!-- Mettre le nom de la réservation -->
+                        <p class="text2p2 margeTexte"> Reservation n° : <span id="numFacture"></span></p>                    <!-- Mettre le numéro de réservation -->
+                        <p class="text2p2 margeTexte espace"> Nom de reservation : <span id="nomReservation"></span></p>                <!-- Mettre le nom de la réservation -->
 
-                    <p class="text2p2 margeTexte"> Traversée : <span id="traverse"></span></p>                         <!-- Mettre le nom de la traversée -->
-                    <p class="text2p2 margeTexte"> Date : <span id="date"></span></p>                              <!-- Mettre la date de départ -->
-                    <p class="text2p2 margeTexte"> Départ : <span id="depart"></span></p>                            <!-- Mettre l'heure de départ -->
-                    <p class="text2p2 margeTexte espace"> Bateau : <span id="bateau"></span></p>                            <!-- Mettre le nom du bateau -->
+                        <p class="text2p2 margeTexte"> Traversée : <span id="traverse"></span></p>                         <!-- Mettre le nom de la traversée -->
+                        <p class="text2p2 margeTexte"> Date : <span id="date"></span></p>                              <!-- Mettre la date de départ -->
+                        <p class="text2p2 margeTexte"> Départ : <span id="depart"></span></p>                            <!-- Mettre l'heure de départ -->
+                        <p class="text2p2 margeTexte espace"> Bateau : <span id="bateau"></span></p>                            <!-- Mettre le nom du bateau -->
 
-                    <p class="text2p2 margeTexte espace"> Les personnes </p>
-                    
-                    <table class="tableUnifie2">
-                        <thead>
-                            <tr>
-                                <th> Catégorie </th>
-                                <th> &nbsp; Nombre &nbsp; </th>
-                                <th> &nbsp; Prix unitaire &nbsp; </th>
-                                <th> &nbsp; Prix ligne &nbsp; </th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableauPassagers">
+                        <p class="text2p2 margeTexte espace"> Les personnes </p>
+                        
+                        <table class="tableUnifie2">
+                            <thead>
+                                <tr>
+                                    <th> Catégorie </th>
+                                    <th> &nbsp; Nombre &nbsp; </th>
+                                    <th> &nbsp; Prix unitaire &nbsp; </th>
+                                    <th> &nbsp; Prix ligne &nbsp; </th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableauPassagers">
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
 
-                    <p class="text2p2 margeTexte espace "> Les véhicules </p>
-                    
-                    <table class="tableUnifie2">
-                        <thead>
-                            <tr>
-                                <th>Catégorie</th>
-                                <th>Quantité</th>
-                                <th>Prix unitaire</th>
-                                <th>Prix ligne</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableauVehicules">
-                            
-                        </tbody>
-                    </table>
+                        <p class="text2p2 margeTexte espace "> Les véhicules </p>
+                        
+                        <table class="tableUnifie2">
+                            <thead>
+                                <tr>
+                                    <th>Catégorie</th>
+                                    <th>Quantité</th>
+                                    <th>Prix unitaire</th>
+                                    <th>Prix ligne</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableauVehicules">
+                                
+                            </tbody>
+                        </table>
 
-                </article>
+                    </article>
 
-            </div>
+                </div>
 
-            <p class="texteFacture">Pour télécharger une version de votre facture, cliquer sur le bouton suivant</p>
+                <div class="footerRow texteFacture">
+                    <p class="texteFacture">Pour télécharger une version de votre facture, cliquer sur le bouton suivant</p>
+                    <img id="imgTelechargement" src="../img/puce/telechargement/tlg2_sf.png" alt="Icône téléchargements" width="24" height="23">
+                </div>
+                
+            </section>		
+        </div>
 
-		</section>		
         
         
 			
@@ -96,6 +102,7 @@
 
 	</footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="../js/javascript.js"></script>
     <script src="../js/facture.js"></script>
 </body>

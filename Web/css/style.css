@@ -240,11 +240,6 @@ ul.puceJ li
     height: 300px;                                    /* On définit une hauteur fixe */       
 }
 
-.bateauCard:hover 
-{
-    transform: translateY(-5px);
-}
-
 .bateauCard img 
 {
     width: 100%;
@@ -293,7 +288,6 @@ ul.puceJ li
     opacity: 1;
     transform: translateX(0);
 }
-
 
 /* ########################################################################################################################################################## */
 /* ######################################################## - Page n°1 - Les cartes d'embarquement - ######################################################## */
@@ -484,6 +478,350 @@ ul.puceJ li
     font-weight: normal;
 }
 
+.fondBleu
+{
+    position: relative;
+    width: 850px;
+    height: 435px;
+    background-color: #0b638c;
+    border: 4.2px solid black;
+    border-radius: 22px;
+    padding: 6px;
+    margin:20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);   
+}
+
+.zoneTexte1
+{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 90px;
+    border-radius: 15px;
+}
+
+/* ################################################################################################ */
+/* ########################### Les cartes d'embarquement | Media queries ########################## */
+/* ################################################################################################ */
+
+@media (max-width: 1150px)
+{
+    .fondBleu
+    {
+        width: 600px;
+        height: 360px;
+    }
+    
+    .zoneTexte1
+    {
+        margin: 15px 30px;
+    }
+    
+    .titreAccueil
+    {
+        font-size: 2.1em;
+    }
+    
+    .img1p1
+    {
+        height: 90px !important;
+    }
+    
+    .fondBlanc
+    {
+        width: 280px;
+        height: 100px;
+    }
+    
+    .fondBlanc2
+    {
+        width: 280px;
+        height: 292px;
+    }
+    
+    .zoneHaut
+    {
+        height: 90px;
+    }
+    
+    .zoneHautGauche, .zoneBasGauche
+    {
+        width: 100px;
+    }
+    
+    .zoneHautDroite, .zoneBasDroite
+    {
+        width: 180px;
+    }
+    
+    .zoneBas
+    {
+        height: 180px;
+    }
+    
+    .ligne > p
+    {
+        font-size: 14px;
+    }
+    
+    .zoneBlanche
+    {
+        height: 22px;
+        width: 120px;
+    }
+    
+    .texteNoir
+    {
+        font-size: 14px;
+    }
+    
+    .texteNoir2
+    {
+        font-size: 14px;
+        margin: 3px;
+    }
+    
+    .carteEmbTexte
+    {
+        font-size: 22px !important;
+    }
+    
+    .carteEmbTexte2
+    {
+        font-size: 1em;
+        gap: 26px;
+    }
+    
+    .carteEmbTexte2 .ligne:first-child
+    {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 750px)
+{
+    .fondBleu
+    {
+        width: 260px;
+        height: 740px;
+    }
+
+    .zoneTexte1
+    {
+        margin: 15px 20px;
+    }
+
+    .titreAccueil
+    {
+        font-size: 1.62em;
+    }
+
+    .img1p1
+    {
+        height:70px !important;
+    }
+
+    .fondBlanc
+    {
+        width: 246px;
+        height: 75px;
+    }
+
+    .ligne > p
+    {
+        font-size: 14px;
+    }
+
+    .zoneBlanche
+    {
+        height: 20px;
+        width: 122px;
+    }
+
+    .texteNoir
+    {
+        font-size: 14px;
+    }
+
+    .carteEmbTexte
+    {
+        font-size:20px !important;
+        margin-left:140px !important;
+    }
+
+    .fondBlanc2
+    {
+        width: 246px;
+        height: 360px;
+        margin-left:140px;
+    }
+
+    .texteNoir2
+    {
+        font-size: 14px;
+    }
+}
+
+/* ################################################################################################ */
+/* ############################ Les liens et les images | Media queries ########################### */
+/* ################################################################################################ */
+
+@media (max-width: 1500px)
+{
+    .img1p0
+    {
+        height: 110px !important;
+        border-radius: 0px;
+    }
+    .img2p0
+    {
+        height: 110px !important;
+        border-radius: 0px;
+    }
+    
+    .menuPageAcceuil ul.lienMenu 
+    { 
+        padding: 15px 30px;
+        max-width: 450px;
+    }
+    
+    .menuPageAcceuil li a
+    {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li 
+    {
+        margin: 5px 8px;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li a img
+    {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 1100px)
+{
+    .menuPageAcceuil
+    {
+        flex-direction: column;
+    }
+
+    .img1p0
+    {
+        height: 80px !important;
+        border-radius: 0px;
+    }
+
+    .img2p0
+    {
+        height: 80px !important;
+        border-radius: 0px;
+    }
+
+    .menuPageAcceuil ul.lienMenu 
+    { 
+        padding: 15px 30px;
+        max-width: 450px;
+    }
+    
+    .menuPageAcceuil li a
+    {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li 
+    {
+        margin: 5px 8px;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li a img
+    {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .menuPageAcceuil
+    {
+        flex-direction: column;
+    }
+
+    .img1p0
+    {
+        height: 80px !important;
+        border-radius: 0px;
+    }
+
+    .img2p0
+    {
+        height: 80px !important;
+        border-radius: 0px;
+    }
+
+    .menuPageAcceuil ul.lienMenu 
+    { 
+        flex-direction: column;
+        padding: 15px 20px;
+        max-width: 300px;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li 
+    {
+        width: 100%;
+        margin: 3px 0;
+    }
+    
+    .menuPageAcceuil li a
+    {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li a 
+    {
+        font-size: 0.85rem;
+    }
+}
+
+/* ################################################################################################ */
+/* ##################################### Footer | Media queries ################################### */
+/* ################################################################################################ */
+
+
+@media (max-width: 580px)
+{
+    .footerRow p 
+    {
+        font-size: 0.8em;
+        margin:0;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .footerRow p 
+    {
+        font-size: 0.7em;
+        margin:0;
+    }
+
+    .footerRow img
+    {
+        height: 18px;
+        width:21px;
+    }
+}
+
 /* ########################################################################################################################################################## */
 /* ############################################################### - Page n°2 - Les factures - ############################################################## */
 /* ########################################################################################################################################################## */
@@ -585,8 +923,9 @@ p.espace
 
 .texteFacture
 {
-    margin-top:30px;
+    margin-top:22px;
 }
+
 /* ########################################################################################################################################################## */
 /* ########################################################### - Page n°3 - Le tableau de bord - ############################################################ */
 /* ########################################################################################################################################################## */
@@ -605,15 +944,13 @@ p.espace
 
 .zoneLiaison
 {
-    border:2px red dashed;
+    background-color: #f0f4f8;
     height:auto;
     width:auto;
     border-radius: 12px;
     display: flex;
-    flex-direction: row;
-    margin:20px;
-    display:flex;
     flex-direction: column;
+    margin:20px;
 }
 
 .dateTableau 
@@ -633,66 +970,61 @@ p.espace
 }
 
 
-
-
-
-
-.remplissageHorizontale
+.remplissageHorizontale p
 {
-    display: flex;
-    flex-direction: row;
-}
-
-.abc
-{
-    margin-left: 100px;
-}
-
-.texteRemplissageHorizontale
-{
-    align-items: center;
-    justify-content: center;
-    margin:10px 10px 10px 0px;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
 
 .carreNoirDate
 {
-    border:2px #fafafa solid;
+    border: 2px #fafafa solid;
     border-radius: 10px;
-    margin:8px;
+    margin-left: 8px;
+    padding: 8px;
+    color: black;
+    height: 26px;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    font-weight: bold;
 }
-
-
-
-
-
-
-
 
 .lesLiaison
 {
-    display:flex;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;     
+    justify-content: center;  
     border-radius: 12px;
-    margin:0px 20px 20px;
+    margin: 0px 20px 20px;
+    width: 100%;           
+    gap: 40px;      
+    max-width: 1400px;
 }
 
 .uneLiaison
 {
-    background-color: #0b638c;;
+    background-color: #0b638c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    
-    height:auto;
-    width:auto;
-    padding:12px;
+    height: auto;
+    width: calc(50% - 60px);  
+    min-height: 200px;  
+    padding: 12px;
     border-radius: 12px;
-    margin:30px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.uneLiaison h2
+.uneLiaison h3 
 {
-    margin: 15px 80px 15px 80px;
-    color:white;
+    margin: 15px 80px 0px 80px;
+    padding-bottom: 18px;         
+    color: white;
+    text-align: center;
 }
 
 .uneLiaison p
@@ -701,6 +1033,26 @@ p.espace
     margin: 0;
 }
 
+.uneLiaison p.tauxPassagers 
+{
+    margin: 15px auto;
+    padding: 12px 50px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    border-left: 4px solid #ffc100;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+.remplissageHorizontale
+{
+    font-size: 0.95em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:14px;
+}
 
 
 /* ########################################################################################################################################################## */
@@ -719,6 +1071,59 @@ p.espace
     border-radius: 15px;
 }
 
+.zoneStats
+{
+    background-color: #f0f4f8;
+    height:auto;
+    width:auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    margin:20px;
+}
+
+.lesStats
+{
+    display:flex;
+    flex-direction: row;
+    border-radius: 12px;
+    margin:0px 20px 20px;
+}
+
+.uneStats p.unEspace {
+    margin: 15px 0;
+    padding: 12px 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    border-left: 4px solid #ffc100; 
+    font-size: 0.95em;
+}
+
+.uneStats
+{
+    background-color: #0b638c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height:auto;
+    width:auto;
+    padding:12px;
+    border-radius: 12px;
+    margin:30px;
+    color:white;
+}
+
+.uneStats h3 
+{
+    margin: 15px 80px 15px 80px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #ffc100; 
+    color: white;
+}
+
+.uneStats p.unEspace 
+{
+    margin-left: 10px; 
+}
+
 /* ########################################################################################################################################################## */
 /* ############################################################# - Page n°5 - Les paramètres - ############################################################## */
 /* ########################################################################################################################################################## */
@@ -734,310 +1139,6 @@ p.espace
     margin: 15px 140px;
     border-radius: 40px;
     text-align: center;
-}
-
-/* ########################################################################################################################################################## */
-/* ########################################################### - Page n°6 - Horraires et tarifs - ########################################################### */
-/* ########################################################################################################################################################## */
-
-.zoneTexte6
-{
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    margin: 15px 280px;
-    border-radius: 15px;
-}
-
-/* ########################################################################################################################################################## */
-/* ################################################################ - Page n°7 - Connexion - ################################################################ */
-/* ########################################################################################################################################################## */
-
-.zoneTexte7 
-{
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    margin: 15px 300px;
-    border-radius: 15px;
-}
-
-.texte1Connexion {
-    font-size: 1.1em;
-}
-
-.regroupementConnexion {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch; 
-    gap: 20px; 
-}
-
-.connexionFondBlanc1 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    background-color: #fafafa;
-    border-radius: 8px;
-    margin: 24px;
-    text-align: center;
-}
-
-
-.connexionFondBlanc2 
-{
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    background-color: #fafafa;
-    border-radius: 8px;
-    margin: 24px;
-    text-align: center;
-}
-
-.connexionBlanc {
-    margin-top: 10px;
-    color: white;
-}
-
-.connexionFondBleu {
-    width: 100%;
-    height: 100%;
-    background-color: #0b638c;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-}
-
-img.imageConnexion1 {
-    margin-top: 22px;
-    padding: 12px;
-    height: auto; 
-    width: auto;
-    max-width: 40%;
-    max-height: 40%;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideI1 0.9s ease-out forwards;
-}
-
-
-.imageConnexion2 {
-    padding: 20px;
-    border-radius: 28px;
-}
-
-.connexionVerticale {
-    display: flex;
-    flex-direction: column;
-    padding: 29px 30px 8px 30px;
-    gap: 10px;
-    margin: 20px;
-}
-
-#erreurConnexion {
-    padding: 10px;
-}
-
-.animationConnexion {
-    opacity: 0;
-    transform: translateY(-24px);
-    animation: slideAnimationCo 0.9s ease-out forwards;
-}
-
-@keyframes slideAnimationCo {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* ########################################################################################################################################################## */
-/* ################################################# - Tableau des caractéristiques et des factures - ####################################################### */
-/* ########################################################################################################################################################## */
-
-.tableUnifie
-{
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0;
-    font-size: 1.1rem;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 14px;
-    overflow: hidden;
-}
-
-.tableUnifie th
-{
-    background: #ffc100;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    font-size: 1.2rem;
-    border: none;
-}
-
-.tableUnifie td
-{
-    padding: 10px 12px;
-    text-align: center;
-    border: none;
-}
-
-.tableUnifie tr:nth-child(even)
-{
-    background-color: #f7f7f7;
-}
-
-.tableUnifie tbody tr
-{
-    transition: background-color 1s ease;
-}
-
-.tableUnifie tbody tr:hover
-{
-    background-color: #fff3b0;
-}
-
-.contBateau
-{
-    display: flex;
-    align-items: stretch;
-    padding: 20px;
-}
-
-.contBateauP1
-{
-    flex: 0 0 77%;
-    margin-right: 20px;
-}
-
-.contBateauP2
-{
-    flex: 0 0 20%;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:#0b638c;
-    border-radius: 12px;
-    padding: 20px;
-}
-
-.contBateauImg1
-{
-    border-radius: 12px;
-    max-width: 90%;
-    height: auto;
-    margin: 15px 0px;
-    transition: transform 1s ease;
-}
-
-.contBateauImg1:hover
-{
-    transform: scale(1.1);
-}
-
-.tableUnifie3 
-{
-    width: 90%;
-    border-collapse: collapse;
-    margin: 20px auto 2.5rem auto;
-    font-size: 1.1rem;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 14px;
-    overflow: hidden;
-}
-
-
-.tableUnifie3 th 
-{
-    background: #ffc100;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    font-size: 1.2rem;
-    border: none; 
-}
-
-.tableUnifie3 td 
-{
-    padding: 10px 12px;
-    text-align: center;
-    border: none;
-}
-
-.tableUnifie3 tr:nth-child(even) 
-{
-    background-color: #f7f7f7;
-}
-
-.tableUnifie3 tbody tr 
-{
-    transition: background-color 1s ease; 
-}
-
-.tableUnifie3 tbody tr:hover 
-{
-    background-color: #fff3b0; 
-}
-
-
-/* ######################################################################################################################################################################## */
-/* ###################################################################### - Animation des boutons - ####################################################################### */
-/* ######################################################################################################################################################################## */
-
-.btn 
-{
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none; 
-    display: inline-block;
-}
-
-.btn-pulse 
-{
-    display: inline-block;
-    padding: 8px 40px; /* padding plus large pour ressembler à ton premier style */
-    background-color: #506E99;
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 4px;
-    animation: pulse 1.5s infinite;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
-
-.btn-pulse2 
-{
-    background-color: #506E99;
-    color: white;
-    padding:8px 40px;
-    margin:4px;
-    animation: pulse 1.5s infinite;
-    border-radius: 8px;
-}
-
-@keyframes pulse 
-{
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
 }
 
 .lesSons 
@@ -1157,10 +1258,322 @@ img.imageConnexion1 {
     }
 }
 
+/* ########################################################################################################################################################## */
+/* ########################################################### - Page n°6 - Horraires et tarifs - ########################################################### */
+/* ########################################################################################################################################################## */
+
+.zoneTexte6
+{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 280px;
+    border-radius: 15px;
+}
+
+.tableUnifie3 
+{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto 2.5rem auto;
+    font-size: 1.1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+
+.tableUnifie3 th 
+{
+    background: #ffc100;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none; 
+}
+
+.tableUnifie3 td 
+{
+    padding: 10px 12px;
+    text-align: center;
+    border: none;
+}
+
+.tableUnifie3 tr:nth-child(even) 
+{
+    background-color: #f7f7f7;
+}
+
+.tableUnifie3 tbody tr 
+{
+    transition: background-color 1s ease; 
+}
+
+.tableUnifie3 tbody tr:hover 
+{
+    background-color: #fff3b0; 
+}
+
+/* ########################################################################################################################################################## */
+/* ################################################################ - Page n°7 - Connexion - ################################################################ */
+/* ########################################################################################################################################################## */
+
+.zoneTexte7 
+{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 300px;
+    border-radius: 15px;
+}
+
+.texte1Connexion 
+{
+    font-size: 1.1em;
+}
+
+.regroupementConnexion 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 20px; 
+}
+
+.connexionFondBlanc1 
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin: 24px;
+    text-align: center;
+}
+
+
+.connexionFondBlanc2 
+{
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin: 24px;
+    text-align: center;
+}
+
+.connexionBlanc 
+{
+    margin-top: 10px;
+    color: white;
+}
+
+.connexionFondBleu 
+{
+    width: 100%;
+    height: 100%;
+    background-color: #0b638c;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+img.imageConnexion1 
+{
+    margin-top: 22px;
+    padding: 12px;
+    height: auto; 
+    width: auto;
+    max-width: 40%;
+    max-height: 40%;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideI1 0.9s ease-out forwards;
+}
+
+
+.imageConnexion2 
+{
+    padding: 20px;
+    border-radius: 28px;
+}
+
+.connexionVerticale 
+{
+    display: flex;
+    flex-direction: column;
+    padding: 29px 30px 8px 30px;
+    gap: 10px;
+    margin: 20px;
+}
+
+#erreurConnexion 
+{
+    padding: 10px;
+}
+
+.animationConnexion 
+{
+    opacity: 0;
+    transform: translateY(-24px);
+    animation: slideAnimationCo 0.9s ease-out forwards;
+}
+
+@keyframes slideAnimationCo {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ########################################################################################################################################################## */
+/* ################################################# - Tableau des caractéristiques et des factures - ####################################################### */
+/* ########################################################################################################################################################## */
+
+.tableUnifie
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 1.1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.tableUnifie th
+{
+    background: #ffc100;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.tableUnifie td
+{
+    padding: 10px 12px;
+    text-align: center;
+    border: none;
+}
+
+.tableUnifie tr:nth-child(even)
+{
+    background-color: #f7f7f7;
+}
+
+.tableUnifie tbody tr
+{
+    transition: background-color 1s ease;
+}
+
+.tableUnifie tbody tr:hover
+{
+    background-color: #fff3b0;
+}
+
+.contBateau
+{
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.contBateauP1
+{
+    flex: 0 0 77%;
+    margin-right: 20px;
+}
+
+.contBateauP2
+{
+    flex: 0 0 17%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#0b638c;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.contBateauImg1
+{
+    border-radius: 12px;
+    max-width: 90%;
+    height: auto;
+    margin: 15px 0px;
+    transition: transform 1s ease;
+}
+
+.contBateauImg1:hover
+{
+    transform: scale(1.1);
+}
+
+/* ######################################################################################################################################################################## */
+/* ###################################################################### - Animation des boutons - ####################################################################### */
+/* ######################################################################################################################################################################## */
+
+.btn 
+{
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; 
+    display: inline-block;
+}
+
+.btn-pulse 
+{
+    display: inline-block;
+    padding: 8px 40px; 
+    background-color: #506E99;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 4px;
+    animation: pulse 1.5s infinite;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.btn-pulse2 
+{
+    background-color: #506E99;
+    color: white;
+    padding:8px 40px;
+    margin:4px;
+    animation: pulse 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes pulse 
+{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 /* ######################################################################################################################################################################## */
 /* ###################################################################### - Le footer - ################################################################################### */
 /* ######################################################################################################################################################################## */
-
 
 .footer 
 {
@@ -1180,14 +1593,8 @@ img.imageConnexion1 {
     margin-bottom: 10px;
 }
 
-.footerRow p 
-{
-    margin: 0;
-}
-
-
 /* ######################################################################################################################################################################## */
-/* ######################################################################################################################################################################## */
+/* #################################### - Enregistrement du numéro de facture / carte d’embarquement pour éviter une nouvelle saisie - #################################### */
 /* ######################################################################################################################################################################## */
 
 span
@@ -1197,8 +1604,8 @@ span
 
 #numRes
 {
-        -webkit-text-security: disc;
-        text-align: center;
+    -webkit-text-security: disc;
+    text-align: center;
 }
 
 /* ######################################################################################################################################################################## */
