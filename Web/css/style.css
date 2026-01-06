@@ -293,6 +293,10 @@ ul.puceJ li
 /* ######################################################## - Page n°1 - Les cartes d'embarquement - ######################################################## */
 /* ########################################################################################################################################################## */
 
+/* ################################################################################################ */
+/* ########################### Les cartes d'embarquement | Les passagers ########################## */
+/* ################################################################################################ */
+
 .zoneTexte1
 {
     background-color: #fafafa;
@@ -309,12 +313,12 @@ ul.puceJ li
 {
     position: relative;
     width: 850px;
-    height: 435px;
+    height: 450px;
     background-color: #0b638c;
     border: 4.2px solid black;
     border-radius: 22px;
     padding: 6px;
-    margin:20px;
+    margin:30px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);   
 }
 
@@ -344,7 +348,7 @@ ul.puceJ li
 .fondBlanc2
 {
     width: 396px;
-    height: 345px;
+    height: 360px;
     background-color: white;
     border: 3.5px solid black;
     border-radius: 18px;
@@ -438,12 +442,10 @@ ul.puceJ li
     border-radius: 18px;
 }
 
-
 .zoneBas
 {
     height:212px;
     margin:8px;
-    border-radius: 18px;
     display: flex;
     flex-direction:row;
 }
@@ -453,15 +455,18 @@ ul.puceJ li
     margin:8px;
     height:190px;
     width:120px;
-    border-radius: 18px;
+    display: flex; 
+    flex-direction: column;
+    gap:2px;
 }
 
 .zoneBasDroite
 {
     margin:8px;
     height:190px;
-    width:230px;
-    border-radius: 18px;
+    width: 230px;
+    display: flex;       
+    flex-direction: column;  
 }
 
 .texteNoir2
@@ -478,7 +483,16 @@ ul.puceJ li
     font-weight: normal;
 }
 
-.fondBleu
+.zoneQRCode
+{
+    margin-left:6px;
+}
+
+/* ################################################################################################ */
+/* ########################### Les cartes d'embarquement | Les véhicules ########################## */
+/* ################################################################################################ */
+
+.fondBleu2
 {
     position: relative;
     width: 850px;
@@ -487,24 +501,183 @@ ul.puceJ li
     border: 4.2px solid black;
     border-radius: 22px;
     padding: 6px;
-    margin:20px;
+    margin: 30px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);   
 }
 
-.zoneTexte1
+.zoneGauche2
 {
-    background-color: #fafafa;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.zoneDroite2
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.fondBlanc_2
+{
+    width: 390px;
+    height: 150px;
+    background-color: white;
+    border: 3.5px solid black;
+    border-radius: 18px;
+}
+
+.fondBlanc2_2
+{
+    width: 396px;
+    height: 345px;
+    background-color: white;
+    border: 3.5px solid black;
+    border-radius: 18px;
+}
+
+.img1p1_2
+{
+    display: block;
+    margin: 0 auto;
+    height: 140px;
+}
+
+.zoneDroite2 p.carteEmbTexte2
+{
+    position: relative;
+    top: 9px;
+    color: white;
+    font-size: 1.88em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.carteEmbTexte2_2
+{
+    margin-left: 12px;
+    color: white;
+    font-size: 1.36em;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
+    gap: 22px;
+}
+
+.carteEmbTexte2_2 .ligne2:first-child
+{
+    margin-top: 18px;
+}
+
+.ligne2
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.ligne2 p
+{
+    margin: 0;
+}
+
+.zoneBlanche2
+{
+    background-color: white;
+    height: 30px;
+    width: 190px;
+    border-radius: 10px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    margin: 15px 90px;
-    border-radius: 15px;
+}
+
+.texteNoir_2
+{
+    color: black;
+    margin: 0;
+}
+
+.zoneHaut2
+{
+    height: 100px;
+    margin: 8px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+}
+
+.zoneHautGauche2
+{
+    margin: 8px;
+    height: 80px;
+    width: 120px;
+    border-radius: 18px;
+}
+
+.zoneHautDroite2
+{
+    margin: 8px;
+    height: 80px;
+    width: 230px;
+    border-radius: 18px;
+}
+
+.zoneBas2
+{
+    height: 212px;
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.zoneBasGauche2
+{
+    margin: 8px;
+    height: 190px;
+    width: 120px;
+    display: flex; 
+    flex-direction: column;
+    gap: 2px;
+}
+
+.zoneBasGauche2 p:nth-of-type(1) 
+{
+    margin-bottom: 9px;
+}
+
+.zoneBasDroite2
+{
+    margin: 8px;
+    height: 190px;
+    width: 230px;
+    display: flex;       
+    flex-direction: column;  
+}
+
+.texteNoir2_2
+{
+    color: black;
+    margin: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.grasPageEmbarquement2
+{
+    font-weight: normal;
+}
+
+.zoneQRCode2
+{
+    margin-left: 6px;
 }
 
 /* ################################################################################################ */
-/* ########################### Les cartes d'embarquement | Media queries ########################## */
+/* ################## Les cartes d'embarquement - Les passagers | Media queries ################### */
 /* ################################################################################################ */
 
 @media (max-width: 1150px)
@@ -512,7 +685,7 @@ ul.puceJ li
     .fondBleu
     {
         width: 600px;
-        height: 360px;
+        height: 358px;
     }
     
     .zoneTexte1
@@ -539,27 +712,70 @@ ul.puceJ li
     .fondBlanc2
     {
         width: 280px;
-        height: 292px;
+        height: 290px;
     }
     
     .zoneHaut
     {
-        height: 90px;
+        height: 70px;
+        margin-bottom: 5px;
     }
     
-    .zoneHautGauche, .zoneBasGauche
+    .zoneHautGauche
     {
         width: 100px;
     }
     
-    .zoneHautDroite, .zoneBasDroite
+    .zoneHautDroite 
     {
         width: 180px;
+    }
+    
+    .zoneHaut p
+    {
+        margin: 2px 0;
+    }
+    
+    .zoneBasGauche p:nth-of-type(1) 
+    {
+        margin-bottom: 10px;
+    }
+    
+    .zoneBasGauche p:nth-of-type(4) 
+    {
+        margin-top: 12px;
+    }
+    
+    .zoneBasGauche p:last-child 
+    {
+        margin-top: 15px;
+    }
+    
+    .zoneBasGauche p:first-child 
+    {
+        margin-top: 18px;
+    }
+    
+    .zoneBasGauche
+    {
+        width: 100px;
+    }
+    
+    .zoneBasDroite
+    {
+        width: 180px;
+        gap: 2px;
     }
     
     .zoneBas
     {
         height: 180px;
+        margin-top: 5px;
+    }
+    
+    .fondBlanc2 hr
+    {
+        margin: 5px 0;
     }
     
     .ligne > p
@@ -592,7 +808,7 @@ ul.puceJ li
     .carteEmbTexte2
     {
         font-size: 1em;
-        gap: 26px;
+        gap: 24px;
     }
     
     .carteEmbTexte2 .ligne:first-child
@@ -606,7 +822,7 @@ ul.puceJ li
     .fondBleu
     {
         width: 260px;
-        height: 740px;
+        height: 610px;
     }
 
     .zoneTexte1
@@ -652,10 +868,15 @@ ul.puceJ li
         margin-left:140px !important;
     }
 
+    .carteEmbTexte2
+    {
+        gap:11px;
+    }
+    
     .fondBlanc2
     {
         width: 246px;
-        height: 360px;
+        height: 294px;
         margin-left:140px;
     }
 
@@ -663,7 +884,218 @@ ul.puceJ li
     {
         font-size: 14px;
     }
+
+    .zoneBasGauche p:nth-of-type(3) 
+    {
+        margin-bottom: 4px;
+    }
+
+    .zoneBasGauche p:nth-of-type(4) 
+    {
+        margin-bottom: 2px;
+    }
 }
+
+/* ################################################################################################ */
+/* ################## Les cartes d'embarquement - Les véhicules | Media queries ################### */
+/* ################################################################################################ */
+
+@media (max-width: 1150px)
+{
+    .fondBleu2
+    {
+        width: 600px;
+        height: 320px;
+    }
+    
+    .img1p1_2
+    {
+        height: 90px !important;
+    }
+    
+    .fondBlanc_2
+    {
+        width: 280px;
+        height: 100px;
+    }
+    
+    .fondBlanc2_2
+    {
+        width: 280px;
+        height: 250px;
+        
+    }
+    
+    .zoneHaut2
+    {
+        height: 70px;
+        margin-bottom: 5px;
+    }
+    
+    .zoneHautGauche2
+    {
+        width: 100px;
+    }
+    
+    .zoneHautDroite2 
+    {
+        width: 180px;
+    }
+    
+    .zoneHaut2 p
+    {
+        margin: 2px 0;
+    }
+    
+    .zoneBasGauche2 p:nth-of-type(1) 
+    {
+        margin-bottom: 10px;
+    }
+    
+    .zoneBasGauche2 p:last-child 
+    {
+        margin-top: 5px;
+    }
+    
+    .zoneBasGauche2 p:first-child 
+    {
+        margin-top: 18px;
+    }
+    
+    .zoneBasGauche2
+    {
+        width: 100px;
+        
+    }
+    
+    .zoneBasDroite2
+    {
+        width: 180px;
+        gap: 2px;
+    }
+    
+    .zoneBas2
+    {
+        height: 180px;
+        margin-top: 5px;
+    }
+    
+    .fondBlanc2_2 hr
+    {
+        margin: 5px 0;
+    }
+    
+    .ligne2 > p
+    {
+        font-size: 14px;
+    }
+    
+    .zoneBlanche2
+    {
+        height: 22px;
+        width: 120px;
+    }
+    
+    .texteNoir_2
+    {
+        font-size: 14px;
+    }
+    
+    .texteNoir2_2
+    {
+        font-size: 14px;
+        margin: 3px;
+    }
+    
+    .zoneDroite2 p.carteEmbTexte2
+    {
+        font-size: 22px !important;
+    }
+    
+    .carteEmbTexte2_2
+    {
+        font-size: 1em;
+        gap: 16px;
+    }
+    
+    .carteEmbTexte2_2 .ligne2:first-child
+    {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 750px)
+{
+    .fondBleu2
+    {
+        width: 260px;
+        height: 570px;
+    }
+
+    .img1p1_2
+    {
+        height: 70px !important;
+    }
+
+    .fondBlanc_2
+    {
+        width: 246px;
+        height: 75px;
+    }
+
+    .ligne2 > p
+    {
+        font-size: 14px;
+    }
+
+    .zoneBlanche2
+    {
+        height: 20px;
+        width: 122px;
+    }
+
+    .texteNoir_2
+    {
+        font-size: 14px;
+    }
+
+    .zoneDroite2 p.carteEmbTexte2
+    {
+        font-size: 20px !important;
+        margin-left: 140px !important;
+    }
+
+    .fondBlanc2_2
+    {
+        width: 246px;
+        height: 246px;
+        margin-left: 140px;
+    }
+
+    .carteEmbTexte2_2
+    {
+        gap: 11px;
+    }
+
+    .texteNoir2_2
+    {
+        font-size: 14px;
+    }
+
+    .zoneBasGauche2 p:first-child 
+    {
+        margin-bottom: 11px;
+    }
+
+    .zoneBasGauche2 p:nth-of-type(3) 
+    {
+        margin-bottom: 2px;
+    }
+}
+
+
+
+
 
 /* ################################################################################################ */
 /* ############################ Les liens et les images | Media queries ########################### */
@@ -1085,9 +1517,12 @@ p.espace
 .lesStats
 {
     display:flex;
+    flex-wrap: wrap;
+    gap:30px;
     flex-direction: row;
     border-radius: 12px;
-    margin:0px 20px 20px;
+    margin:40px;
+    justify-content: center;
 }
 
 .uneStats p.unEspace {
@@ -1103,12 +1538,12 @@ p.espace
 {
     background-color: #0b638c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    height:auto;
-    width:auto;
-    padding:12px;
+    height: auto;
+    width: calc(50% - 15px); 
+    max-width: 600px; 
+    padding: 12px;
     border-radius: 12px;
-    margin:30px;
-    color:white;
+    color: white;
 }
 
 .uneStats h3 
