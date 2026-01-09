@@ -71,12 +71,12 @@ async function remplieFacture() {
 
     if(vehicule["libelleCategorie"] in dicVehicules)
     {
-      dicVehicules[vehicule["libelle"]][0] += 1;
-      dicVehicules[vehicule["libelle"]][1] += vehicule["prix"];
+      dicVehicules[vehicule["libelle"]][0] += vehicule["quantite"];
+      dicVehicules[vehicule["libelle"]][1] += vehicule["prix"] * vehicule["quantite"];
     }
     else
     {
-      dicVehicules[vehicule["libelle"]] = [1, vehicule["prix"]];
+      dicVehicules[vehicule["libelle"]] = [vehicule["quantite"], vehicule["prix"]*vehicule["quantite"]];
     }
   }
 

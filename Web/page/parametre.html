@@ -8,63 +8,74 @@
 </head>
 <!-- Page n°5 - Les paramètres -->
 <body>
-    <header>
-    </header>
 
+    <!-- Navigation principale : liens et images situés en haut de la page -->
     <nav class="menuPageAcceuil">
         <ul class="zoneImage">
             <div class="imgWrapper flash">
-                <img class="img1p0" src="../logo/logo_can_sf.png" alt="Logo de la CAN">
+                <img class="img1p0" src="../logo/logo_can_sf.png" alt="Logo de la Compagnie Alsacienne de Navigation">
             </div>
         </ul>
+
+        <!-- Liens du menu -->
         <ul class="lienMenu">
-            <li><a href="../index.html"><p>Acceuil</p><img src="../img/puce/home/home3_sf.png" alt="Acceuil" width="24" height="24"></a></li>
-            <li><a href="connexion.html?vers=carteEmbarquement"><p>Les cartes d'embarquements</p><img src="../img/puce/carte/carte2_sf.png" alt="Carte d'embarquements" width="24" height="24"></a></li>
-            <li><a href="connexion.html?vers=facture"><p>Les factures</p><img src="../img/puce/facture/fct3_sf.png" alt="Facture" width="29" height="29"></a></li>
-            <li><a href="tableauDeBord.html"><p>Le tableau de bord</p><img src="../img/puce/tableau/tdb3_sf.png" alt="Tableau de bord" width="26" height="26"></a></li>
-            <li><a href="statistique.html"><p>Les statistiques</p><img src="../img/puce/statistique/stt3_sf.png" alt="Statistique" width="25" height="25"></a></li>
-            <li><a href="horraireTarif.html"><p>Horaires et tarifs</p><img src="../img/puce/horloge/horloge1_sf.png" alt="Horaires et tarifs" width="26" height="26"></a></li>
+            <li><a href="index.html"><p>Accueil</p><img src="../img/puce/home/home3_sf.png" alt="Lien vers la page d'accueil" width="24" height="24"></a></li>
+            <li><a href="connexion.html?vers=carteEmbarquement"><p>Les cartes d'embarquements</p><img src="../img/puce/carte/carte2_sf.png" alt="Lien vers la page carte d'embarquements" width="24" height="24"></a></li>
+            <li><a href="connexion.html?vers=facture"><p>Les factures</p><img src="../img/puce/facture/fct3_sf.png" alt="Lien vers la page facture" width="29" height="29"></a></li>
+            <li><a href="tableauDeBord.html"><p>Le tableau de bord</p><img src="../img/puce/tableau/tdb3_sf.png" alt="Lien vers la page tableau de bord" width="26" height="26"></a></li>
+            <li><a href="statistique.html"><p>Les statistiques</p><img src="../img/puce/statistique/stt3_sf.png" alt="Lien vers la page statistique" width="25" height="25"></a></li>
+            <li><a href="horraireTarif.html"><p>Horaires et tarifs</p><img src="../img/puce/horloge/horloge1_sf.png" alt="Lien vers la page des horaires et des tarifs" width="26" height="26"></a></li>
         </ul>
+
         <ul class="zoneImage">
             <div class="imgWrapper flash">
-                <img class="img2p0 flash" src="../logo/logo_iut_sf.png" alt="Logo de l'IUT">
+                <img class="img2p0 flash" src="../logo/logo_iut_sf.png" alt="Ancien logo de l'IUT Robert Schuman">
             </div>
         </ul>
-
 	</nav>	
 
+
+    <!-- Contenu principal de la page -->
 	<main>
         <section class="zoneTexte5">
+
+            <!-- Titre de la page -->
             <h1 class="titreAccueil policePacifico">Les paramètres</h1>
 
+            <!-- Section des sons d'ambiance -->
             <div class="lesSons">
                 <h2>Bruits d’ambiance</h2>
 
-                <div class="sonVerticale">
+                <!-- Conteneur vertical des sons -->
+                <div class="sonVerticale" id="sonsParametre">
 
+                    <!-- Ligne horizontale regroupant les différents sons -->
                     <div class="sonHorizontale">
                         <div class="mesSons">
 
+                            <!-- Son Mouette -->
                             <div class="bruitDuSon mouette" data-sound="mouette">
                                 <img class="img1Son" src="../img/animaux/mte1.png" alt="Image d'une Mouette">
                                 <h3>Mouette</h3>
-                                <button class="btnPlay">
+                                <button class="btnPlay" id="mouette">
                                     <img src="../img/puce/sons/sns4_sf.png" alt="Icône son" width="40" height="40">
                                 </button>
                             </div>
 
+                            <!-- Son Goéland -->
                             <div class="bruitDuSon goeland" data-sound="goeland">
                                 <img class="img2Son" src="../img/animaux/gld1.png" alt="Image d'une Goéland">
                                 <h3>Goéland</h3>
-                                <button class="btnPlay">
+                                <button class="btnPlay" id="goeland">
                                     <img src="../img/puce/sons/sns4_sf.png" alt="Icône son" width="40" height="40">
                                 </button>
                             </div>
 
+                            <!-- Son Cormoran -->
                             <div class="bruitDuSon cormoran" data-sound="cormoran">
                                 <img class="img3Son" src="../img/animaux/crm1.png" alt="Image d'une Cormoran">
                                 <h3>Cormoran</h3>
-                                <button class="btnPlay">
+                                <button class="btnPlay" id="cormoran">
                                     <img src="../img/puce/sons/sns4_sf.png" alt="Icône son" width="40" height="40">
                                 </button>
                             </div>
@@ -79,26 +90,28 @@
                 </div>
             </div>
         </section>
-
 	</main>
 	
+
+    <!-- Pied de page du site -->
     <footer class="footer">
         <div class="footerRow">
-            <img src="../img/puce/encre/enc1_sf.png" alt="Icône encre" width="30" height="30">
+            <img src="../img/puce/encre/enc1_sf.png" alt="Icône d'une encre" width="30" height="30">
             <p>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compagnie Alsacienne de Navigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</p>
-            <img src="../img/puce/encre/enc1_sf.png" alt="Icône encre" width="30" height="30">
+            <img src="../img/puce/encre/enc1_sf.png" alt="Icône d'une encre" width="30" height="30">
         </div>
 
         <div class="footerRow">
-            <img src="../img/puce/friend/frd1_sf.png" alt="Icône petit gens" width="30" height="26">
+            <img src="../img/puce/friend/frd1_sf.png" alt="Icône de deux individus" width="30" height="26">
             <p>&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conception : PEIGNIER Maxime & DANRÉE Alexis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</p>
-            <img src="../img/puce/friend/frd1_sf.png" alt="Icône petit gens"" width="30" height="26">
+            <img src="../img/puce/friend/frd1_sf.png" alt="Icône de deux individus" width="30" height="26">
         </div>
-        
     </footer>
 
+
+    <!-- Scripts JavaScript du site -->
     <script src="../js/javascript.js"></script>
+    <script src="../js/parametre.js"></script>
 
 </body>
-
 </html>

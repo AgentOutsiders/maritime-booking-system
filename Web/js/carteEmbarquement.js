@@ -172,7 +172,7 @@ async function remplieCarte() {
                                 <br>
                                 <p class="texteNoir2_2 grasPageEmbarquement2">Catégorie ${vehicule["code"]}</p>
                                 <p class="texteNoir2_2 grasPageEmbarquement2">${vehicule["quantite"]}</p>
-                                <p class="texteNoir2_2 grasPageEmbarquement2">${vehicule["prix"]} €</p>
+                                <p class="texteNoir2_2 grasPageEmbarquement2">${vehicule["prix"]*vehicule["quantite"]} €</p>
                             </div>
                         </div>
                     </div>
