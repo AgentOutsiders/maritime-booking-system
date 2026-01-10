@@ -10,19 +10,18 @@ body
     background-color: #506E99;          /* On définit la couleur de fond */
 }
 
-img.img1p0 {
-    height: 150px;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideI1 0.9s ease-out forwards;
+img.img1p0 
+{
+    height: 150px;                                            /* On fixe la hauteur de l'image à 150px */
+    transform: translateY(-20px);                             /* On décale l'élément de 20px vers le haut */
+    animation: slideI1 0.9s ease-out forwards;                /* On lance l'animation slideI1 et on garde l'état final */    
 }
 
 img.img2p0
 {
     height:150px;                                             /* On fixe la hauteur de l'image à 150px */
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideI1 0.9s ease-out forwards;
+    transform: translateY(-20px);                             /* On décale l'élément de 20px vers le haut */
+    animation: slideI1 0.9s ease-out forwards;                /* On lance l'animation slideI1 et on garde l'état final */   
 }
 
 .flash 
@@ -38,23 +37,21 @@ img.img2p0
 
 .imgWrapper 
 {
-    display: inline-block;
-    overflow: hidden;
-    transition: transform 0.8s ease, border-radius 0.8s ease;
+    display: inline-block;                                                /* On combine le comportement inline et les propriétés de bloc */
+    transition: transform 0.8s ease, border-radius 0.8s ease;             /* Animation fluide de 0.8s avec accélération progressive */
 }
 
 .imgWrapper:hover 
 {
-    transform: scale(0.95);
-    border-radius: 32px;
+    transform: scale(0.95);                  /* On réduit légèrement l’élément lors du survol */
+    border-radius: 32px;                     /* On arrondis les coins lors du survol */
 }
 
-@keyframes slideI1 
+@keyframes slideI1                           /* Animation d'apparition par glissement vers le haut */    
 {
     to 
     {
-        opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0);            /* On effectue un retour à la position initiale */  
     }
 }
 
@@ -73,12 +70,12 @@ img.img2p0
 
 .menuPageAcceuil ul.lienMenu li a p 
 {
-    white-space: nowrap;    /* On empêche le retour à la ligne */
+    white-space: nowrap;                   /* On empêche le retour à la ligne */
 }
 
 .menuPageAcceuil ul.lienMenu li 
 {
-    margin: 5px;                          /* On met un petit espace entre les boutons */
+    margin: 5px;                           /* On met un petit espace entre les boutons */
 }
 
 
@@ -96,30 +93,29 @@ img.img2p0
 
 .menuPageAcceuil ul.lienMenu 
 { 
-    display: flex;
-    flex-wrap: wrap;          /* Permet de passer à la ligne */
-    padding: 20px 40px;
-    border-radius: 40px;
-    background-color: #fafafa;
-    justify-content: center;   /* Centre horizontalement les liens */
-    list-style: none;
-    max-width: 800px;          /* Ajuste selon ton design */
+    display: flex;                            /* On active flexbox */
+    flex-wrap: wrap;                          /* Permet de passer à la ligne */
+    padding: 20px 40px;                       /* On applique un padding de 20px vertical et 40px horizontal */
+    border-radius: 40px;                      /* On arrondis les coins */
+    background-color: #fafafa;              /* On définit la couleur de fond */
+    justify-content: center;                  /* Centre horizontalement les liens */
+    list-style: none;                         /* On supprime les puces */
+    max-width: 800px;                         /* Ajuste selon ton design */
 }
 
 .menuPageAcceuil ul.lienMenu li 
 {
-    flex: 0 0 26%;            /* Chaque lien prend environ 1/3 de la largeur */
-    text-align: center;       /* Centre le contenu à l’intérieur du lien */
+    flex: 0 0 26%;                           /* Chaque lien prend environ 1/3 de la largeur */
+    text-align: center;                      /* Centre le contenu à l’intérieur du lien */
 }
 
 .menuPageAcceuil ul.lienMenu li a 
 {
-    display: inline-flex;      /* On garde flex pour aligner l'image et le texte */
+    display: inline-flex;                    /* On garde flex pour aligner l'image et le texte */
     align-items: center; 
-    justify-content: center;   /* Centre le texte et l'image horizontalement */
-    gap: 8px;           
+    justify-content: center;                 /* Centre le texte et l'image horizontalement */
+    gap: 8px;                                /* On espace les éléments de 8px */
     height: 29px;
-    text-decoration: none;
 }
 
 .menuPageAcceuil ul:not(.zoneImage) 
@@ -194,13 +190,11 @@ ul.puceJ li
 }
 
 .titreAccueil 
-{
-    
+{   
     text-align: center;                                /* On centre le texte horizontalement */
     margin-bottom: 20px;                               /* Espace sous le titre */       
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideI1 0.9s ease-out forwards;
+    transform: translateY(-20px);                      /* On décale l'élément de 20px vers le haut */
+    animation: slideI1 0.9s ease-out forwards;         /* On lance l'animation et on garde l'état final */
 }
 
 .blocTexte 
@@ -227,7 +221,6 @@ ul.puceJ li
 
 .bateauCard 
 {
-
     padding: 15px;                                    /* On ajoute un espace interne autour du contenu de la carte */
     border-radius: 20px;                              /* On arrondis les coins */
     width: 200px;                                     /* On définit une largeur fixe */
@@ -242,9 +235,7 @@ ul.puceJ li
 
 .bateauCard img 
 {
-    width: 100%;
-    height: 150px;         
-    object-fit: cover;   
+    height: 150px;          
     border-radius: 15px;
     margin-bottom: 10px;
 }
@@ -257,35 +248,27 @@ ul.puceJ li
 
 .lienMenu li a 
 {
-  display: flex;
-  align-items: center; 
-  gap: 8px;           
-  height: 29px;
-  text-decoration: none;
-}
-
-.lienMenu li a img 
-{
-  margin: 0;
+    display: flex;
+    align-items: center; 
+    gap: 8px;                         /* On espace les éléments de 8px */
+    height: 29px;
+    text-decoration: none;
 }
 
 .fromLeft 
 {
-    opacity: 0;
     transform: translateX(-80px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .fromRight 
 {
-    opacity: 0;
     transform: translateX(80px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .show 
 {
-    opacity: 1;
     transform: translateX(0);
 }
 
@@ -311,11 +294,11 @@ ul.puceJ li
 
 .fondBleu
 {
-    position: relative;
+    position: relative;                         /* On active le positionnement relatif */
     width: 850px;
     height: 450px;
     background-color: #0b638c;
-    border: 4.2px solid black;
+    border: 4px solid black;                /* On ajoute une bordure noire de 4px */
     border-radius: 22px;
     padding: 6px;
     margin:30px;
@@ -324,16 +307,16 @@ ul.puceJ li
 
 .zoneGauche
 {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: absolute;                          /* Positionne l’élément exactement où on veut par rapport à son parent */
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .zoneDroite
 {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    position: absolute;                          /* Positionne l’élément exactement où on veut par rapport à son parent */
+    bottom: 10px;                                /* On place l’élément à 10px du bas */
+    right: 10px;                                 /* On place l’élément à 10px de la droite */
 }
 
 .fondBlanc
@@ -354,20 +337,13 @@ ul.puceJ li
     border-radius: 18px;
 }
 
-.img1p1
-{
-    display: block;
-    margin: 0 auto;
-    height: 140px;
-}
-
 .zoneDroite p.carteEmbTexte
 {
-    position: relative;
-    top: 9px;
+    position: relative;                                     /* Permet de déplacer l’élément par rapport à sa position normale */
+    top: 9px;                                               /* On décale l’élément de 9px vers le bas */
     color: white;
     font-size: 1.88em;
-    font-weight: bold;
+    font-weight: bold;                                      /* On met le texte en gras */
     text-align: center;
 }
 
@@ -379,7 +355,7 @@ ul.puceJ li
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 22px;                          /* On espace les éléments de 22px */
 }
 
 .carteEmbTexte2 .ligne:first-child
@@ -397,7 +373,7 @@ ul.puceJ li
 
 .ligne p
 {
-    margin: 0;
+    margin: 0;                           /* On supprime toutes les marges autour de l’élément */
 }
 
 .zoneBlanche
@@ -414,7 +390,6 @@ ul.puceJ li
 .texteNoir
 {
     color: black;
-    margin: 0;
 }
 
 .zoneHaut
@@ -457,7 +432,7 @@ ul.puceJ li
     width:120px;
     display: flex; 
     flex-direction: column;
-    gap:2px;
+    gap:2px;                                /* On espace les éléments de 2px */
 }
 
 .zoneBasDroite
@@ -498,7 +473,7 @@ ul.puceJ li
     width: 850px;
     height: 435px;
     background-color: #0b638c;
-    border: 4.2px solid black;
+    border: 4px solid black;
     border-radius: 22px;
     padding: 6px;
     margin: 30px;
@@ -507,16 +482,16 @@ ul.puceJ li
 
 .zoneGauche2
 {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: absolute;                          /* On positionne l'élément de manière absolue */
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .zoneDroite2
 {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    position: absolute;                          /* On positionne l'élément de manière absolue */
+    bottom: 10px;                                /* On place l’élément à 10px du bas */
+    right: 10px;                                 /* On place l’élément à 10px de la droite */
 }
 
 .fondBlanc_2
@@ -537,17 +512,10 @@ ul.puceJ li
     border-radius: 18px;
 }
 
-.img1p1_2
-{
-    display: block;
-    margin: 0 auto;
-    height: 140px;
-}
-
 .zoneDroite2 p.carteEmbTexte2
 {
-    position: relative;
-    top: 9px;
+    position: relative;                             /* On garde l’élément dans le flux normal mais permet de le déplacer */
+    top: 9px;                                       /* On décale l’élément de 9px vers le bas par rapport à sa position normale */
     color: white;
     font-size: 1.88em;
     font-weight: bold;
@@ -562,7 +530,7 @@ ul.puceJ li
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 22px;                                      /* On espace les éléments de 22px */
 }
 
 .carteEmbTexte2_2 .ligne2:first-child
@@ -580,7 +548,7 @@ ul.puceJ li
 
 .ligne2 p
 {
-    margin: 0;
+    margin: 0;                             /* On supprime toutes les marges autour de l’élément */
 }
 
 .zoneBlanche2
@@ -597,7 +565,6 @@ ul.puceJ li
 .texteNoir_2
 {
     color: black;
-    margin: 0;
 }
 
 .zoneHaut2
@@ -640,7 +607,7 @@ ul.puceJ li
     width: 120px;
     display: flex; 
     flex-direction: column;
-    gap: 2px;
+    gap: 2px;                            /* On espace les éléments de 2px */
 }
 
 .zoneBasGauche2 p:nth-of-type(1) 
@@ -676,584 +643,6 @@ ul.puceJ li
     margin-left: 6px;
 }
 
-/* ################################################################################################ */
-/* ################## Les cartes d'embarquement - Les passagers | Media queries ################### */
-/* ################################################################################################ */
-
-@media (max-width: 1150px)
-{
-    .fondBleu
-    {
-        width: 600px;
-        height: 358px;
-    }
-    
-    .zoneTexte1
-    {
-        margin: 15px 30px;
-    }
-    
-    .titreAccueil
-    {
-        font-size: 2.1em;
-    }
-    
-    .img1p1
-    {
-        height: 90px !important;
-    }
-    
-    .fondBlanc
-    {
-        width: 280px;
-        height: 100px;
-    }
-    
-    .fondBlanc2
-    {
-        width: 280px;
-        height: 290px;
-    }
-    
-    .zoneHaut
-    {
-        height: 70px;
-        margin-bottom: 5px;
-    }
-    
-    .zoneHautGauche
-    {
-        width: 100px;
-    }
-    
-    .zoneHautDroite 
-    {
-        width: 180px;
-    }
-    
-    .zoneHaut p
-    {
-        margin: 2px 0;
-    }
-    
-    .zoneBasGauche p:nth-of-type(1) 
-    {
-        margin-bottom: 10px;
-    }
-    
-    .zoneBasGauche p:nth-of-type(4) 
-    {
-        margin-top: 12px;
-    }
-    
-    .zoneBasGauche p:last-child 
-    {
-        margin-top: 15px;
-    }
-    
-    .zoneBasGauche p:first-child 
-    {
-        margin-top: 18px;
-    }
-    
-    .zoneBasGauche
-    {
-        width: 100px;
-    }
-    
-    .zoneBasDroite
-    {
-        width: 180px;
-        gap: 2px;
-    }
-    
-    .zoneBas
-    {
-        height: 180px;
-        margin-top: 5px;
-    }
-    
-    .fondBlanc2 hr
-    {
-        margin: 5px 0;
-    }
-    
-    .ligne > p
-    {
-        font-size: 14px;
-    }
-    
-    .zoneBlanche
-    {
-        height: 22px;
-        width: 120px;
-    }
-    
-    .texteNoir
-    {
-        font-size: 14px;
-    }
-    
-    .texteNoir2
-    {
-        font-size: 14px;
-        margin: 3px;
-    }
-    
-    .carteEmbTexte
-    {
-        font-size: 22px !important;
-    }
-    
-    .carteEmbTexte2
-    {
-        font-size: 1em;
-        gap: 24px;
-    }
-    
-    .carteEmbTexte2 .ligne:first-child
-    {
-        margin-top: 24px;
-    }
-}
-
-@media (max-width: 750px)
-{
-    .fondBleu
-    {
-        width: 260px;
-        height: 610px;
-    }
-
-    .zoneTexte1
-    {
-        margin: 15px 20px;
-    }
-
-    .titreAccueil
-    {
-        font-size: 1.62em;
-    }
-
-    .img1p1
-    {
-        height:70px !important;
-    }
-
-    .fondBlanc
-    {
-        width: 246px;
-        height: 75px;
-    }
-
-    .ligne > p
-    {
-        font-size: 14px;
-    }
-
-    .zoneBlanche
-    {
-        height: 20px;
-        width: 122px;
-    }
-
-    .texteNoir
-    {
-        font-size: 14px;
-    }
-
-    .carteEmbTexte
-    {
-        font-size:20px !important;
-        margin-left:140px !important;
-    }
-
-    .carteEmbTexte2
-    {
-        gap:11px;
-    }
-    
-    .fondBlanc2
-    {
-        width: 246px;
-        height: 294px;
-        margin-left:140px;
-    }
-
-    .texteNoir2
-    {
-        font-size: 14px;
-    }
-
-    .zoneBasGauche p:nth-of-type(3) 
-    {
-        margin-bottom: 4px;
-    }
-
-    .zoneBasGauche p:nth-of-type(4) 
-    {
-        margin-bottom: 2px;
-    }
-}
-
-/* ################################################################################################ */
-/* ################## Les cartes d'embarquement - Les véhicules | Media queries ################### */
-/* ################################################################################################ */
-
-@media (max-width: 1150px)
-{
-    .fondBleu2
-    {
-        width: 600px;
-        height: 320px;
-    }
-    
-    .img1p1_2
-    {
-        height: 90px !important;
-    }
-    
-    .fondBlanc_2
-    {
-        width: 280px;
-        height: 100px;
-    }
-    
-    .fondBlanc2_2
-    {
-        width: 280px;
-        height: 250px;
-        
-    }
-    
-    .zoneHaut2
-    {
-        height: 70px;
-        margin-bottom: 5px;
-    }
-    
-    .zoneHautGauche2
-    {
-        width: 100px;
-    }
-    
-    .zoneHautDroite2 
-    {
-        width: 180px;
-    }
-    
-    .zoneHaut2 p
-    {
-        margin: 2px 0;
-    }
-    
-    .zoneBasGauche2 p:nth-of-type(1) 
-    {
-        margin-bottom: 10px;
-    }
-    
-    .zoneBasGauche2 p:last-child 
-    {
-        margin-top: 5px;
-    }
-    
-    .zoneBasGauche2 p:first-child 
-    {
-        margin-top: 18px;
-    }
-    
-    .zoneBasGauche2
-    {
-        width: 100px;
-        
-    }
-    
-    .zoneBasDroite2
-    {
-        width: 180px;
-        gap: 2px;
-    }
-    
-    .zoneBas2
-    {
-        height: 180px;
-        margin-top: 5px;
-    }
-    
-    .fondBlanc2_2 hr
-    {
-        margin: 5px 0;
-    }
-    
-    .ligne2 > p
-    {
-        font-size: 14px;
-    }
-    
-    .zoneBlanche2
-    {
-        height: 22px;
-        width: 120px;
-    }
-    
-    .texteNoir_2
-    {
-        font-size: 14px;
-    }
-    
-    .texteNoir2_2
-    {
-        font-size: 14px;
-        margin: 3px;
-    }
-    
-    .zoneDroite2 p.carteEmbTexte2
-    {
-        font-size: 22px !important;
-    }
-    
-    .carteEmbTexte2_2
-    {
-        font-size: 1em;
-        gap: 16px;
-    }
-    
-    .carteEmbTexte2_2 .ligne2:first-child
-    {
-        margin-top: 24px;
-    }
-}
-
-@media (max-width: 750px)
-{
-    .fondBleu2
-    {
-        width: 260px;
-        height: 570px;
-    }
-
-    .img1p1_2
-    {
-        height: 70px !important;
-    }
-
-    .fondBlanc_2
-    {
-        width: 246px;
-        height: 75px;
-    }
-
-    .ligne2 > p
-    {
-        font-size: 14px;
-    }
-
-    .zoneBlanche2
-    {
-        height: 20px;
-        width: 122px;
-    }
-
-    .texteNoir_2
-    {
-        font-size: 14px;
-    }
-
-    .zoneDroite2 p.carteEmbTexte2
-    {
-        font-size: 20px !important;
-        margin-left: 140px !important;
-    }
-
-    .fondBlanc2_2
-    {
-        width: 246px;
-        height: 246px;
-        margin-left: 140px;
-    }
-
-    .carteEmbTexte2_2
-    {
-        gap: 11px;
-    }
-
-    .texteNoir2_2
-    {
-        font-size: 14px;
-    }
-
-    .zoneBasGauche2 p:first-child 
-    {
-        margin-bottom: 11px;
-    }
-
-    .zoneBasGauche2 p:nth-of-type(3) 
-    {
-        margin-bottom: 2px;
-    }
-}
-
-
-
-
-
-/* ################################################################################################ */
-/* ############################ Les liens et les images | Media queries ########################### */
-/* ################################################################################################ */
-
-@media (max-width: 1500px)
-{
-    .img1p0
-    {
-        height: 110px !important;
-        border-radius: 0px;
-    }
-    .img2p0
-    {
-        height: 110px !important;
-        border-radius: 0px;
-    }
-    
-    .menuPageAcceuil ul.lienMenu 
-    { 
-        padding: 15px 30px;
-        max-width: 450px;
-    }
-    
-    .menuPageAcceuil li a
-    {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .menuPageAcceuil ul.lienMenu li 
-    {
-        margin: 5px 8px;
-    }
-    
-    .menuPageAcceuil ul.lienMenu li a img
-    {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-@media (max-width: 1100px)
-{
-    .menuPageAcceuil
-    {
-        flex-direction: column;
-    }
-
-    .img1p0
-    {
-        height: 80px !important;
-        border-radius: 0px;
-    }
-
-    .img2p0
-    {
-        height: 80px !important;
-        border-radius: 0px;
-    }
-
-    .menuPageAcceuil ul.lienMenu 
-    { 
-        padding: 15px 30px;
-        max-width: 450px;
-    }
-    
-    .menuPageAcceuil li a
-    {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .menuPageAcceuil ul.lienMenu li 
-    {
-        margin: 5px 8px;
-    }
-    
-    .menuPageAcceuil ul.lienMenu li a img
-    {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-@media (max-width: 700px)
-{
-    .menuPageAcceuil
-    {
-        flex-direction: column;
-    }
-
-    .img1p0
-    {
-        height: 80px !important;
-        border-radius: 0px;
-    }
-
-    .img2p0
-    {
-        height: 80px !important;
-        border-radius: 0px;
-    }
-
-    .menuPageAcceuil ul.lienMenu 
-    { 
-        flex-direction: column;
-        padding: 15px 20px;
-        max-width: 300px;
-    }
-    
-    .menuPageAcceuil ul.lienMenu li 
-    {
-        width: 100%;
-        margin: 3px 0;
-    }
-    
-    .menuPageAcceuil li a
-    {
-        padding: 6px 12px;
-        font-size: 0.85rem;
-    }
-    
-    .menuPageAcceuil ul.lienMenu li a 
-    {
-        font-size: 0.85rem;
-    }
-}
-
-/* ################################################################################################ */
-/* ##################################### Footer | Media queries ################################### */
-/* ################################################################################################ */
-
-
-@media (max-width: 580px)
-{
-    .footerRow p 
-    {
-        font-size: 0.8em;
-        margin:0;
-    }
-}
-
-@media (max-width: 480px)
-{
-    .footerRow p 
-    {
-        font-size: 0.7em;
-        margin:0;
-    }
-
-    .footerRow img
-    {
-        height: 18px;
-        width:21px;
-    }
-}
-
 /* ########################################################################################################################################################## */
 /* ############################################################### - Page n°2 - Les factures - ############################################################## */
 /* ########################################################################################################################################################## */
@@ -1261,57 +650,57 @@ ul.puceJ li
 .zoneTexte2 
 {
     background-color: #fafafa;
-    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 15px;
-    margin: 15px 280px;
     border-radius: 15px;
+    margin: 15px 280px;
+    padding: 15px;
+    display: flex;
 }
 
 .carreBleu 
 {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
     border: 3px solid #0b638c;
+    background-color: transparent;
     border-radius: 8px;
+    height: 100%;
+    width: 100%;
 }
 
 .imageContainer 
 {
-    display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 0;
+    display: flex;
 }
 
 p.text1p2 
 {
+    font-family: Calibri;         /* On définit la police à Calibri */
     font-weight: bold;
     text-align: center;
     font-size: 24px;
-    font-family: Calibri, Arial, sans-serif;
 }
 
 p.text2p2 
 {
-    font-weight: bold;
-    font-family: Calibri, Arial, sans-serif;
+    font-family: Calibri;          /* On définit la police à Calibri */
+    font-weight: bold; 
 }
 
 article.articlePage2 
 {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    display: flex;
 }
 
 p.margeTexte 
 {
-    align-self: flex-start;
     padding-left: 68px;
+    align-self: flex-start;
 }
 
 p.espace 
@@ -1321,31 +710,29 @@ p.espace
 
 .tableUnifie2
 {
-    width: 70%;
-    border-collapse: collapse;
-    font-size: 1.1rem;
-    margin-bottom: 4px;
-    background: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 14px;
-    overflow: hidden;
+    border-collapse: collapse;                          /* On fusionne les bordures des cellules pour qu’il n’y ait pas d’espace entre elles */
+    margin-bottom: 4px;
+    background-color: white;
+    font-size: 1.1rem;
+    border-radius: 14px;                                /* On arrondi les coins du tableau */
+    overflow: hidden;                                   /* On empêche le contenu des cellules de dépasser et on préserve l’arrondi */
+    width: 70%;                                         /* On fixe la largeur à 70% */
 }
 
 .tableUnifie2 th 
 {
-    background: #ffc100;
-    color: black;
+    background-color: #ffc100;
     text-align: center;
-    padding: 12px;
     font-size: 1.2rem;
-    border: none; 
+    padding: 12px;
+    color: black;
 }
 
 .tableUnifie2 td 
 {
     padding: 10px 12px;
     text-align: center;
-    border: none;
 }
 
 .tableUnifie2 tr:nth-child(even) 
@@ -1355,22 +742,22 @@ p.espace
 
 .texteFacture
 {
-    margin-top:22px;
+    margin-top: 22px;
 }
 
 .ligneTotal 
 {
-    width: 30%;
-    align-self: flex-end;
-    display: flex;
     justify-content: center;
-    padding: 10px 15px;
-    margin-top: 8px;
-    margin-bottom: 8px;;
-    margin-right: 15%;  
     background-color: #f0f0f0;
-    border-radius: 8px;
+    align-self: flex-end;
+    margin-right: 15%;                    /* On ajoute un espace de 15% du conteneur à droite de l’élément */
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 8px;
     font-weight: bold;
+    margin-top: 8px;
+    display: flex;
+    width: 30%;
 }
 
 .ligneTotal:last-child
@@ -1417,15 +804,12 @@ p.espace
 
 .dateTableau select
 {
-    margin-top:4px;
-    margin-left:9px;
+    margin-top: 4px;
+    margin-left: 9px;
 }
 
-
 .remplissageHorizontale p
-{
-    margin: 0;
-    padding: 0;
+{     
     color: white;
 }
 
@@ -1448,10 +832,10 @@ p.espace
 {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;     
+    flex-wrap: wrap;                                    /* On permet aux éléments de passer à la ligne suivante */
     justify-content: center;  
     border-radius: 12px;
-    margin: 0px 20px 20px;
+    margin: 0px 20px 20px;                              /* On applique 0px en haut, 20px à gauche et à droite, 20px en bas */
     width: 100%;           
     gap: 40px;      
     max-width: 1400px;
@@ -1462,11 +846,10 @@ p.espace
     background-color: #0b638c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     height: auto;
-    width: calc(50% - 60px);  
-    min-height: 200px;  
+    width: calc(50% - 60px);                            /* On dit que la largeur est égale à 50% du conteneur moins 60px */
+    min-height: 200px;                                  /* On définit la hauteur minimale à 200px, l’élément peut être plus grand mais jamais plus petit */
     padding: 12px;
     border-radius: 12px;
-    margin: 0;
     display: flex;
     flex-direction: column;
 }
@@ -1477,12 +860,6 @@ p.espace
     padding-bottom: 18px;         
     color: white;
     text-align: center;
-}
-
-.uneLiaison p
-{
-    color:white;
-    margin: 0;
 }
 
 .uneLiaison p.tauxPassagers 
@@ -1505,7 +882,6 @@ p.espace
     justify-content: center;
     gap:14px;
 }
-
 
 /* ########################################################################################################################################################## */
 /* ############################################################ - Page n°4 - Les statistiques - ############################################################# */
@@ -1537,7 +913,7 @@ p.espace
 .lesStats
 {
     display:flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;                  /* On fait passer les éléments à la ligne si nécessaire */
     gap:30px;
     flex-direction: row;
     border-radius: 12px;
@@ -1545,12 +921,13 @@ p.espace
     justify-content: center;
 }
 
-.uneStats p.unEspace {
-    margin: 15px 0;
-    padding: 12px 15px;
-    background: rgba(255,255,255,0.1);
+.uneStats p.unEspace 
+{
+    margin: 15px 0;                                 /* On ajoute 15px de marge en haut et en bas et rien sur les côtés */
+    padding: 12px 15px;                             /* On définit l'espacement intérieur : 12px vertical et 15px horizontal */
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
-    border-left: 4px solid #ffc100; 
+    border-left: 4px solid #ffc100;               /* On ajoute une bordure jaune de 4px à gauche */
     font-size: 0.95em;
 }
 
@@ -1559,18 +936,18 @@ p.espace
     background-color: #0b638c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     height: auto;
-    width: calc(50% - 15px); 
-    max-width: 600px; 
+    width: calc(50% - 15px);                        /* On calcule la largeur : 50% moins 15px */
+    max-width: 600px;                               /* On limite la largeur maximale à 600px */
     padding: 12px;
     border-radius: 12px;
     color: white;
 }
 
 .uneStats h3 
-{
-    margin: 15px 80px 15px 80px;
+{ 
+    margin: 15px 80px 15px 80px;                    /* On applique 15px en haut et en bas et 80px à gauche et à droite */
     padding-bottom: 18px;
-    border-bottom: 2px solid #ffc100; 
+    border-bottom: 2px solid #ffc100;             /* On ajoute une bordure jaune de 2px en bas */
     color: white;
 }
 
@@ -1629,31 +1006,37 @@ p.espace
 {
     background: #f5f5f5;
     border-radius: 20px;
-    padding: 8px 20px 22px 22px;
+    padding: 8px 20px 22px 22px;                           /* On applique un padding de 8px en haut, 20px à droite, 22px en bas et à gauche */
     width: 180px;
     text-align: center;
-    cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #stopSon 
 {
-    background: #e74c3c;
-    border: none;
-    padding: 12px 0;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    max-width: calc(180px * 3 + 25px * 2);
+    background-color: #e74c3c;
+    border: none;                                                  /* On supprime toutes les bordures */
+    padding: 12px 0;                                               /* On ajoute 12px de padding en haut et en bas et rien sur les côtés */
+    border-radius: 10px;  
+    cursor: pointer;                                               /* On change le curseur en main au survol */
+    width: 50%;                                                    /* On fixe la largeur à 50% */
+    max-width: calc(180px * 3 + 25px * 2);                         /* On calcule la largeur max : 3 éléments de 180px + 2 espaces de 25px */
+    position: relative;                                            /* On active le positionnement relatif pour l'animation */
+    box-shadow: inset 0 1px 0 #ff6b5a, 0 5px 0 #a83228;        /* On crée un effet 3D : lumière interne en haut et ombre en dessous */
 }
 
+#stopSon:active 
+{
+    top: 5px;                                                             /* On déplace le bouton vers le bas quand on clique */
+    box-shadow: inset 0 1px 0 #ff6b5a, inset 0 -3px 0 #a83228;        /* On inverse les ombres internes pour simuler l'enfoncement du bouton */
+}
 
 .btnPlay 
 {
-    border: none;
-    padding: 6px 10px 4px 12px;
+    border: none;                                          /* On supprime toutes les bordures */
+    padding: 6px 10px 4px 12px;                            /* On applique un padding de 6px en haut, 10px à droite, 4px en bas et 12px à gauche */
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer;                                       /* On change le curseur en main au survol */
 }
 
 .img1Son
@@ -1661,9 +1044,8 @@ p.espace
     border-radius: 10px;
     margin-top:10px;
     height:110px;
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: slideImgSon1 0.9s ease-out forwards;
+    transform: translateX(-20px);                          /* On décale l'élément de 20px vers la gauche */
+    animation: slideImgSon1 0.9s ease-out forwards;        /* On lance l'animation et on garde l'état final */
 }
 
 .img2Son
@@ -1671,9 +1053,8 @@ p.espace
     border-radius: 10px;
     margin-top:10px;
     height:110px;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideImgSon1 0.9s ease-out forwards;
+    transform: translateY(-20px);                          /* On décale l'élément de 20px vers le haut */
+    animation: slideImgSon1 0.9s ease-out forwards;        /* On lance l'animation et on garde l'état final */
 }
 
 .img3Son
@@ -1681,35 +1062,25 @@ p.espace
     border-radius: 10px;
     margin-top:10px;
     height:110px;
-    opacity: 0;
-    transform: translateX(20px);
-    animation: slideImgSon1 0.9s ease-out forwards;
+    transform: translateX(20px);                           /* On décale l'élément de 20px vers la gauche */
+    animation: slideImgSon1 0.9s ease-out forwards;        /* On lance l'animation et on garde l'état final */
 }
 
+/* Animation d'apparition par glissement */
 @keyframes slideImgSon1
 {
     to 
     {
-        opacity: 1;
         transform: translateX(0);
     }
 }
 
+/* Animation d'apparition par glissement */
 @keyframes slideImgSon2
 {
     to 
     {
-        opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes slideImgSon3
-{
-    to 
-    {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
@@ -1732,13 +1103,13 @@ p.espace
 .tableUnifie3 
 {
     width: 90%;
-    border-collapse: collapse;
-    margin: 20px auto 2.5rem auto;
+    border-collapse: collapse;                    /* On fusionne les bordures du tableau */
+    margin: 20px auto 2.5rem auto;                /* On centre horizontalement avec 20px en haut et 2.5rem en bas */
     font-size: 1.1rem;
     background: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 14px;
-    overflow: hidden;
+    overflow: hidden;                             /* On masque le contenu qui dépasse de l'élément */
 }
 
 
@@ -1749,14 +1120,14 @@ p.espace
     text-align: center;
     padding: 12px;
     font-size: 1.2rem;
-    border: none; 
+    border: none;                                 /* On supprime toutes les bordures */
 }
 
 .tableUnifie3 td 
 {
     padding: 10px 12px;
     text-align: center;
-    border: none;
+    border: none;                                 /* On supprime toutes les bordures */
 }
 
 .tableUnifie3 tr:nth-child(even) 
@@ -1806,7 +1177,7 @@ p.espace
 
 .connexionFondBlanc1 
 {
-    flex: 1;
+    flex: 1;                            /* On autorise l'élément à s'étendre proportionnellement */
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -1820,7 +1191,7 @@ p.espace
 
 .connexionFondBlanc2 
 {
-    flex: 1; 
+    flex: 1;                            /* On autorise l'élément à s'étendre proportionnellement */
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -1852,13 +1223,11 @@ img.imageConnexion1
     padding: 12px;
     height: auto; 
     width: auto;
-    max-width: 40%;
-    max-height: 40%;
-    opacity: 0;
+    max-width: 40%;                                   /* On limite la largeur maximale à 40% */
+    max-height: 40%;                                  /* On limite la hauteur maximale à 40% */
     transform: translateY(-20px);
     animation: slideI1 0.9s ease-out forwards;
 }
-
 
 .imageConnexion2 
 {
@@ -1882,14 +1251,14 @@ img.imageConnexion1
 
 .animationConnexion 
 {
-    opacity: 0;
     transform: translateY(-24px);
     animation: slideAnimationCo 0.9s ease-out forwards;
 }
 
-@keyframes slideAnimationCo {
-    to {
-        opacity: 1;
+@keyframes slideAnimationCo 
+{
+    to 
+    {
         transform: translateX(0);
     }
 }
@@ -1901,18 +1270,18 @@ img.imageConnexion1
 .tableUnifie
 {
     width: 100%;
-    border-collapse: collapse;
-    margin: 0;
+    border-collapse: collapse;                      /* On fusionne les bordures du tableau */
+    margin: 0;                                      /* On supprime toutes les marges externes */
+    overflow: hidden;                               /* On masque le contenu qui dépasse de l'élément */
     font-size: 1.1rem;
     background: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 14px;
-    overflow: hidden;
 }
 
 .tableUnifie th
 {
-    background: #ffc100;
+    background-color: #ffc100;
     color: black;
     text-align: center;
     padding: 12px;
@@ -1945,19 +1314,19 @@ img.imageConnexion1
 .contBateau
 {
     display: flex;
-    align-items: stretch;
+    align-items: stretch;                         /* On étire les éléments pour remplir toute la hauteur du conteneur */
     padding: 20px;
 }
 
 .contBateauP1
 {
-    flex: 0 0 77%;
+    flex: 0 0 77%;                                /* On fixe la largeur à 77% sans permettre de croissance ou rétrécissement */
     margin-right: 20px;
 }
 
 .contBateauP2
 {
-    flex: 0 0 17%;
+    flex: 0 0 17%;                                /* On fixe la largeur à 17% sans permettre de croissance ou rétrécissement */
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -1988,7 +1357,7 @@ img.imageConnexion1
 
 .btn 
 {
-    cursor: pointer;
+    cursor: pointer;                                      /* On change le curseur en main au survol */
     transition: all 0.3s ease;
     text-decoration: none; 
     display: inline-block;
@@ -2004,9 +1373,9 @@ img.imageConnexion1
     text-decoration: none;
     font-weight: bold;
     margin: 4px;
-    animation: pulse 1.5s infinite;
+    animation: pulse 1.5s infinite;                       /* On lance une animation pulsante de 1.5s en boucle infinie */
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    cursor: pointer;                                      /* On change le curseur en main au survol */
 }
 
 .btn-pulse2 
@@ -2015,15 +1384,16 @@ img.imageConnexion1
     color: white;
     padding:8px 40px;
     margin:4px;
-    animation: pulse 1.5s infinite;
+    animation: pulse 1.5s infinite;                       /* On lance une animation pulsante de 1.5s en boucle infinie */
     border-radius: 8px;
 }
 
+/* Animation de pulsation : on agrandit puis on revient à la taille normale */
 @keyframes pulse 
 {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1); }                    /* On part de la taille normale */
+    50% { transform: scale(1.1); }                 /* On agrandit de 10% */
+    100% { transform: scale(1); }                  /* On revient à la taille d'origine */
 }
 
 /* ######################################################################################################################################################################## */
@@ -2045,7 +1415,6 @@ img.imageConnexion1
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
 /* ######################################################################################################################################################################## */
@@ -2059,7 +1428,7 @@ span
 
 #numRes
 {
-    -webkit-text-security: disc;
+    -webkit-text-security: disc;                        /* On transforme les caractères en points noirs */
     text-align: center;
 }
 

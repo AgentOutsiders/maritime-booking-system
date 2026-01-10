@@ -1,0 +1,577 @@
+/* ################################################################################################ */
+/* ################## Les cartes d'embarquement - Les passagers | Media queries ################### */
+/* ################################################################################################ */
+
+@media (max-width: 1150px)
+{
+    .fondBleu
+    {
+        width: 600px;
+        height: 358px;
+    }
+    
+    .zoneTexte1
+    {
+        margin: 15px 30px;
+    }
+    
+    .titreAccueil
+    {
+        font-size: 2.1em;
+    }
+    
+    .img1p1
+    {
+        height: 90px !important;
+    }
+    
+    .fondBlanc
+    {
+        width: 280px;
+        height: 100px;
+    }
+    
+    .fondBlanc2
+    {
+        width: 280px;
+        height: 290px;
+    }
+    
+    .zoneHaut
+    {
+        height: 70px;
+        margin-bottom: 5px;
+    }
+    
+    .zoneHautGauche
+    {
+        width: 100px;
+    }
+    
+    .zoneHautDroite 
+    {
+        width: 180px;
+    }
+    
+    .zoneHaut p
+    {
+        margin: 2px 0;
+    }
+    
+    .zoneBasGauche p:nth-of-type(1) 
+    {
+        margin-bottom: 10px;
+    }
+    
+    .zoneBasGauche p:nth-of-type(4) 
+    {
+        margin-top: 12px;
+    }
+    
+    .zoneBasGauche p:last-child 
+    {
+        margin-top: 15px;
+    }
+    
+    .zoneBasGauche p:first-child 
+    {
+        margin-top: 18px;
+    }
+    
+    .zoneBasGauche
+    {
+        width: 100px;
+    }
+    
+    .zoneBasDroite
+    {
+        width: 180px;
+        gap: 2px;
+    }
+    
+    .zoneBas
+    {
+        height: 180px;
+        margin-top: 5px;
+    }
+    
+    .fondBlanc2 hr
+    {
+        margin: 5px 0;
+    }
+    
+    .ligne > p
+    {
+        font-size: 14px;
+    }
+    
+    .zoneBlanche
+    {
+        height: 22px;
+        width: 120px;
+    }
+    
+    .texteNoir
+    {
+        font-size: 14px;
+    }
+    
+    .texteNoir2
+    {
+        font-size: 14px;
+        margin: 3px;
+    }
+    
+    .carteEmbTexte
+    {
+        font-size: 22px !important;
+    }
+    
+    .carteEmbTexte2
+    {
+        font-size: 1em;
+        gap: 24px;
+    }
+    
+    .carteEmbTexte2 .ligne:first-child
+    {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 750px)
+{
+    .fondBleu
+    {
+        width: 260px;
+        height: 610px;
+    }
+
+    .zoneTexte1
+    {
+        margin: 15px 20px;
+    }
+
+    .titreAccueil
+    {
+        font-size: 1.62em;
+    }
+
+    .img1p1
+    {
+        height:70px !important;
+    }
+
+    .fondBlanc
+    {
+        width: 246px;
+        height: 75px;
+    }
+
+    .ligne > p
+    {
+        font-size: 14px;
+    }
+
+    .zoneBlanche
+    {
+        height: 20px;
+        width: 122px;
+    }
+
+    .texteNoir
+    {
+        font-size: 14px;
+    }
+
+    .carteEmbTexte
+    {
+        font-size:20px !important;
+        margin-left:140px !important;
+    }
+
+    .carteEmbTexte2
+    {
+        gap:11px;
+    }
+    
+    .fondBlanc2
+    {
+        width: 246px;
+        height: 294px;
+        margin-left:140px;
+    }
+
+    .texteNoir2
+    {
+        font-size: 14px;
+    }
+
+    .zoneBasGauche p:nth-of-type(3) 
+    {
+        margin-bottom: 4px;
+    }
+
+    .zoneBasGauche p:nth-of-type(4) 
+    {
+        margin-bottom: 2px;
+    }
+}
+
+/* ################################################################################################ */
+/* ################## Les cartes d'embarquement - Les véhicules | Media queries ################### */
+/* ################################################################################################ */
+
+@media (max-width: 1150px)
+{
+    .fondBleu2
+    {
+        width: 600px;
+        height: 320px;
+    }
+    
+    .img1p1_2
+    {
+        height: 90px !important;
+    }
+    
+    .fondBlanc_2
+    {
+        width: 280px;
+        height: 100px;
+    }
+    
+    .fondBlanc2_2
+    {
+        width: 280px;
+        height: 250px;
+        
+    }
+    
+    .zoneHaut2
+    {
+        height: 70px;
+        margin-bottom: 5px;
+    }
+    
+    .zoneHautGauche2
+    {
+        width: 100px;
+    }
+    
+    .zoneHautDroite2 
+    {
+        width: 180px;
+    }
+    
+    .zoneHaut2 p
+    {
+        margin: 2px 0;
+    }
+    
+    .zoneBasGauche2 p:nth-of-type(1) 
+    {
+        margin-bottom: 10px;
+    }
+    
+    .zoneBasGauche2 p:last-child 
+    {
+        margin-top: 5px;
+    }
+    
+    .zoneBasGauche2 p:first-child 
+    {
+        margin-top: 18px;
+    }
+    
+    .zoneBasGauche2
+    {
+        width: 100px;
+        
+    }
+    
+    .zoneBasDroite2
+    {
+        width: 180px;
+        gap: 2px;
+    }
+    
+    .zoneBas2
+    {
+        height: 180px;
+        margin-top: 5px;
+    }
+    
+    .fondBlanc2_2 hr
+    {
+        margin: 5px 0;
+    }
+    
+    .ligne2 > p
+    {
+        font-size: 14px;
+    }
+    
+    .zoneBlanche2
+    {
+        height: 22px;
+        width: 120px;
+    }
+    
+    .texteNoir_2
+    {
+        font-size: 14px;
+    }
+    
+    .texteNoir2_2
+    {
+        font-size: 14px;
+        margin: 3px;
+    }
+    
+    .zoneDroite2 p.carteEmbTexte2
+    {
+        font-size: 22px !important;
+    }
+    
+    .carteEmbTexte2_2
+    {
+        font-size: 1em;
+        gap: 16px;
+    }
+    
+    .carteEmbTexte2_2 .ligne2:first-child
+    {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 750px)
+{
+    .fondBleu2
+    {
+        width: 260px;
+        height: 570px;
+    }
+
+    .img1p1_2
+    {
+        height: 70px !important;
+    }
+
+    .fondBlanc_2
+    {
+        width: 246px;
+        height: 75px;
+    }
+
+    .ligne2 > p
+    {
+        font-size: 14px;
+    }
+
+    .zoneBlanche2
+    {
+        height: 20px;
+        width: 122px;
+    }
+
+    .texteNoir_2
+    {
+        font-size: 14px;
+    }
+
+    .zoneDroite2 p.carteEmbTexte2
+    {
+        font-size: 20px !important;
+        margin-left: 140px !important;
+    }
+
+    .fondBlanc2_2
+    {
+        width: 246px;
+        height: 246px;
+        margin-left: 140px;
+    }
+
+    .carteEmbTexte2_2
+    {
+        gap: 11px;
+    }
+
+    .texteNoir2_2
+    {
+        font-size: 14px;
+    }
+
+    .zoneBasGauche2 p:first-child 
+    {
+        margin-bottom: 11px;
+    }
+
+    .zoneBasGauche2 p:nth-of-type(3) 
+    {
+        margin-bottom: 2px;
+    }
+}
+
+/* ################################################################################################ */
+/* ############################ Les liens et les images | Media queries ########################### */
+/* ################################################################################################ */
+
+@media (max-width: 1500px)
+{
+    .img1p0
+    {
+        height: 110px !important;
+        border-radius: 0px;
+    }
+    .img2p0
+    {
+        height: 110px !important;
+        border-radius: 0px;
+    }
+    
+    .menuPageAcceuil ul.lienMenu 
+    { 
+        padding: 15px 30px;
+        max-width: 450px;
+    }
+    
+    .menuPageAcceuil li a
+    {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li 
+    {
+        margin: 5px 8px;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li a img
+    {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 1100px)
+{
+    .menuPageAcceuil
+    {
+        flex-direction: column;
+    }
+
+    .img1p0
+    {
+        height: 80px !important;
+        border-radius: 0px;
+    }
+
+    .img2p0
+    {
+        height: 80px !important;
+        border-radius: 0px;
+    }
+
+    .menuPageAcceuil ul.lienMenu 
+    { 
+        padding: 15px 30px;
+        max-width: 450px;
+    }
+    
+    .menuPageAcceuil li a
+    {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li 
+    {
+        margin: 5px 8px;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li a img
+    {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .menuPageAcceuil
+    {
+        flex-direction: column;
+    }
+
+    .img1p0
+    {
+        height: 80px !important;
+        border-radius: 0px;
+    }
+
+    .img2p0
+    {
+        height: 80px !important;
+        border-radius: 0px;
+    }
+
+    .menuPageAcceuil ul.lienMenu 
+    { 
+        flex-direction: column;
+        padding: 15px 20px;
+        max-width: 300px;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li 
+    {
+        width: 100%;
+        margin: 3px 0;
+    }
+    
+    .menuPageAcceuil li a
+    {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .menuPageAcceuil ul.lienMenu li a 
+    {
+        font-size: 0.85rem;
+    }
+}
+
+/* ################################################################################################ */
+/* ##################################### Footer | Media queries ################################### */
+/* ################################################################################################ */
+
+
+@media (max-width: 580px)
+{
+    .footerRow p 
+    {
+        font-size: 0.8em;
+        margin:0;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .footerRow p 
+    {
+        font-size: 0.7em;
+        margin:0;
+    }
+
+    .footerRow img
+    {
+        height: 18px;
+        width:21px;
+    }
+}
+
+/* ################################################################################################ */
+/* ################################################################################################ */
+/* ################################################################################################ */
