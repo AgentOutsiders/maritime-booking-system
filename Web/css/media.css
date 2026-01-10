@@ -2,7 +2,7 @@
 /* ################## Les cartes d'embarquement - Les passagers | Media queries ################### */
 /* ################################################################################################ */
 
-@media (max-width: 1150px)
+@media (max-width: 1150px)                       /* On applique ces styles pour les écrans de 1150px de large et moins */
 {
     .fondBleu
     {
@@ -22,7 +22,7 @@
     
     .img1p1
     {
-        height: 90px !important;
+        height: 90px !important;                 /* On force la hauteur à 90px */
     }
     
     .fondBlanc
@@ -55,25 +55,25 @@
     
     .zoneHaut p
     {
-        margin: 2px 0;
+        margin: 2px 0;                           /* On ajoute 2px de marge en haut et en bas et rien sur les côtés */
     }
     
-    .zoneBasGauche p:nth-of-type(1) 
+    .zoneBasGauche p:nth-of-type(1)              /* On cible le premier paragraphe dans .zoneBasGauche */
     {
         margin-bottom: 10px;
     }
     
-    .zoneBasGauche p:nth-of-type(4) 
+    .zoneBasGauche p:nth-of-type(4)              /* On cible le quatrième paragraphe dans .zoneBasGauche */
     {
         margin-top: 12px;
     }
     
-    .zoneBasGauche p:last-child 
+    .zoneBasGauche p:last-child                  /* On cible le dernier élément <p> */
     {
         margin-top: 15px;
     }
     
-    .zoneBasGauche p:first-child 
+    .zoneBasGauche p:first-child                 /* On cible le premier élément <p> */
     {
         margin-top: 18px;
     }
@@ -97,11 +97,11 @@
     
     .fondBlanc2 hr
     {
-        margin: 5px 0;
+        margin: 5px 0;                           /* On ajoute 5px de marge en haut et en bas et rien sur les côtés */
     }
     
-    .ligne > p
-    {
+    .ligne > p                                   /* On sélectionne uniquement les <p> directement dans .ligne */
+    { 
         font-size: 14px;
     }
     
@@ -124,7 +124,7 @@
     
     .carteEmbTexte
     {
-        font-size: 22px !important;
+        font-size: 22px !important;              /* On force la taille de police à 22px */
     }
     
     .carteEmbTexte2
@@ -133,13 +133,13 @@
         gap: 24px;
     }
     
-    .carteEmbTexte2 .ligne:first-child
+    .carteEmbTexte2 .ligne:first-child           /* On cible la première .ligne dans .carteEmbTexte2 */
     {
         margin-top: 24px;
     }
 }
 
-@media (max-width: 750px)
+@media (max-width: 750px)                        /* On applique ces styles pour les écrans de 750px de large et moins */
 {
     .fondBleu
     {
@@ -159,7 +159,7 @@
 
     .img1p1
     {
-        height:70px !important;
+        height:70px !important;                  /* On force la hauteur à 70px */
     }
 
     .fondBlanc
@@ -168,7 +168,7 @@
         height: 75px;
     }
 
-    .ligne > p
+    .ligne > p                                   /* On sélectionne uniquement les <p> directement dans .ligne */
     {
         font-size: 14px;
     }
@@ -186,8 +186,8 @@
 
     .carteEmbTexte
     {
-        font-size:20px !important;
-        margin-left:140px !important;
+        font-size: 20px !important;              /* On force la taille de police à 20px */
+        margin-left: 140px !important;           /* On force la marge gauche à 140px */
     }
 
     .carteEmbTexte2
@@ -207,12 +207,12 @@
         font-size: 14px;
     }
 
-    .zoneBasGauche p:nth-of-type(3) 
+    .zoneBasGauche p:nth-of-type(3)              /* On cible le troisième paragraphe dans .zoneBasGauche */
     {
         margin-bottom: 4px;
     }
 
-    .zoneBasGauche p:nth-of-type(4) 
+    .zoneBasGauche p:nth-of-type(4)              /* On cible le quatrième paragraphe dans .zoneBasGauche */
     {
         margin-bottom: 2px;
     }
@@ -222,7 +222,7 @@
 /* ################## Les cartes d'embarquement - Les véhicules | Media queries ################### */
 /* ################################################################################################ */
 
-@media (max-width: 1150px)
+@media (max-width: 1150px)                       /* On applique ces styles pour les écrans de 1150px de large et moins */
 {
     .fondBleu2
     {
@@ -232,7 +232,7 @@
     
     .img1p1_2
     {
-        height: 90px !important;
+        height: 90px !important;                 /* On force la hauteur à 90px */
     }
     
     .fondBlanc_2
@@ -269,17 +269,17 @@
         margin: 2px 0;
     }
     
-    .zoneBasGauche2 p:nth-of-type(1) 
+    .zoneBasGauche2 p:nth-of-type(1)             /* On cible le première paragraphe dans .zoneBasGauche2 */
     {
         margin-bottom: 10px;
     }
     
-    .zoneBasGauche2 p:last-child 
+    .zoneBasGauche2 p:last-child                 /* On cible le dernier paragraphe dans .zoneBasGauche2 */
     {
         margin-top: 5px;
     }
     
-    .zoneBasGauche2 p:first-child 
+    .zoneBasGauche2 p:first-child                /* On cible le premier paragraphe dans .zoneBasGauche2 */
     {
         margin-top: 18px;
     }
@@ -346,7 +346,7 @@
     }
 }
 
-@media (max-width: 750px)
+@media (max-width: 750px)                        /* On applique ces styles pour les écrans de 750px de large et moins */
 {
     .fondBleu2
     {
@@ -419,7 +419,7 @@
 /* ############################ Les liens et les images | Media queries ########################### */
 /* ################################################################################################ */
 
-@media (max-width: 1500px)
+@media (max-width: 1500px)                       /* On applique ces styles pour les écrans de 1500px de large et moins */
 {
     .img1p0
     {
@@ -456,7 +456,7 @@
     }
 }
 
-@media (max-width: 1100px)
+@media (max-width: 1100px)                       /* On applique ces styles pour les écrans de 1100px de large et moins */
 {
     .menuPageAcceuil
     {
@@ -499,7 +499,7 @@
     }
 }
 
-@media (max-width: 700px)
+@media (max-width: 700px)                        /* On applique ces styles pour les écrans de 700px de large et moins */
 {
     .menuPageAcceuil
     {
@@ -548,21 +548,21 @@
 /* ################################################################################################ */
 
 
-@media (max-width: 580px)
+@media (max-width: 580px)                        /* On applique ces styles pour les écrans de 580px de large et moins */
 {
     .footerRow p 
     {
         font-size: 0.8em;
-        margin:0;
+        margin:0;                                /* On supprime toutes les marges */
     }
 }
 
-@media (max-width: 480px)
+@media (max-width: 480px)                        /* On applique ces styles pour les écrans de 480px de large et moins */
 {
     .footerRow p 
     {
         font-size: 0.7em;
-        margin:0;
+        margin:0;                                /* On supprime toutes les marges */
     }
 
     .footerRow img
