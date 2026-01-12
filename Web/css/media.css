@@ -1,141 +1,141 @@
-/* ################################################################################################ */
-/* ################## Les cartes d'embarquement - Les passagers | Media queries ################### */
-/* ################################################################################################ */
+/* ######################################################################################################################################################## */
+/* ############################################## Les cartes d'embarquement - Les passagers | Media queries ############################################### */
+/* ######################################################################################################################################################## */
 
 @media (max-width: 1150px)                       /* On applique ces styles pour les écrans de 1150px de large et moins */
 {
     .fondBleu
     {
-        width: 600px;
-        height: 358px;
+        width: 600px;                            /* On définit la largeur à 600px */
+        height: 358px;                           /* On définit la hauteur à 358px */
     }
-    
+
     .zoneTexte1
     {
-        margin: 15px 30px;
+        margin: 15px 30px;                       /* On définit la marge à 15px en haut et en bas et 30px sur les côtés */
     }
-    
+
     .titreAccueil
     {
-        font-size: 2.1em;
+        font-size: 2.1em;                        /* On définit la taille de police à 2.1em */
     }
-    
+
     .img1p1
     {
         height: 90px !important;                 /* On force la hauteur à 90px */
     }
-    
+
     .fondBlanc
     {
-        width: 280px;
-        height: 100px;
+        width: 280px;                            /* On définit la largeur à 280px */
+        height: 100px;                           /* On définit la hauteur à 100px */
     }
-    
+
     .fondBlanc2
     {
-        width: 280px;
-        height: 290px;
+        width: 280px;                            /* On définit la largeur à 280px */
+        height: 290px;                           /* On définit la hauteur à 290px */
     }
-    
+
     .zoneHaut
     {
-        height: 70px;
-        margin-bottom: 5px;
+        height: 70px;                            /* On définit la hauteur à 70px */
+        margin-bottom: 5px;                      /* On définit la marge basse à 5px */
     }
-    
+
     .zoneHautGauche
     {
-        width: 100px;
+        width: 100px;                            /* On définit la largeur à 100px */
     }
-    
-    .zoneHautDroite 
+
+    .zoneHautDroite
     {
-        width: 180px;
+        width: 180px;                            /* On définit la largeur à 180px */
     }
-    
+
     .zoneHaut p
     {
         margin: 2px 0;                           /* On ajoute 2px de marge en haut et en bas et rien sur les côtés */
     }
-    
+
     .zoneBasGauche p:nth-of-type(1)              /* On cible le premier paragraphe dans .zoneBasGauche */
     {
-        margin-bottom: 10px;
+        margin-bottom: 10px;                     /* On définit la marge basse à 10px */
     }
-    
+
     .zoneBasGauche p:nth-of-type(4)              /* On cible le quatrième paragraphe dans .zoneBasGauche */
     {
-        margin-top: 12px;
+        margin-top: 12px;                        /* On définit la marge haute à 12px */
     }
-    
+
     .zoneBasGauche p:last-child                  /* On cible le dernier élément <p> */
     {
-        margin-top: 15px;
+        margin-top: 15px;                        /* On définit la marge haute à 15px */
     }
-    
+
     .zoneBasGauche p:first-child                 /* On cible le premier élément <p> */
     {
-        margin-top: 18px;
+        margin-top: 18px;                        /* On définit la marge haute à 18px */
     }
-    
+
     .zoneBasGauche
     {
-        width: 100px;
+        width: 100px;                            /* On définit la largeur à 100px */
     }
-    
+
     .zoneBasDroite
     {
-        width: 180px;
-        gap: 2px;
+        width: 180px;                            /* On définit la largeur à 180px */
+        gap: 2px;                                /* On définit l'espacement à 2px */
     }
-    
+
     .zoneBas
     {
-        height: 180px;
-        margin-top: 5px;
+        height: 180px;                           /* On définit la hauteur à 180px */
+        margin-top: 5px;                         /* On définit la marge haute à 5px */
     }
-    
+
     .fondBlanc2 hr
     {
         margin: 5px 0;                           /* On ajoute 5px de marge en haut et en bas et rien sur les côtés */
     }
-    
+
     .ligne > p                                   /* On sélectionne uniquement les <p> directement dans .ligne */
-    { 
-        font-size: 14px;
+    {
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
-    
+
     .zoneBlanche
     {
-        height: 22px;
-        width: 120px;
+        height: 22px;                            /* On définit la hauteur à 22px */
+        width: 120px;                            /* On définit la largeur à 120px */
     }
-    
+
     .texteNoir
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
-    
+
     .texteNoir2
     {
-        font-size: 14px;
-        margin: 3px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
+        margin: 3px;                             /* On définit la marge à 3px */
     }
-    
+
     .carteEmbTexte
     {
         font-size: 22px !important;              /* On force la taille de police à 22px */
     }
-    
+
     .carteEmbTexte2
     {
-        font-size: 1em;
-        gap: 24px;
+        font-size: 1em;                          /* On définit la taille de police à 1em */
+        gap: 24px;                               /* On définit l'espacement à 24px */
     }
-    
+
     .carteEmbTexte2 .ligne:first-child           /* On cible la première .ligne dans .carteEmbTexte2 */
     {
-        margin-top: 24px;
+        margin-top: 24px;                        /* On définit la marge haute à 24px */
     }
 }
 
@@ -143,45 +143,45 @@
 {
     .fondBleu
     {
-        width: 260px;
-        height: 610px;
+        width: 260px;                            /* On définit la largeur à 260px */
+        height: 610px;                           /* On définit la hauteur à 610px */
     }
 
     .zoneTexte1
     {
-        margin: 15px 20px;
+        margin: 15px 20px;                       /* On définit la marge à 15px en haut et en bas et 20px sur les côtés */
     }
 
     .titreAccueil
     {
-        font-size: 1.62em;
+        font-size: 1.62em;                       /* On définit la taille de police à 1.62em */
     }
 
     .img1p1
     {
-        height:70px !important;                  /* On force la hauteur à 70px */
+        height: 70px !important;                 /* On force la hauteur à 70px */
     }
 
     .fondBlanc
     {
-        width: 246px;
-        height: 75px;
+        width: 246px;                            /* On définit la largeur à 246px */
+        height: 75px;                            /* On définit la hauteur à 75px */
     }
 
     .ligne > p                                   /* On sélectionne uniquement les <p> directement dans .ligne */
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
 
     .zoneBlanche
     {
-        height: 20px;
-        width: 122px;
+        height: 20px;                            /* On définit la hauteur à 20px */
+        width: 122px;                            /* On définit la largeur à 122px */
     }
 
     .texteNoir
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
 
     .carteEmbTexte
@@ -192,157 +192,155 @@
 
     .carteEmbTexte2
     {
-        gap:11px;
+        gap: 11px;                               /* On définit l'espacement à 11px */
     }
-    
+
     .fondBlanc2
     {
-        width: 246px;
-        height: 294px;
-        margin-left:140px;
+        width: 246px;                            /* On définit la largeur à 246px */
+        height: 294px;                           /* On définit la hauteur à 294px */
+        margin-left: 140px;                      /* On définit la marge gauche à 140px */
     }
 
     .texteNoir2
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
 
     .zoneBasGauche p:nth-of-type(3)              /* On cible le troisième paragraphe dans .zoneBasGauche */
     {
-        margin-bottom: 4px;
+        margin-bottom: 4px;                      /* On définit la marge basse à 4px */
     }
 
     .zoneBasGauche p:nth-of-type(4)              /* On cible le quatrième paragraphe dans .zoneBasGauche */
     {
-        margin-bottom: 2px;
+        margin-bottom: 2px;                      /* On définit la marge basse à 2px */
     }
 }
 
-/* ################################################################################################ */
-/* ################## Les cartes d'embarquement - Les véhicules | Media queries ################### */
-/* ################################################################################################ */
+/* ######################################################################################################################################################## */
+/* ############################################# Les cartes d'embarquement - Les véhicules | Media queries ################################################ */
+/* ######################################################################################################################################################## */
 
 @media (max-width: 1150px)                       /* On applique ces styles pour les écrans de 1150px de large et moins */
 {
     .fondBleu2
     {
-        width: 600px;
-        height: 320px;
+        width: 600px;                            /* On définit la largeur à 600px */
+        height: 320px;                           /* On définit la hauteur à 320px */
     }
-    
+
     .img1p1_2
     {
         height: 90px !important;                 /* On force la hauteur à 90px */
     }
-    
+
     .fondBlanc_2
     {
-        width: 280px;
-        height: 100px;
+        width: 280px;                            /* On définit la largeur à 280px */
+        height: 100px;                           /* On définit la hauteur à 100px */
     }
-    
+
     .fondBlanc2_2
     {
-        width: 280px;
-        height: 250px;
-        
+        width: 280px;                            /* On définit la largeur à 280px */
+        height: 250px;                           /* On définit la hauteur à 250px */
     }
-    
+
     .zoneHaut2
     {
-        height: 70px;
-        margin-bottom: 5px;
+        height: 70px;                            /* On définit la hauteur à 70px */
+        margin-bottom: 5px;                      /* On définit la marge basse à 5px */
     }
-    
+
     .zoneHautGauche2
     {
-        width: 100px;
+        width: 100px;                            /* On définit la largeur à 100px */
     }
-    
-    .zoneHautDroite2 
+
+    .zoneHautDroite2
     {
-        width: 180px;
+        width: 180px;                            /* On définit la largeur à 180px */
     }
-    
+
     .zoneHaut2 p
     {
-        margin: 2px 0;
+        margin: 2px 0;                           /* On ajoute 2px de marge en haut et en bas et rien sur les côtés */
     }
-    
+
     .zoneBasGauche2 p:nth-of-type(1)             /* On cible le première paragraphe dans .zoneBasGauche2 */
     {
-        margin-bottom: 10px;
+        margin-bottom: 10px;                     /* On définit la marge basse à 10px */
     }
-    
+
     .zoneBasGauche2 p:last-child                 /* On cible le dernier paragraphe dans .zoneBasGauche2 */
     {
-        margin-top: 5px;
+        margin-top: 5px;                         /* On définit la marge haute à 5px */
     }
-    
+
     .zoneBasGauche2 p:first-child                /* On cible le premier paragraphe dans .zoneBasGauche2 */
     {
-        margin-top: 18px;
+        margin-top: 18px;                        /* On définit la marge haute à 18px */
     }
-    
+
     .zoneBasGauche2
     {
-        width: 100px;
-        
+        width: 100px;                            /* On définit la largeur à 100px */
     }
-    
+
     .zoneBasDroite2
     {
-        width: 180px;
-        gap: 2px;
+        width: 180px;                            /* On définit la largeur à 180px */
+        gap: 2px;                                /* On définit l'espacement à 2px */
     }
-    
+
     .zoneBas2
     {
-        height: 180px;
-        margin-top: 5px;
+        height: 180px;                           /* On définit la hauteur à 180px */
+        margin-top: 5px;                         /* On définit la marge haute à 5px */
     }
-    
+
     .fondBlanc2_2 hr
     {
-        margin: 5px 0;
+        margin: 5px 0;                           /* On ajoute 5px de marge en haut et en bas et rien sur les côtés */
     }
-    
+
     .ligne2 > p
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
-    
+
     .zoneBlanche2
     {
-        height: 22px;
-        width: 120px;
+        height: 22px;                            /* On définit la hauteur à 22px */
+        width: 120px;                            /* On définit la largeur à 120px */
     }
-    
+
     .texteNoir_2
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
-    
+
     .texteNoir2_2
     {
-        font-size: 14px;
-        margin: 3px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
+        margin: 3px;                             /* On définit la marge à 3px */
     }
-    
+
     .zoneDroite2 p.carteEmbTexte2
     {
-        font-size: 22px !important;
+        font-size: 22px !important;              /* On force la taille de police à 22px */
     }
-    
+
     .carteEmbTexte2_2
     {
-        font-size: 1em;
-        gap: 16px;
+        font-size: 1em;                          /* On définit la taille de police à 1em */
+        gap: 16px;                               /* On définit l'espacement à 16px */
     }
-    
+
     .carteEmbTexte2_2 .ligne2:first-child
     {
-        margin-top: 24px;
+        margin-top: 24px;                        /* On définit la marge haute à 24px */
     }
 }
 
@@ -350,86 +348,84 @@
 {
     .fondBleu2
     {
-        width: 260px;
-        height: 570px;
+        width: 260px;                            /* On définit la largeur à 260px */
+        height: 570px;                           /* On définit la hauteur à 570px */
     }
 
     .img1p1_2
     {
-        height: 70px !important;
+        height: 70px !important;                 /* On force la hauteur à 70px */
     }
 
     .fondBlanc_2
     {
-        width: 246px;
-        height: 75px;
+        width: 246px;                            /* On définit la largeur à 246px */
+        height: 75px;                            /* On définit la hauteur à 75px */
     }
 
     .ligne2 > p
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
 
     .zoneBlanche2
     {
-        height: 20px;
-        width: 122px;
+        height: 20px;                            /* On définit la hauteur à 20px */
+        width: 122px;                            /* On définit la largeur à 122px */
     }
 
     .texteNoir_2
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
 
     .zoneDroite2 p.carteEmbTexte2
     {
-        font-size: 20px !important;
-        margin-left: 140px !important;
+        font-size: 20px !important;              /* On force la taille de police à 20px */
+        margin-left: 140px !important;           /* On force la marge gauche à 140px */
     }
 
     .fondBlanc2_2
     {
-        width: 246px;
-        height: 246px;
-        margin-left: 140px;
+        width: 246px;                            /* On définit la largeur à 246px */
+        height: 246px;                           /* On définit la hauteur à 246px */
+        margin-left: 140px;                      /* On définit la marge gauche à 140px */
     }
 
     .carteEmbTexte2_2
     {
-        gap: 11px;
+        gap: 11px;                               /* On définit l'espacement à 11px */
     }
 
     .texteNoir2_2
     {
-        font-size: 14px;
+        font-size: 14px;                         /* On définit la taille de police à 14px */
     }
 
     .zoneBasGauche2 p:first-child 
     {
-        margin-bottom: 11px;
+        margin-bottom: 11px;                     /* On définit la marge basse à 11px */
     }
 
     .zoneBasGauche2 p:nth-of-type(3) 
     {
-        margin-bottom: 2px;
+        margin-bottom: 2px;                      /* On définit la marge basse à 2px */
     }
 }
 
-/* ################################################################################################ */
-/* ############################ Les liens et les images | Media queries ########################### */
-/* ################################################################################################ */
+/* ######################################################################################################################################################## */
+/* ######################################################## Les liens et les images | Media queries ####################################################### */
+/* ######################################################################################################################################################## */
 
 @media (max-width: 1500px)                       /* On applique ces styles pour les écrans de 1500px de large et moins */
 {
     .img1p0
     {
         height: 110px !important;
-        border-radius: 0px;
     }
     .img2p0
     {
         height: 110px !important;
-        border-radius: 0px;
     }
     
     .menuPageAcceuil ul.lienMenu 
@@ -543,16 +539,16 @@
     }
 }
 
-/* ################################################################################################ */
-/* ##################################### Footer | Media queries ################################### */
-/* ################################################################################################ */
+/* ######################################################################################################################################################## */
+/* ################################################################# Footer | Media queries ############################################################### */
+/* ######################################################################################################################################################## */
 
 
 @media (max-width: 580px)                        /* On applique ces styles pour les écrans de 580px de large et moins */
 {
     .footerRow p 
     {
-        font-size: 0.8em;
+        font-size: 0.8em;                        /* On définit la taille de police à 0.8em */
         margin:0;                                /* On supprime toutes les marges */
     }
 }
@@ -561,17 +557,17 @@
 {
     .footerRow p 
     {
-        font-size: 0.7em;
+        font-size: 0.7em;                        /* On définit la taille de police à 0.7em */
         margin:0;                                /* On supprime toutes les marges */
     }
 
     .footerRow img
     {
-        height: 18px;
-        width:21px;
+        height: 18px;                            /* On définit la hauteur à 18px */
+        width:21px;                              /* On définit la largeur à 21px */
     }
 }
 
-/* ################################################################################################ */
-/* ################################################################################################ */
-/* ################################################################################################ */
+/* ######################################################################################################################################################## */
+/* ######################################################################################################################################################## */
+/* ######################################################################################################################################################## */
