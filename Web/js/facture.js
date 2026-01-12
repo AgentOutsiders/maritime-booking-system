@@ -23,6 +23,7 @@ async function remplieFacture() {
 
 
   let dicPassagers = {};
+  let soustotalPersonnes = 0;
 
   for(let i=1; i<=donne["nbPassagers"]; i++)
   {
@@ -45,6 +46,8 @@ async function remplieFacture() {
     {
       dicPassagers[passager["libelleCategorie"]] = [1, passager["price"]];
     }
+    
+    soustotalPersonnes += passager["price"];
   }
 
   for(let cle in dicPassagers)
@@ -55,8 +58,11 @@ async function remplieFacture() {
                                                                       <td> &nbsp; ${dicPassagers[cle][1]} € &nbsp; </td></tr>`;
   }
 
+  articleFacture.querySelector("#soustotalPersonnes").textContent = soustotalPersonnes.toFixed(2) + " €";
+
 
   let dicVehicules = {};
+  let soustotalVehicules = 0;
 
   for(let i=1; i<=donne["nbVehicules"]; i++)
   {
@@ -78,6 +84,8 @@ async function remplieFacture() {
     {
       dicVehicules[vehicule["libelle"]] = [vehicule["quantite"], vehicule["prix"]*vehicule["quantite"]];
     }
+    
+    soustotalVehicules += vehicule["prix"] * vehicule["quantite"];
   }
 
   for(let cle in dicVehicules)
@@ -88,10 +96,14 @@ async function remplieFacture() {
         <td> &nbsp; ${dicVehicules[cle][1]} € &nbsp; </td></tr>`;
   }
 
+  articleFacture.querySelector("#soustotalVehicules").textContent = soustotalVehicules.toFixed(2) + " €";
+
+  let prixTotal = soustotalPersonnes + soustotalVehicules;
+  articleFacture.querySelector("#prixTotal").textContent = prixTotal.toFixed(2) + " €";
+
   leTelechargement();
 
 }
-
 
 
 function leTelechargement() 
