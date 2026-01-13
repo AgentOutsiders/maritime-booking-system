@@ -9,6 +9,11 @@ async function remplieCarte() {
   let zoneCarte = document.getElementById("zoneCarte");
   let zoneVehicule = document.getElementById("zoneVehicule");
 
+    if(donne["nbPassagers"] == 0) 
+    {
+        zoneCarte.innerHTML = `<p style="text-align: center;">Aucun passager pour cette réservation</p>`;
+    }
+
     for(let i = 1; i <= donne["nbPassagers"]; i++)
     {
         let passager = await fetch(
@@ -94,6 +99,12 @@ async function remplieCarte() {
                 </div>
             </div>
         `;
+    }
+
+
+    if(donne["nbVehicules"] == 0) 
+    {
+        zoneVehicule.innerHTML = `<p style="text-align: center;">Aucun véhicule pour cette réservation</p>`;
     }
 
     for(let j = 1; j <= donne["nbVehicules"]; j++)
