@@ -1346,7 +1346,7 @@ img.imageConnexion1
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:#0b638c;
+    background-color:#e0e0e0;
     border-radius: 12px;
     padding: 20px;
 }
@@ -1358,6 +1358,7 @@ img.imageConnexion1
     height: auto;
     margin: 15px 0px;
     transition: transform 1s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .contBateauImg1:hover
@@ -1444,6 +1445,49 @@ span
 {
     -webkit-text-security: disc;                        /* On transforme les caractères en points noirs */
     text-align: center;
+}
+
+/* ######################################################################################################################################################################## */
+/* ################################################################### - Pop-up de retour vers le haut - ################################################################## */
+/* ######################################################################################################################################################################## */
+
+.popUpHaut 
+{
+    position: fixed;                                                         /* On fixe la position par rapport à la fenêtre */
+    bottom: 30px;                                                            /* On définit la distance du bas à 30px */
+    right: 30px;                                                             /* On définit la distance de la droite à 30px */
+    background-color: #0056b3;                                             /* On définit la couleur de fond */
+    border-radius: 50%;                                                      
+    width: 60px;                                                             /* On définit la largeur à 60px */
+    height: 60px;                                                            /* On définit la hauteur à 60px */
+    display: flex;                                                           
+    align-items: center;                                                    
+    justify-content: center;                                                 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);                         
+    opacity: 0;                                                              /* On définit l'opacité à 0 */
+    visibility: hidden;                                                      /* On cache l'élément */
+    transform: translateX(100px);                                            /* On déplace l'élément de 100px vers la droite */
+    transition: opacity 1s ease, transform 1s ease, visibility 1s;           /* On définit la transition à opacity 1s ease, transform 1s ease, visibility 1s */
+    cursor: pointer;                                                         /* On définit le curseur en pointeur */
+}
+
+.popUpHaut:hover 
+{
+    transform: translateX(0) scale(1.1);                                     /* On déplace l'élément à 0 et on applique une échelle de 1.1 */
+}
+
+.popUpHaut.visible 
+{
+    opacity: 1;                                                              /* On définit l'opacité à 1 */
+    visibility: visible;                                                     /* On rend l'élément visible */
+    transform: translateX(0);                                                /* On déplace l'élément à 0 */
+}
+
+
+#flecheRetour
+{
+    width:40px; 
+    height: 37px;
 }
 
 /* ######################################################################################################################################################################## */
