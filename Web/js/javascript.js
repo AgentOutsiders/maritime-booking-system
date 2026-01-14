@@ -13,15 +13,15 @@ document.addEventListener("click", jouerSonBP, { once: true });
 // Fonction pour lancer un fichier audio spécifique
 function jouerSon(chemin) {
     
-    // Si une musique joue déjà, on la met en pause pour éviter la superposition
+    // Si musique joue déjà, met en pause pour éviter la superposition
     if (sonActuel) {
         sonActuel.pause();
     }
 
-    // On charge le nouveau fichier audio
+    // charge le nouveau fichier audio
     sonActuel = new Audio(chemin);
     
-    // On active la répétition en boucle (loop)
+    // active la répétition en boucle
     sonActuel.loop = true;
     
     // On lance la lecture
@@ -39,11 +39,11 @@ function arreterSon() {
 function jouerSonBP() {
     // On récupère le chemin du fichier son sauvegardé dans le navigateur (localStorage)
     // et on l'envoie à la fonction principale
-    jouerSon(localStorage.getItem("son"));
+    if(localStorage.getItem("son") != null)
+    {
+        jouerSon(localStorage.getItem("son"));
+    }
 }
-
-
-
 
 
 
@@ -104,11 +104,11 @@ document.addEventListener('keydown', (event) => {
   // On récupère la touche appuyée
   const toucheAppuyee = event.key;
 
-  // 4. On compare avec la touche attendue dans la séquence
-  // On regarde ce qu'il y a dans le tableau à l'index 'positionActuelle'
+  // 4.  compare avec la touche attendue dans la séquence
+  // regarde ce qu'il y a dans le tableau à l'index 'positionActuelle'
   if (toucheAppuyee == codeSecret[positionActuelle]) {
     
-    // C'est la bonne touche ! On passe à la suivante.
+    // C'est la bonne touche on passe à la suivante.
     positionActuelle += 1;
 
     // 5. Est-ce que la séquence est complète ?
@@ -118,7 +118,7 @@ document.addEventListener('keydown', (event) => {
     }
 
   } else {
-    // Mauvaise touche ! On réinitialise la progression.
+    // Mauvaise touche on réinitialise la progression.
     positionActuelle = 0;
   }
 });
@@ -126,14 +126,12 @@ document.addEventListener('keydown', (event) => {
 // 6. La fonction qui fait l'action spéciale
 let angle = 0;
 
-// Optionnel : Ajouter de la musique (mets une URL de MP3 valide ici)
 const audio1 = new Audio('https://www.myinstants.com//media/sounds/a-real-boy.mp3'); 
 audio1.loop = true;
 const audio2 = new Audio('https://www.myinstants.com/media/sounds/echo3b.mp3');
 audio2.loop = true;
 
 function lancerEasterEgg() {
-  // --- 1. Audio (décommente si tu veux du son) ---
   if (angle == 0) 
     {
         audio1.play();
@@ -141,38 +139,32 @@ function lancerEasterEgg() {
     }
 
   // On incrémente l'angle
-  angle += 5; // On accélère un peu la base
-
-  // --- 2. Calculs du chaos ---
+  angle += 5;
   
-  // PULSATION : Math.sin crée une vague entre -1 et 1.
-  // Ici, le zoom va osciller entre 0.5 (dézoomé) et 1.5 (zoomé)
+  // Math.sin entre -1 et 1
+  // zoom va osciller entre 0.5 (dézoomé) et 1.5 (zoomé)
   const echelle = 1 + Math.sin(angle * 0.05) * 0.5; 
 
-  // TREMBLEMENT : Un nombre aléatoire entre -10px et 10px
+  // tremblement un nombre aléatoire entre -10px et 10px
   const decaleX = (Math.random() * 20) - 10;
   const decaleY = (Math.random() * 20) - 10;
 
-  // --- 3. Application sur le BODY ---
+  // Application sur le BODY
   
-  // On combine : Rotation + Zoom (scale) + Tremblement (translate)
+  // On combine : Rotation + Zoom (scale) + Tremblement (translate -> deplace les elements)
   document.body.style.transform = 
     "rotate(" + angle + "deg) " + 
     "scale(" + echelle + ") " + 
     "translate(" + decaleX + "px, " + decaleY + "px)";
 
-  // Couleurs stroboscopiques (ton code original)
+  // Couleurs stroboscopiques
   document.body.style.backgroundColor = "rgb(" + (angle % 255) + ", " + ((angle * 2) % 255) + ", " + ((angle * 3) % 255) + ")";
-  document.body.style.color = "rgb(" + (255 - (angle % 255)) + ", 0, 0)"; // Texte rouge clignotant c'est plus agressif
+  document.body.style.color = "rgb(" + (255 - (angle % 255)) + ", 0, 0)"; // Texte rouge clignotant
 
   // FILTRES : Ajoute du flou et inverse les couleurs cycliquement
-  // C'est ça qui donne l'effet "Deep Fried Meme"
   document.body.style.filter = "invert(" + (angle % 100) + "%) contrast(200%)";
 
-  // POLICE : La touche finale
-  document.body.style.fontFamily = '"Comic Sans MS", "Comic Sans", cursive';
-
-  // --- 4. Destruction des images ---
+  // Destruction des images
   document.querySelectorAll("img").forEach((img) => {
     // Les images tournent dans l'autre sens ET s'étirent bizarrement (skew)
     img.style.transform = 
@@ -180,10 +172,9 @@ function lancerEasterEgg() {
         "skew(" + (angle % 45) + "deg)";
   });
   
-  // --- 5. Modification du texte (Optionnel) ---
-  // Attention, ça peut ralentir si tu as beaucoup de texte
+  //Modification du texte 
   document.querySelectorAll("h1, h2, p").forEach((el) => {
-      el.innerText = "ERREUR";
+      el.innerText = "HELLO";
   });
 
   requestAnimationFrame(lancerEasterEgg);
