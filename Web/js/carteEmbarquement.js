@@ -1,29 +1,40 @@
+// Fonction principale asynchrone pour générer les cartes d'embarquement
 async function remplieCarte() {
-  console.log(sessionStorage.getItem("num"));
+    
+    // 1. Récupération du numéro de réservation stocké
+    let numReservation = sessionStorage.getItem("num");
+    console.log("Numéro de réservation : " + numReservation);
 
-  let reponse = await fetch(
-    "https://can.iutrs.unistra.fr/api/reservation/" +
-      sessionStorage.getItem("num")
-  );
-  let donne = await reponse.json();
-  let zoneCarte = document.getElementById("zoneCarte");
-  let zoneVehicule = document.getElementById("zoneVehicule");
+    // 2. Récupération des informations générales de la réservation
+    let reponse = await fetch("https://can.iutrs.unistra.fr/api/reservation/" + numReservation);
+    let donneesReservation = await reponse.json();
 
-    if(donne["nbPassagers"] == 0) 
+    // Sélection des zones HTML où on va injecter les cartes
+    let zoneCarte = document.getElementById("zoneCarte");
+    let zoneVehicule = document.getElementById("zoneVehicule");
+
+    // --- GESTION DES PASSAGERS ---
+
+    // Vérification si y'a des passagers
+    if(donneesReservation["nbPassagers"] == 0) 
     {
         zoneCarte.innerHTML = `<p style="text-align: center;">Aucun passager pour cette réservation</p>`;
     }
 
-    for(let i = 1; i <= donne["nbPassagers"]; i++)
-    {
-        let passager = await fetch(
+    // 3. Boucle sur chaque passager pour créer sa carte
+    for (let i = 1; i <= donneesReservation["nbPassagers"]; i++) {
+        
+        // Récupération des détails du passager spécifique (i)
+        let reponsePassager = await fetch(
             "https://can.iutrs.unistra.fr/api/reservation/" +
-            sessionStorage.getItem("num") +
+            numReservation +
             "/passager/" +
             i
         );
-        passager = await passager.json();
+        let infoPassager = await reponsePassager.json();
 
+        // Injection du HTML pour la carte passager
+        // Note : On crée un ID unique pour le QR Code (QRCode1, QRCode2, etc.)
         zoneCarte.innerHTML += `
             <div class="fondBleu"> 
                 <div class="zoneGauche">
@@ -34,31 +45,31 @@ async function remplieCarte() {
                         <div class="ligne">
                             <p>Gare de départ</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir grasPageEmbarquement">${donne["portDepart"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donneesReservation["portDepart"]}</p>
                             </div>
                         </div>
                         <div class="ligne">
                             <p>Gare d'arrivée</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir grasPageEmbarquement">${donne["portArrivee"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donneesReservation["portArrivee"]}</p>
                             </div>
                         </div>
                         <div class="ligne">
                             <p>Date</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir grasPageEmbarquement">${donne["date"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donneesReservation["date"]}</p>
                             </div>
                         </div>
                         <div class="ligne">
                             <p>Heure départ</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir grasPageEmbarquement">${donne["heure"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donneesReservation["heure"]}</p>
                             </div>
                         </div>
                         <div class="ligne">
                             <p>Bateau</p>
                             <div class="zoneBlanche">
-                                <p class="texteNoir grasPageEmbarquement">${donne["bateau"]}</p>
+                                <p class="texteNoir grasPageEmbarquement">${donneesReservation["bateau"]}</p>
                             </div>
                         </div>
                     </div>
@@ -72,8 +83,8 @@ async function remplieCarte() {
                                 <p class="texteNoir2">Nom</p>
                             </div>
                             <div class="zoneHautDroite">
-                                <p class="texteNoir2 grasPageEmbarquement">${sessionStorage.getItem("num")}</p>
-                                <p class="texteNoir2 grasPageEmbarquement">${donne["nom"]}</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${numReservation}</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${donneesReservation["nom"]}</p>
                             </div>
                         </div>
                         <hr>
@@ -89,10 +100,10 @@ async function remplieCarte() {
                             <div class="zoneBasDroite">
                                 <div class="zoneQRCode" id="QRCode${i}"></div>
                                 <br>
-                                <p class="texteNoir2 grasPageEmbarquement">${passager["nom"]}</p>
-                                <p class="texteNoir2 grasPageEmbarquement">${passager["prenom"]}</p>
-                                <p class="texteNoir2 grasPageEmbarquement">${passager["libelleCategorie"]}</p>
-                                <p class="texteNoir2 grasPageEmbarquement">${passager["price"]} €</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${infoPassager["nom"]}</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${infoPassager["prenom"]}</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${infoPassager["libelleCategorie"]}</p>
+                                <p class="texteNoir2 grasPageEmbarquement">${infoPassager["price"]} €</p>
                             </div>
                         </div>
                     </div>
@@ -101,22 +112,27 @@ async function remplieCarte() {
         `;
     }
 
+    // --- GESTION DES VÉHICULES ---
 
-    if(donne["nbVehicules"] == 0) 
+    // Vérification si y'a des véhicules
+    if(donneesReservation["nbVehicules"] == 0) 
     {
         zoneVehicule.innerHTML = `<p style="text-align: center;">Aucun véhicule pour cette réservation</p>`;
     }
 
-    for(let j = 1; j <= donne["nbVehicules"]; j++)
-    {
-        let vehicule = await fetch(
+    // 4. Boucle sur chaque véhicule pour créer sa carte
+    for (let j = 1; j <= donneesReservation["nbVehicules"]; j++) {
+        
+        // Récupération des détails du véhicule spécifique (j)
+        let reponseVehicule = await fetch(
             "https://can.iutrs.unistra.fr/api/reservation/" +
-            sessionStorage.getItem("num") +
+            numReservation +
             "/vehicule/" +
             j
         );
-        vehicule = await vehicule.json();
+        let infoVehicule = await reponseVehicule.json();
 
+        // Injection du HTML pour la carte véhicule
         zoneVehicule.innerHTML += `
             <div class="fondBleu2"> 
                 <div class="zoneGauche2">
@@ -127,31 +143,31 @@ async function remplieCarte() {
                         <div class="ligne2">
                             <p>Gare de départ</p>
                             <div class="zoneBlanche2">
-                                <p class="texteNoir_2 grasPageEmbarquement2">${donne["portDepart"]}</p>
+                                <p class="texteNoir_2 grasPageEmbarquement2">${donneesReservation["portDepart"]}</p>
                             </div>
                         </div>
                         <div class="ligne2">
                             <p>Gare d'arrivée</p>
                             <div class="zoneBlanche2">
-                                <p class="texteNoir_2 grasPageEmbarquement2">${donne["portArrivee"]}</p>
+                                <p class="texteNoir_2 grasPageEmbarquement2">${donneesReservation["portArrivee"]}</p>
                             </div>
                         </div>
                         <div class="ligne2">
                             <p>Date</p>
                             <div class="zoneBlanche2">
-                                <p class="texteNoir_2 grasPageEmbarquement2">${donne["date"]}</p>
+                                <p class="texteNoir_2 grasPageEmbarquement2">${donneesReservation["date"]}</p>
                             </div>
                         </div>
                         <div class="ligne2">
                             <p>Heure départ</p>
                             <div class="zoneBlanche2">
-                                <p class="texteNoir_2 grasPageEmbarquement2">${donne["heure"]}</p>
+                                <p class="texteNoir_2 grasPageEmbarquement2">${donneesReservation["heure"]}</p>
                             </div>
                         </div>
                         <div class="ligne2">
                             <p>Bateau</p>
                             <div class="zoneBlanche2">
-                                <p class="texteNoir_2 grasPageEmbarquement2">${donne["bateau"]}</p>
+                                <p class="texteNoir_2 grasPageEmbarquement2">${donneesReservation["bateau"]}</p>
                             </div>
                         </div>
                     </div>
@@ -165,8 +181,8 @@ async function remplieCarte() {
                                 <p class="texteNoir2_2">Nom</p>
                             </div>
                             <div class="zoneHautDroite2">
-                                <p class="texteNoir2_2 grasPageEmbarquement2">${sessionStorage.getItem("num")}</p>
-                                <p class="texteNoir2_2 grasPageEmbarquement2">${donne["nom"]}</p>
+                                <p class="texteNoir2_2 grasPageEmbarquement2">${numReservation}</p>
+                                <p class="texteNoir2_2 grasPageEmbarquement2">${donneesReservation["nom"]}</p>
                             </div>
                         </div>
                         <hr>
@@ -181,9 +197,9 @@ async function remplieCarte() {
                             <div class="zoneBasDroite2">
                                 <div class="zoneQRCode2" id="QRCodeVehicule${j}"></div>
                                 <br>
-                                <p class="texteNoir2_2 grasPageEmbarquement2">Catégorie ${vehicule["code"]}</p>
-                                <p class="texteNoir2_2 grasPageEmbarquement2">${vehicule["quantite"]}</p>
-                                <p class="texteNoir2_2 grasPageEmbarquement2">${vehicule["prix"]*vehicule["quantite"]} €</p>
+                                <p class="texteNoir2_2 grasPageEmbarquement2">Catégorie ${infoVehicule["code"]}</p>
+                                <p class="texteNoir2_2 grasPageEmbarquement2">${infoVehicule["quantite"]}</p>
+                                <p class="texteNoir2_2 grasPageEmbarquement2">${infoVehicule["prix"] * infoVehicule["quantite"]} €</p>
                             </div>
                         </div>
                     </div>
@@ -192,21 +208,27 @@ async function remplieCarte() {
         `;
     }
 
-    for (let i = 1; i <= donne["nbPassagers"]; i++) {
-    new QRCode(document.getElementById(`QRCode${i}`), {
-        text: sessionStorage.getItem("num"),
-        width: 50,
-        height: 50
-    });
+    // --- GÉNÉRATION DES QR CODES ---
+    // Note : On le fait APRÈS avoir créé le HTML, car les div #QRCode... doivent exister
+
+    // Génération pour les passagers
+    for (let i = 1; i <= donneesReservation["nbPassagers"]; i++) {
+        new QRCode(document.getElementById(`QRCode${i}`), {
+            text: numReservation,
+            width: 50,
+            height: 50
+        });
     }
 
-    for (let j = 1; j <= donne["nbVehicules"]; j++) {
-    new QRCode(document.getElementById(`QRCodeVehicule${j}`), {
-        text: sessionStorage.getItem("num"),
-        width: 50,
-        height: 50
-    });
+    // Génération pour les véhicules
+    for (let j = 1; j <= donneesReservation["nbVehicules"]; j++) {
+        new QRCode(document.getElementById(`QRCodeVehicule${j}`), {
+            text: numReservation,
+            width: 50,
+            height: 50
+        });
     }
-
 }
+
+// Lancement de la fonction
 remplieCarte();

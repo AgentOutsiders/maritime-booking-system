@@ -47,13 +47,34 @@ function jouerSonBP() {
 
 
 
+// Fonction pop up
+document.body.innerHTML += `<div class="popUpHaut" id="popUpHaut">
+        <img src="../img/puce/fleche/flh1_sf.png" alt="Image d'une flèche pour remonter" id="flecheRetour">
+    </div>`;
+
+const popUpHaut = document.getElementById('popUpHaut');                // On récupère l'élément HTML de la pop-up grâce à son identifiant
+window.addEventListener('scroll', function()                           // On écoute l'événement de scroll
+{
+    let scrollPosition = window.scrollY;                               // On stocke la position actuelle du scroll en pixels depuis le haut de la page
+    if (scrollPosition > 300)                                          // On test si l'utilisateur a scrollé plus de 300 pixels vers le bas
+    {
+        popUpHaut.classList.add('visible');                            // Si c'est le cas, on ajoute la classe visible pour afficher la pop-up
+    } 
+    else 
+    {
+        popUpHaut.classList.remove('visible');                         // Sinon, on retire la classe visible pour cacher la pop-up
+    }
+});
 
 
-
-
-
-
-
+let bouton = document.getElementById("flecheRetour");                  // On récupère l'élément HTML du bouton flèche grâce à son identifiant
+bouton.addEventListener("click", function()                            // On écoute l'événement de clic sur le bouton
+{
+    window.scrollTo({                                                  // On fait défiler la page jusqu'en haut
+        top: 0,                                                        // On définit la position de destination, c'est à dire tout en haut
+        behavior: 'smooth'                                             // On fait un défilement fluide et animé
+    });
+});
 
 
 
@@ -105,17 +126,65 @@ document.addEventListener('keydown', (event) => {
 // 6. La fonction qui fait l'action spéciale
 let angle = 0;
 
+// Optionnel : Ajouter de la musique (mets une URL de MP3 valide ici)
+const audio1 = new Audio('https://www.myinstants.com//media/sounds/a-real-boy.mp3'); 
+audio1.loop = true;
+const audio2 = new Audio('https://www.myinstants.com/media/sounds/echo3b.mp3');
+audio2.loop = true;
+
 function lancerEasterEgg() {
-  // 1. On augmente l'angle (la vitesse de rotation)
-  // Plus le chiffre est grand, plus ça tourne vite
-  angle = angle + 2; 
+  // --- 1. Audio (décommente si tu veux du son) ---
+  if (angle == 0) 
+    {
+        audio1.play();
+        audio2.play();
+    }
 
-  // 2. On applique le nouvel angle
-  // On insère la variable 'angle' dans le texte CSS
-  document.body.style.transform = "rotate(" + angle + "deg)";
+  // On incrémente l'angle
+  angle += 5; // On accélère un peu la base
+
+  // --- 2. Calculs du chaos ---
+  
+  // PULSATION : Math.sin crée une vague entre -1 et 1.
+  // Ici, le zoom va osciller entre 0.5 (dézoomé) et 1.5 (zoomé)
+  const echelle = 1 + Math.sin(angle * 0.05) * 0.5; 
+
+  // TREMBLEMENT : Un nombre aléatoire entre -10px et 10px
+  const decaleX = (Math.random() * 20) - 10;
+  const decaleY = (Math.random() * 20) - 10;
+
+  // --- 3. Application sur le BODY ---
+  
+  // On combine : Rotation + Zoom (scale) + Tremblement (translate)
+  document.body.style.transform = 
+    "rotate(" + angle + "deg) " + 
+    "scale(" + echelle + ") " + 
+    "translate(" + decaleX + "px, " + decaleY + "px)";
+
+  // Couleurs stroboscopiques (ton code original)
   document.body.style.backgroundColor = "rgb(" + (angle % 255) + ", " + ((angle * 2) % 255) + ", " + ((angle * 3) % 255) + ")";
-  document.body.style.color = "rgb(" + ((angle * 2) % 255) + ", " + ((angle * 3) % 255) + ", " + (angle % 255) + ")";
+  document.body.style.color = "rgb(" + (255 - (angle % 255)) + ", 0, 0)"; // Texte rouge clignotant c'est plus agressif
 
-  // 3. On rappelle la fonction pour la frame suivante
+  // FILTRES : Ajoute du flou et inverse les couleurs cycliquement
+  // C'est ça qui donne l'effet "Deep Fried Meme"
+  document.body.style.filter = "invert(" + (angle % 100) + "%) contrast(200%)";
+
+  // POLICE : La touche finale
+  document.body.style.fontFamily = '"Comic Sans MS", "Comic Sans", cursive';
+
+  // --- 4. Destruction des images ---
+  document.querySelectorAll("img").forEach((img) => {
+    // Les images tournent dans l'autre sens ET s'étirent bizarrement (skew)
+    img.style.transform = 
+        "rotate(" + (-angle * 2) + "deg) " + 
+        "skew(" + (angle % 45) + "deg)";
+  });
+  
+  // --- 5. Modification du texte (Optionnel) ---
+  // Attention, ça peut ralentir si tu as beaucoup de texte
+  document.querySelectorAll("h1, h2, p").forEach((el) => {
+      el.innerText = "ERREUR";
+  });
+
   requestAnimationFrame(lancerEasterEgg);
 }
