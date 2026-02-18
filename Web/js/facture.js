@@ -128,7 +128,7 @@ function leTelechargement() {
         }).then(function(canvas) {
             
             // Création d'un lien invisible pour télécharger l'image générée
-            let lien = document.createElement();
+            let lien = document.createElement('a');
             lien.download = 'Facture_CAN.png';
             lien.href = canvas.toDataURL('image/png');
             
