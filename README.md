@@ -5,8 +5,8 @@
 
 ## 📌 About
 This is a booking system for a fake boat company. It has two parts:
-1. **C# App:** A console program to book tickets for people and cars. It saves the data in a JSON file. *(Developed by my teammate)*
-2. **Website:** A responsive site made with HTML, CSS, and JavaScript. It shows boarding passes with QR codes, invoices, and boat stats. *(My main contribution)*
+1. **C# App:** A console program to book tickets for people and cars. It saves the data in a JSON file.
+2. **Website:** A responsive site made with HTML, CSS, and JavaScript. It shows boarding passes with QR codes, invoices, and boat stats.
 
 ## 🛠️ Tools Used
 * **C# App:** C#, .NET, Newtonsoft.Json
