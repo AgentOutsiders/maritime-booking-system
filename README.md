@@ -1,6 +1,6 @@
 # 🚢 CAN - Boat Booking System
 
-> **Note:** This is a 1st-year school project built by a team of 2 students. The code is in French. 
+> **Note:** This is a 1st-year school project built by a team of 2 students [Alexis Danrée](https://github.com/AgentOutsiders) and [Maxime Peignier](https://github.com/rmax3iu). The code is in French. 
 > ⚠️ **The school API used for the website is now closed.** The code is here to show my work, but the website cannot get live data anymore.
 
 ## 📌 About
